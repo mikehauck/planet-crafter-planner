@@ -1,9 +1,9 @@
 "use client";
-import { useState } from "react";
-import { CheckIcon, PlusIcon, SearchIcon } from "lucide-react";
+import { useRef, useState } from "react";
+import { CheckIcon, PlusIcon, SearchIcon, XIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
+import { InputGroup, InputGroupAddon, InputGroupButton, InputGroupInput } from "@/components/ui/input-group";
 import { cn } from "@/lib/utils";
 import type { CatalogItem } from "@/lib/plan";
 
@@ -24,6 +24,7 @@ export function ItemSearch({
 }) {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
+  const input = useRef<HTMLInputElement>(null);
 
   const words = query.toLowerCase().split(/\s+/).filter(Boolean);
   const results = words.length
@@ -45,6 +46,7 @@ export function ItemSearch({
           <SearchIcon />
         </InputGroupAddon>
         <InputGroupInput
+          ref={input}
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
@@ -62,6 +64,22 @@ export function ItemSearch({
           aria-label="Search items"
           autoFocus
         />
+        {query && (
+          <InputGroupAddon align="inline-end">
+            <InputGroupButton
+              size="icon-xs"
+              aria-label="Clear search"
+              title="Clear search"
+              onClick={() => {
+                setQuery("");
+                setActive(0);
+                input.current?.focus();
+              }}
+            >
+              <XIcon />
+            </InputGroupButton>
+          </InputGroupAddon>
+        )}
       </InputGroup>
       {words.length > 0 && (
         <ul role="listbox" className="max-h-80 overflow-y-auto rounded-lg border p-1">
