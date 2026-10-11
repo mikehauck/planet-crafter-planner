@@ -1,0 +1,5226 @@
+[
+ {
+  "id": "Arch1",
+  "name": "Metal arch",
+  "type": "Base Building",
+  "planet": "Selenea",
+  "recipe": {
+   "Silicon": 1,
+   "Selenium": 1
+  }
+ },
+ {
+  "id": "biodome",
+  "name": "Biodome",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Seed0": 1,
+   "Titanium": 2,
+   "Cobalt": 2,
+   "Aluminium": 1,
+   "Alloy": 3
+  }
+ },
+ {
+  "id": "Biodome2",
+  "name": "T2 Biodome",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Fertilizer1": 2,
+   "Bacteria1": 2,
+   "Alloy": 1,
+   "Sulfur": 1
+  }
+ },
+ {
+  "id": "Biolab",
+  "name": "Biolab",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Osmium": 2,
+   "Alloy": 3,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "DeparturePlatform",
+  "name": "Extraction platform",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "FusionEnergyCell": 1,
+   "FuseEnergy1": 1,
+   "CircuitBoard1": 1,
+   "Rod-uranium": 1,
+   "PulsarQuartz": 1,
+   "Rod-iridium": 1
+  }
+ },
+ {
+  "id": "Fence",
+  "name": "Fence",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "FenceRounded",
+  "name": "Rounded fence",
+  "type": "Base Building",
+  "planet": "Aqualis",
+  "recipe": {
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "FloorAngleGlass",
+  "name": "Rounded glass floor",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Titanium": 1,
+   "Cobalt": 1
+  }
+ },
+ {
+  "id": "FloorGlass",
+  "name": "Living compartment glass",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Titanium": 1,
+   "Cobalt": 1
+  }
+ },
+ {
+  "id": "Foundation",
+  "name": "Foundation grid",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "FoundationAngle",
+  "name": "Foundation – Angle",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "FoundationSlope",
+  "name": "Foundation – Slope",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 2
+  }
+ },
+ {
+  "id": "InsideLamp1",
+  "name": "Area Lamp",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Magnesium": 1,
+   "Cobalt": 1
+  }
+ },
+ {
+  "id": "InsideLamp2",
+  "name": "Intense area lamp",
+  "type": "Furniture",
+  "planet": "Skeo",
+  "recipe": {
+   "Phosphorus": 1,
+   "Cobalt": 1
+  }
+ },
+ {
+  "id": "InteriorStairs1",
+  "name": "Interior stairs",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 2,
+   "Aluminium": 2,
+   "Titanium": 2
+  }
+ },
+ {
+  "id": "InterplanetaryExchangePlatform1",
+  "name": "Interplanetary exchange shuttle",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 2,
+   "CosmicQuartz": 1,
+   "Rod-alloy": 1,
+   "RocketReactor2": 1,
+   "Rod-uranium": 1
+  }
+ },
+ {
+  "id": "Ladder",
+  "name": "Indoor ladder",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Cobalt": 1
+  }
+ },
+ {
+  "id": "LaunchPlatform",
+  "name": "Launch Platform",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Alloy": 3,
+   "Titanium": 3,
+   "Iron": 3
+  }
+ },
+ {
+  "id": "LightBoxMedium",
+  "name": "Light Box",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Silicon": 2,
+   "SolarQuartz": 1
+  }
+ },
+ {
+  "id": "Megadome1",
+  "name": "Megadome",
+  "type": "Base Building",
+  "planet": "Selenea",
+  "recipe": {
+   "BalzarQuartz": 4,
+   "Selenium": 3,
+   "Rod-alloy": 2
+  }
+ },
+ {
+  "id": "OutsideLamp1",
+  "name": "Outdoor lamp",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Magnesium": 1
+  }
+ },
+ {
+  "id": "PlanetaryDeliveryDepot1",
+  "name": "Planetary Delivery Depot",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "CosmicQuartz": 1,
+   "FuseTradeRocketsSpeed1": 1,
+   "FusionEnergyCell": 1
+  }
+ },
+ {
+  "id": "pod",
+  "name": "Living compartment",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 2,
+   "Titanium": 1
+  }
+ },
+ {
+  "id": "Pod4x",
+  "name": "Big living compartment",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 3,
+   "Titanium": 3,
+   "Alloy": 2
+  }
+ },
+ {
+  "id": "Pod9xA",
+  "name": "Rounded living compartment",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 3,
+   "Titanium": 3,
+   "Alloy": 3
+  }
+ },
+ {
+  "id": "Pod9xB",
+  "name": "Living compartment with dome",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 3,
+   "Cobalt": 3,
+   "Alloy": 3
+  }
+ },
+ {
+  "id": "Pod9xC",
+  "name": "3x3 Living compartment",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 3,
+   "Titanium": 3,
+   "Alloy": 3
+  }
+ },
+ {
+  "id": "podAngle",
+  "name": "Living compartment corner",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Titanium": 1,
+   "Cobalt": 1
+  }
+ },
+ {
+  "id": "PodUnderground",
+  "name": "Underground living compartment",
+  "type": "Base Building",
+  "planet": "Skeo",
+  "recipe": {
+   "Rod-osmium": 2,
+   "Rod-alloy": 1,
+   "Explosive": 3,
+   "BalzarQuartz": 3
+  }
+ },
+ {
+  "id": "Stairs",
+  "name": "Outdoor stairs",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "TradePlatform1",
+  "name": "Trade space rocket",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 3,
+   "Rod-alloy": 1,
+   "RocketReactor": 1,
+   "Rod-uranium": 1
+  }
+ },
+ {
+  "id": "VehicleCrafter1",
+  "name": "Vehicle station",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Aluminium": 3,
+   "Alloy": 2,
+   "Rod-iridium": 1
+  }
+ },
+ {
+  "id": "door",
+  "name": "Living compartment door",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Titanium": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "WallInside",
+  "name": "Interior wall",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 2
+  }
+ },
+ {
+  "id": "wallplain",
+  "name": "Plain wall",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "WallWaterLife",
+  "name": "Aquatic life wall",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Seed0": 1,
+   "WaterBottle1": 1
+  }
+ },
+ {
+  "id": "window",
+  "name": "Living compartment window",
+  "type": "Base Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Cobalt": 1
+  }
+ },
+ {
+  "id": "AquariumTube1",
+  "name": "Aquarium tube",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "OxygenCapsule1": 1,
+   "WaterBottle1": 1,
+   "Bacteria1": 1,
+   "Magnesium": 1
+  }
+ },
+ {
+  "id": "ArcadeMachine1",
+  "name": "Arcade machine",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 2,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "BedDouble",
+  "name": "Double Bed",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "FabricBlue": 6
+  }
+ },
+ {
+  "id": "BedDoubleColored",
+  "name": "Customizable bed",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "SmartFabric": 4,
+   "Alloy": 2
+  }
+ },
+ {
+  "id": "BedSimple",
+  "name": "Bed",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "FabricBlue": 3
+  }
+ },
+ {
+  "id": "ButterflyDisplayer1",
+  "name": "Butterfly display box",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "FabricBlue": 1
+  }
+ },
+ {
+  "id": "Chair1",
+  "name": "Chair",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "FabricBlue": 2
+  }
+ },
+ {
+  "id": "Chair2",
+  "name": "Cozy chair",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "SmartFabric": 2
+  }
+ },
+ {
+  "id": "Container1",
+  "name": "Storage crate (Container1)",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "Container2",
+  "name": "Locker Storage",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 3
+  }
+ },
+ {
+  "id": "Container3",
+  "name": "T2 Locker Storage",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Alloy": 2,
+   "CircuitBoard1": 1
+  }
+ },
+ {
+  "id": "ContainerAqualis",
+  "name": "Clam",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Phosphorus": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "ContainerGoldenAqualis",
+  "name": "Golden clam",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Phosphorus": 1,
+   "Alloy": 1,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "ContainerToxic1",
+  "name": "Toxic goo storage",
+  "type": "Purification",
+  "planet": "Toxicity",
+  "recipe": {
+   "PlasticPolymer": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "CookingStation1",
+  "name": "Cooking station",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "Counter1",
+  "name": "Countertop (Counter1)",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 2
+  }
+ },
+ {
+  "id": "Counter2",
+  "name": "Countertop (Counter2)",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 2
+  }
+ },
+ {
+  "id": "Desktop1",
+  "name": "Desktop (Desktop1)",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 2
+  }
+ },
+ {
+  "id": "Desktop2",
+  "name": "Desktop (Desktop2)",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "DisplayCase",
+  "name": "Display case",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Cobalt": 1,
+   "Iron": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "ExerciseBike1",
+  "name": "Indoor bike",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "FabricBlue": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "Faucet1",
+  "name": "Faucet",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "WaterBottle1": 1,
+   "Alloy": 1,
+   "Magnesium": 1
+  }
+ },
+ {
+  "id": "Fireplace",
+  "name": "Fireplace",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "RedPowder1": 1,
+   "TreeRoot": 1,
+   "Iron": 1
+  }
+ },
+ {
+  "id": "FishDisplayer1",
+  "name": "Fish display",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1
+  }
+ },
+ {
+  "id": "FlowerPot1",
+  "name": "Flower Pot",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Magnesium": 1,
+   "Cobalt": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "FlowerPot2",
+  "name": "Hanging flower Pot",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Magnesium": 1,
+   "Bacteria1": 1
+  }
+ },
+ {
+  "id": "FlowerPot3",
+  "name": "Big flower pot",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "FountainBig",
+  "name": "Fountain",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Alloy": 1,
+   "Zeolite": 1
+  }
+ },
+ {
+  "id": "Fridge1",
+  "name": "Fridge",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Alloy": 1,
+   "MethanCapsule1": 1,
+   "Cobalt": 1
+  }
+ },
+ {
+  "id": "FrogDisplayer1",
+  "name": "Frog displayer",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1
+  }
+ },
+ {
+  "id": "GoldenContainer",
+  "name": "Golden Crate",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Alloy": 1,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "HologramGenerator",
+  "name": "Hologram projector",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "BalzarQuartz": 1,
+   "Rod-alloy": 1
+  }
+ },
+ {
+  "id": "Ivy1",
+  "name": "Ivy",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Seed0": 1
+  }
+ },
+ {
+  "id": "LavaLamp1",
+  "name": "Lava lamp",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Silicon": 1,
+   "CircuitBoard1": 1,
+   "Bioplastic1": 1
+  }
+ },
+ {
+  "id": "Library1",
+  "name": "Library",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "Locker1",
+  "name": "Locker",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "PlanetViewer1",
+  "name": "Planet viewer",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Silicon": 1,
+   "SolarQuartz": 1,
+   "Iron": 1,
+   "Zeolite": 1
+  }
+ },
+ {
+  "id": "Pooltable1",
+  "name": "Pool table",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Aluminium": 2,
+   "SmartFabric": 1
+  }
+ },
+ {
+  "id": "Server1",
+  "name": "Server",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 1
+  }
+ },
+ {
+  "id": "Shelves1",
+  "name": "Shelves",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "Shower1",
+  "name": "Shower",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Aluminium": 1,
+   "Bioplastic1": 1,
+   "FabricBlue": 1
+  }
+ },
+ {
+  "id": "Sign",
+  "name": "Sign",
+  "type": "Screen",
+  "planet": "",
+  "recipe": {
+   "Magnesium": 1
+  }
+ },
+ {
+  "id": "SkinDisplayer",
+  "name": "Spacesuit Displayer",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "QuasarQuartz": 1,
+   "Rod-alloy": 1
+  }
+ },
+ {
+  "id": "Sofa",
+  "name": "Sofa",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "FabricBlue": 2,
+   "Iron": 1
+  }
+ },
+ {
+  "id": "SofaAngle",
+  "name": "Corner sofa",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "FabricBlue": 2
+  }
+ },
+ {
+  "id": "SofaAngleColored",
+  "name": "Customizable corner sofa",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "SmartFabric": 2
+  }
+ },
+ {
+  "id": "SofaColored",
+  "name": "Customizable sofa",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "SmartFabric": 2,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "StarformContainer",
+  "name": "Starform Crate",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Alloy": 1,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "Table1",
+  "name": "Big table",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 2
+  }
+ },
+ {
+  "id": "TableSmall",
+  "name": "Table",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Titanium": 1
+  }
+ },
+ {
+  "id": "TableSmall2",
+  "name": "Small table",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Titanium": 1
+  }
+ },
+ {
+  "id": "TableSmall3",
+  "name": "Glass table",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Cobalt": 1,
+   "Titanium": 1
+  }
+ },
+ {
+  "id": "Toilet1",
+  "name": "Toilet",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Silicon": 1,
+   "Bioplastic1": 1
+  }
+ },
+ {
+  "id": "Trashcan1",
+  "name": "Trash can",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "Treadmill1",
+  "name": "Treadmill",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "TreePlanter2",
+  "name": "Bonzaï pot",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Vault1",
+  "name": "Safe Vault",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Rod-alloy": 1
+  }
+ },
+ {
+  "id": "VendingMachine1",
+  "name": "Vending machine",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Rod-alloy": 1,
+   "Bioplastic1": 1
+  }
+ },
+ {
+  "id": "AlgaeGenerator1",
+  "name": "T1 Algae Generator",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Bioplastic1": 1,
+   "Vegetable0Growable": 1,
+   "WaterBottle1": 1,
+   "Magnesium": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "AlgaeGenerator2",
+  "name": "T2 Algae Generator",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Bioplastic1": 2,
+   "Fertilizer1": 1,
+   "WaterBottle1": 1,
+   "Magnesium": 1,
+   "Alloy": 2
+  }
+ },
+ {
+  "id": "AmphibiansFarm1",
+  "name": "Amphibian farm",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Fertilizer1": 1,
+   "LarvaeBase1": 1,
+   "WaterBottle1": 1
+  }
+ },
+ {
+  "id": "AnimalFeeder1",
+  "name": "Animal feeder",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "WaterBottle1": 1,
+   "CircuitBoard1": 1,
+   "Bioplastic1": 1,
+   "honey": 1,
+   "Silk": 1
+  }
+ },
+ {
+  "id": "AnimalShelter1",
+  "name": "Animal shelter",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "WaterBottle1": 1,
+   "CircuitBoard1": 1,
+   "Silk": 1,
+   "Seed0": 1,
+   "Fertilizer2": 1,
+   "MethanCapsule1": 1
+  }
+ },
+ {
+  "id": "Aquarium1",
+  "name": "T1 Aquarium",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Fertilizer2": 1,
+   "OxygenCapsule1": 1,
+   "Alloy": 1,
+   "CircuitBoard1": 1
+  }
+ },
+ {
+  "id": "Aquarium2",
+  "name": "T2 Aquarium",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 1,
+   "Rod-alloy": 1,
+   "Fertilizer2": 1,
+   "Phytoplankton1": 3
+  }
+ },
+ {
+  "id": "AutoCrafter1",
+  "name": "Auto-Crafter",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Osmium": 2,
+   "Rod-alloy": 1
+  }
+ },
+ {
+  "id": "Beacon",
+  "name": "Beacon",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Titanium": 1,
+   "Silicon": 1,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "Beehive1",
+  "name": "Beehive",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Bee1Larvae": 1,
+   "Alloy": 1,
+   "Fertilizer1": 1,
+   "Bioplastic1": 1
+  }
+ },
+ {
+  "id": "Beehive2",
+  "name": "T2 Beehive",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Bee1Larvae": 1,
+   "TreeRoot": 1,
+   "Fertilizer2": 1,
+   "Bioplastic1": 1
+  }
+ },
+ {
+  "id": "ButterflyDome1",
+  "name": "Butterfly dome",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Fertilizer2": 1,
+   "Fertilizer1": 1,
+   "TreeRoot": 1,
+   "Zeolite": 1,
+   "Alloy": 2
+  }
+ },
+ {
+  "id": "ButterflyFarm1",
+  "name": "Butterfly farm",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Fertilizer2": 1,
+   "Zeolite": 1,
+   "Bioplastic1": 1
+  }
+ },
+ {
+  "id": "ButterflyFarm2",
+  "name": "T2 Butterfly Farm",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Fertilizer2": 1,
+   "Zeolite": 1,
+   "Bioplastic1": 1,
+   "FabricBlue": 2
+  }
+ },
+ {
+  "id": "ButterflyFarm3",
+  "name": "T3 Butterfly Farm",
+  "type": "Biomass",
+  "planet": "Aqualis",
+  "recipe": {
+   "Fertilizer3": 1,
+   "Zeolite": 1,
+   "Bioplastic1": 1,
+   "Seed2": 1,
+   "FabricBlue": 1,
+   "Silk": 1
+  }
+ },
+ {
+  "id": "ComAntenna",
+  "name": "Communication Antenna",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Silicon": 1,
+   "Titanium": 1,
+   "Iron": 1,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "CraftStation1",
+  "name": "T2 Craft Station",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "CraftStation2",
+  "name": "Advanced Craft Station",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Aluminium": 3,
+   "Titanium": 1,
+   "Magnesium": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "Destructor1",
+  "name": "Shredder machine",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Alloy": 1,
+   "Uranim": 1,
+   "Osmium": 1,
+   "RedPowder1": 1
+  }
+ },
+ {
+  "id": "DetoxificationMachine1",
+  "name": "T1 Detoxification machine",
+  "type": "Purification",
+  "planet": "Toxicity",
+  "recipe": {
+   "Titanium": 2,
+   "PristineMushroom": 1,
+   "Iron": 2,
+   "ToxicSpores": 1
+  }
+ },
+ {
+  "id": "DetoxificationMachine2",
+  "name": "T2 Detoxification machine",
+  "type": "Purification",
+  "planet": "Toxicity",
+  "recipe": {
+   "PurificationCapsule": 2,
+   "PristineMushroom": 1,
+   "PlasticPolymer": 3
+  }
+ },
+ {
+  "id": "DetoxificationMachine3",
+  "name": "T3 Detoxification machine",
+  "type": "Purification",
+  "planet": "Toxicity",
+  "recipe": {
+   "PurificationGel": 2,
+   "Rod-plastic": 1,
+   "Minable-Tungsten": 3
+  }
+ },
+ {
+  "id": "Drill0",
+  "name": "T1 Drill",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Titanium": 1,
+   "Iron": 1
+  }
+ },
+ {
+  "id": "Drill1",
+  "name": "T2 Drill",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Titanium": 2
+  }
+ },
+ {
+  "id": "Drill2",
+  "name": "T3 Drill",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Iron": 2,
+   "Titanium": 2,
+   "Aluminium": 2
+  }
+ },
+ {
+  "id": "Drill3",
+  "name": "T4 Drill",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Alloy": 6,
+   "Osmium": 3
+  }
+ },
+ {
+  "id": "Drill4",
+  "name": "T5 Drill",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Rod-alloy": 2,
+   "Rod-osmium": 1
+  }
+ },
+ {
+  "id": "DroneStation1",
+  "name": "Drone station",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Rod-osmium": 1,
+   "FusionEnergyCell": 1,
+   "Rod-alloy": 1,
+   "CircuitBoard1": 3
+  }
+ },
+ {
+  "id": "Ecosystem1",
+  "name": "Ecosystem",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Fertilizer2": 1,
+   "LarvaeBase1": 1,
+   "Mutagen2": 1,
+   "Bacteria1": 1,
+   "Algae1Seed": 1,
+   "WaterBottle1": 1
+  }
+ },
+ {
+  "id": "EnergyGenerator1",
+  "name": "Wind turbine",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "EnergyGenerator2",
+  "name": "T1 Solar Panel",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Cobalt": 2,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "EnergyGenerator3",
+  "name": "T2 Solar Panel",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Magnesium": 1,
+   "Silicon": 1,
+   "Cobalt": 2,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "EnergyGenerator4",
+  "name": "T1 Nuclear Reactor",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Alloy": 3,
+   "WaterBottle1": 2,
+   "Rod-uranium": 1
+  }
+ },
+ {
+  "id": "EnergyGenerator5",
+  "name": "T2 Nuclear Reactor",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "WaterBottle1": 3,
+   "Alloy": 1,
+   "Rod-uranium": 3,
+   "RedPowder1": 1
+  }
+ },
+ {
+  "id": "EnergyGenerator6",
+  "name": "Nuclear Fusion generator",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "PulsarQuartz": 5,
+   "Alloy": 4
+  }
+ },
+ {
+  "id": "Farm1",
+  "name": "Outdoor farm",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Bee1Larvae": 2,
+   "WaterBottle1": 1,
+   "Fertilizer1": 1,
+   "Fertilizer2": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "Farm2",
+  "name": "T2 Outdoor farm",
+  "type": "Biomass",
+  "planet": "Aqualis",
+  "recipe": {
+   "Bee1Larvae": 2,
+   "Bioplastic1": 1,
+   "Fertilizer1": 1,
+   "Alloy": 1,
+   "Fertilizer3": 1
+  }
+ },
+ {
+  "id": "FishFarm1",
+  "name": "Fish farm",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Bioplastic1": 2,
+   "Phytoplankton1": 1,
+   "Silk": 3
+  }
+ },
+ {
+  "id": "FishFarm2",
+  "name": "T2 Fish farm",
+  "type": "Biomass",
+  "planet": "Aqualis",
+  "recipe": {
+   "Bioplastic1": 2,
+   "Phytoplankton1": 1,
+   "Silk": 2,
+   "Fertilizer3": 1
+  }
+ },
+ {
+  "id": "FusionGenerator1",
+  "name": "Fusion reactor (FusionGenerator1)",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "PulsarQuartz": 3,
+   "Osmium": 2,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "GasExtractor1",
+  "name": "Gas Extractor",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Alloy": 3,
+   "Zeolite": 2,
+   "Rod-iridium": 1
+  }
+ },
+ {
+  "id": "GasExtractor2",
+  "name": "T2 Gas Extractor",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Alloy": 2,
+   "CircuitBoard1": 1,
+   "Zeolite": 2,
+   "Rod-iridium": 1
+  }
+ },
+ {
+  "id": "GeneticExtractor1",
+  "name": "Genetic extractor",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "BalzarQuartz": 1,
+   "PulsarQuartz": 1,
+   "SolarQuartz": 1,
+   "Rod-osmium": 1,
+   "CircuitBoard1": 1,
+   "Mutagen3": 1
+  }
+ },
+ {
+  "id": "GeneticManipulator1",
+  "name": "Tree seed sequencer",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Alloy": 1,
+   "Bioplastic1": 1,
+   "RedPowder1": 1,
+   "Zeolite": 1,
+   "Osmium": 1
+  }
+ },
+ {
+  "id": "GeneticSynthetizer1",
+  "name": "Genetic synthesizer",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "MagnetarQuartz": 1,
+   "BalzarQuartz": 1,
+   "QuasarQuartz": 1,
+   "Rod-alloy": 1,
+   "CircuitBoard1": 1,
+   "Mutagen4": 1
+  }
+ },
+ {
+  "id": "GrassSpreader1",
+  "name": "Grass Spreader",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "WaterBottle1": 2,
+   "Magnesium": 1,
+   "Aluminium": 1,
+   "Seed0": 1
+  }
+ },
+ {
+  "id": "HarvestingRobot1",
+  "name": "Harvesting robot",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "QuasarQuartz": 2,
+   "Rod-alloy": 1,
+   "Osmium": 3
+  }
+ },
+ {
+  "id": "Heater1",
+  "name": "T1 Heater",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Iridium": 1,
+   "Iron": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "Heater2",
+  "name": "T2 Heater",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Iridium": 2,
+   "Silicon": 1,
+   "Titanium": 1,
+   "Iron": 1,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "Heater3",
+  "name": "T3 Heater",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Silicon": 1,
+   "Titanium": 1,
+   "Aluminium": 1,
+   "Rod-iridium": 1
+  }
+ },
+ {
+  "id": "Heater4",
+  "name": "t4 Heater",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Alloy": 3,
+   "Rod-iridium": 2,
+   "RedPowder1": 1
+  }
+ },
+ {
+  "id": "Heater5",
+  "name": "T5 Heater",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Rod-iridium": 3,
+   "RedPowder1": 3,
+   "Rod-alloy": 3
+  }
+ },
+ {
+  "id": "Incubator1",
+  "name": "Incubator",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1,
+   "Fertilizer2": 1,
+   "Alloy": 1,
+   "OxygenCapsule1": 1
+  }
+ },
+ {
+  "id": "Incubator2",
+  "name": "T2 Incubator",
+  "type": "Biomass",
+  "planet": "Skeo",
+  "recipe": {
+   "TreeRoot": 1,
+   "Fertilizer3": 1,
+   "Rod-alloy": 1,
+   "Mutagen4": 1
+  }
+ },
+ {
+  "id": "Optimizer1",
+  "name": "Machine optimizer",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "RedPowder1": 2,
+   "Rod-uranium": 1,
+   "Iron": 2,
+   "Cobalt": 1
+  }
+ },
+ {
+  "id": "Optimizer2",
+  "name": "T2 Machine Optimizer",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "RedPowder1": 2,
+   "Rod-uranium": 1,
+   "Obsidian": 3
+  }
+ },
+ {
+  "id": "OreBreaker1",
+  "name": "T1 Ore Crusher",
+  "type": "Machine",
+  "planet": "Humble",
+  "recipe": {
+   "Dolomite": 3,
+   "Magnesium": 1,
+   "Iron": 1,
+   "Titanium": 1
+  }
+ },
+ {
+  "id": "OreBreaker2",
+  "name": "T2 Ore Crusher",
+  "type": "Machine",
+  "planet": "Humble",
+  "recipe": {
+   "Bauxite": 3,
+   "Cobalt": 2,
+   "Dolomite": 1
+  }
+ },
+ {
+  "id": "OreBreaker3",
+  "name": "T3 Ore Crusher",
+  "type": "Machine",
+  "planet": "Humble",
+  "recipe": {
+   "Bauxite": 2,
+   "Uraninite": 1,
+   "Cobalt": 2,
+   "Dolomite": 1
+  }
+ },
+ {
+  "id": "OreExtractor1",
+  "name": "Ore Extractor",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Osmium": 2,
+   "Rod-iridium": 1,
+   "Alloy": 1,
+   "Aluminium": 1,
+   "Titanium": 1
+  }
+ },
+ {
+  "id": "OreExtractor2",
+  "name": "T2 Ore Extractor",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Osmium": 3,
+   "Rod-alloy": 1,
+   "Rod-iridium": 2
+  }
+ },
+ {
+  "id": "OreExtractor3",
+  "name": "T3 Ore Extractor",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Rod-osmium": 1,
+   "Rod-alloy": 1,
+   "Rod-iridium": 1,
+   "Titanium": 3
+  }
+ },
+ {
+  "id": "PortalGenerator1",
+  "name": "Portal generator",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "FusionEnergyCell": 2,
+   "FuseEnergy1": 2,
+   "CircuitBoard1": 2,
+   "HudCompass": 1,
+   "Rod-alloy": 2
+  }
+ },
+ {
+  "id": "QuartzCraftStation1",
+  "name": "Quartz craft station",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Aluminium": 2,
+   "CosmicQuartz": 1,
+   "Titanium": 1,
+   "CircuitBoard1": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "RecyclingMachine",
+  "name": "Recycling machine",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "MultiDeconstruct": 2,
+   "Alloy": 3
+  }
+ },
+ {
+  "id": "RecyclingMachine2",
+  "name": "T2 Recycling machine",
+  "type": "Machine",
+  "planet": "Selenea",
+  "recipe": {
+   "Alloy": 2,
+   "Explosive": 1,
+   "Selenium": 2,
+   "CircuitBoard1": 1
+  }
+ },
+ {
+  "id": "SeedSpreader1",
+  "name": "Flower Spreader",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "WaterBottle1": 3,
+   "Alloy": 1,
+   "Magnesium": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "SeedSpreader2",
+  "name": "T2 Flower Spreader",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "WaterBottle1": 2,
+   "Alloy": 2,
+   "Fertilizer1": 2
+  }
+ },
+ {
+  "id": "SilkGenerator",
+  "name": "Silk generator",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "SilkWorm": 3,
+   "Zeolite": 1,
+   "WaterBottle1": 1,
+   "OxygenCapsule1": 1
+  }
+ },
+ {
+  "id": "Teleporter1",
+  "name": "Teleporter",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Rod-alloy": 1,
+   "Osmium": 1,
+   "Zeolite": 1,
+   "PulsarQuartz": 2,
+   "Obsidian": 1
+  }
+ },
+ {
+  "id": "ToxicRefinementCraftStation1",
+  "name": "Craft Station - refinement",
+  "type": "Purification",
+  "planet": "Toxicity",
+  "recipe": {
+   "Iron": 1,
+   "Silicon": 1,
+   "ToxicSpores": 1
+  }
+ },
+ {
+  "id": "ToxicWaterCollector1",
+  "name": "T1 Toxic Water Collector",
+  "type": "Purification",
+  "planet": "Toxicity",
+  "recipe": {
+   "MicroPlastics": 2,
+   "PristineMushroom": 1
+  }
+ },
+ {
+  "id": "ToxicWaterCollector2",
+  "name": "T2 Toxic Water Collector",
+  "type": "Purification",
+  "planet": "Toxicity",
+  "recipe": {
+   "Minable-Tungsten": 1,
+   "PurificationGel": 1,
+   "PlasticPolymer": 1
+  }
+ },
+ {
+  "id": "ToxicWaterCollector3",
+  "name": "T3 Toxic Water Collector",
+  "type": "Purification",
+  "planet": "Toxicity",
+  "recipe": {
+   "Rod-tungsten": 1,
+   "PurificationGel": 1,
+   "Rod-plastic": 1
+  }
+ },
+ {
+  "id": "TreePlanter",
+  "name": "Tree pot",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Alloy": 1,
+   "Fertilizer2": 1
+  }
+ },
+ {
+  "id": "TreePlanter3",
+  "name": "Giant trees pot",
+  "type": "Furniture",
+  "planet": "Skeo",
+  "recipe": {
+   "Amber": 1,
+   "Fertilizer3": 1
+  }
+ },
+ {
+  "id": "TreeSpreader0",
+  "name": "Tree Spreader",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Alloy": 1,
+   "Bacteria1": 1,
+   "Fertilizer1": 1,
+   "TreeRoot": 1,
+   "Bioplastic1": 1
+  }
+ },
+ {
+  "id": "TreeSpreader1",
+  "name": "T2 Tree Spreader",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Alloy": 1,
+   "Bacteria1": 1,
+   "TreeRoot": 1,
+   "Fertilizer2": 1,
+   "Zeolite": 1
+  }
+ },
+ {
+  "id": "TreeSpreader2",
+  "name": "T3 Tree Spreader",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Alloy": 1,
+   "Bacteria1": 1,
+   "TreeRoot": 1,
+   "Fertilizer2": 2,
+   "Zeolite": 1
+  }
+ },
+ {
+  "id": "VegetableGrower1",
+  "name": "Food Grower",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Aluminium": 1,
+   "Iron": 1,
+   "WaterBottle1": 1
+  }
+ },
+ {
+  "id": "VegetableGrower2",
+  "name": "T2 Food Grower",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "WaterBottle1": 1,
+   "Alloy": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Vegetube1",
+  "name": "T1 Vegetube",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "ice": 1,
+   "Magnesium": 1
+  }
+ },
+ {
+  "id": "Vegetube2",
+  "name": "T2 Vegetube",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "ice": 2,
+   "Magnesium": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "VegetubeOutside1",
+  "name": "T3 Vegetube",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "WaterBottle1": 1,
+   "Silicon": 2,
+   "Magnesium": 1,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "WaterCollector1",
+  "name": "Atmospheric Water Collector",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Silicon": 1,
+   "Magnesium": 1,
+   "Cobalt": 1,
+   "Aluminium": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "WaterCollector2",
+  "name": "Lake Water Collector",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Bioplastic1": 3,
+   "Magnesium": 1,
+   "Aluminium": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "WaterLifeCollector1",
+  "name": "Water life collector",
+  "type": "Biomass",
+  "planet": "",
+  "recipe": {
+   "Bioplastic1": 2,
+   "Alloy": 1,
+   "Silk": 3
+  }
+ },
+ {
+  "id": "WindTurbine1",
+  "name": "T2 Wind turbine",
+  "type": "Machine",
+  "planet": "Aqualis",
+  "recipe": {
+   "Iron": 2,
+   "Bioplastic1": 2,
+   "Silicon": 2
+  }
+ },
+ {
+  "id": "EndingExplosives",
+  "name": "Large explosive device",
+  "type": "Machine",
+  "planet": "",
+  "recipe": {
+   "Rod-iridium": 3,
+   "CircuitBoard1": 1,
+   "FusionEnergyCell": 1,
+   "Rod-uranium": 1,
+   "RedPowder1": 3
+  }
+ },
+ {
+  "id": "ToxicityDiorama1",
+  "name": "Terraforming Diorama A",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Aluminium": 1,
+   "Minable-Tungsten": 1,
+   "PlasticPolymer": 1,
+   "WaterBottle1": 1
+  }
+ },
+ {
+  "id": "ToxicityDiorama2",
+  "name": "Terraforming Diorama B",
+  "type": "Furniture",
+  "planet": "",
+  "recipe": {
+   "Aluminium": 1,
+   "Minable-Tungsten": 1,
+   "PlasticPolymer": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "AirPurificationMachine1",
+  "name": "T1 Atmosphere purifier",
+  "type": "Purification",
+  "planet": "Toxicity",
+  "recipe": {
+   "PlasticPolymer": 2,
+   "PristineMushroom": 1,
+   "PurificationCapsule": 3
+  }
+ },
+ {
+  "id": "AirPurificationMachine2",
+  "name": "T2 Atmosphere purifier",
+  "type": "Purification",
+  "planet": "Toxicity",
+  "recipe": {
+   "PlasticPolymer": 4,
+   "PurificationGel": 2
+  }
+ },
+ {
+  "id": "AirPurificationMachine3",
+  "name": "T3 Atmosphere purifier",
+  "type": "Purification",
+  "planet": "Toxicity",
+  "recipe": {
+   "Rod-plastic": 2,
+   "PurificationGel": 2,
+   "Minable-Tungsten": 2
+  }
+ },
+ {
+  "id": "AirPurificationMachine4",
+  "name": "T4 Atmosphere purifier",
+  "type": "Purification",
+  "planet": "Toxicity",
+  "recipe": {
+   "Rod-plastic": 2,
+   "PurificationGel": 2,
+   "Rod-tungsten": 2
+  }
+ },
+ {
+  "id": "ScreenBiomass",
+  "name": "Biomass screen",
+  "type": "Screen",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Silicon": 1,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "ScreenEnergy",
+  "name": "Screen - Energy levels",
+  "type": "Screen",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Silicon": 1,
+   "Magnesium": 1
+  }
+ },
+ {
+  "id": "ScreenMap1",
+  "name": "Screen - Mapping",
+  "type": "Screen",
+  "planet": "",
+  "recipe": {
+   "HudCompass": 1,
+   "Iron": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "ScreenMessage",
+  "name": "Screen - Transmissions",
+  "type": "Screen",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Silicon": 2,
+   "Magnesium": 1
+  }
+ },
+ {
+  "id": "ScreenRockets",
+  "name": "Screen – Orbital information",
+  "type": "Screen",
+  "planet": "",
+  "recipe": {
+   "HudCompass": 1,
+   "Osmium": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "ScreenSystem1",
+  "name": "Solar system screen",
+  "type": "Screen",
+  "planet": "",
+  "recipe": {
+   "SolarQuartz": 1,
+   "Silicon": 1,
+   "MagnetarQuartz": 1
+  }
+ },
+ {
+  "id": "ScreenTerraStage",
+  "name": "Screen - Progress",
+  "type": "Screen",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Silicon": 2,
+   "Cobalt": 1
+  }
+ },
+ {
+  "id": "ScreenTerraformation",
+  "name": "Screen - Terraformation",
+  "type": "Screen",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Cobalt": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "ScreenToxic1",
+  "name": "Screen – Toxicity",
+  "type": "Purification",
+  "planet": "Toxicity",
+  "recipe": {
+   "PlasticPolymer": 1,
+   "PristineMushroom": 1,
+   "ChlorineCapsule1": 1
+  }
+ },
+ {
+  "id": "ScreenUnlockables",
+  "name": "Screen - Blueprints",
+  "type": "Screen",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "VehicleTruck",
+  "name": "Vehicle – Rover",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 2,
+   "Uranim": 1,
+   "Iron": 1,
+   "FabricBlue": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "Frog14Eggs",
+  "name": "Seren frog eggs",
+  "type": "Item",
+  "planet": "Selenea",
+  "recipe": {
+   "Frog1Eggs": 1,
+   "Mutagen4": 1,
+   "Fertilizer3": 1
+  }
+ },
+ {
+  "id": "Frog15Eggs",
+  "name": "Acuzzi frog eggs",
+  "type": "Item",
+  "planet": "Aqualis",
+  "recipe": {
+   "Frog1Eggs": 1,
+   "Mutagen3": 1,
+   "Fertilizer3": 1
+  }
+ },
+ {
+  "id": "Frog16Eggs",
+  "name": "Toxifia frog eggs",
+  "type": "Item",
+  "planet": "Toxicity",
+  "recipe": {
+   "Frog1Eggs": 1,
+   "Mutagen3": 1,
+   "PristineMushroom": 1
+  }
+ },
+ {
+  "id": "Frog1Eggs",
+  "name": "Generic frog eggs",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Phytoplankton1": 1,
+   "Mutagen4": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Frog2Eggs",
+  "name": "Huli frog eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Frog1Eggs": 1,
+   "Mutagen4": 1
+  }
+ },
+ {
+  "id": "Frog3Eggs",
+  "name": "Felicianna frog eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Frog1Eggs": 1,
+   "Mutagen4": 1
+  }
+ },
+ {
+  "id": "Frog4Eggs",
+  "name": "Strabo frog eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Frog1Eggs": 1,
+   "Mutagen4": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Frog5Eggs",
+  "name": "Trajuu frog eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Frog1Eggs": 1,
+   "Mutagen4": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Frog6Eggs",
+  "name": "Aiolus frog eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Frog1Eggs": 1,
+   "Mutagen4": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Frog7Eggs",
+  "name": "Afae frog eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Frog1Eggs": 1,
+   "Mutagen3": 1,
+   "Fertilizer2": 1
+  }
+ },
+ {
+  "id": "Frog8Eggs",
+  "name": "Cillus frog eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Frog1Eggs": 1,
+   "Mutagen3": 1,
+   "Fertilizer2": 1
+  }
+ },
+ {
+  "id": "Frog9Eggs",
+  "name": "Amedo frog eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Frog1Eggs": 1,
+   "Mutagen4": 1,
+   "Fertilizer2": 1
+  }
+ },
+ {
+  "id": "FrogGoldEggs",
+  "name": "Golden frog eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Frog1Eggs": 1,
+   "Mutagen3": 1,
+   "Fertilizer2": 1
+  }
+ },
+ {
+  "id": "AntiToxinsExplosive1",
+  "name": "T1 Toxic goo removal explosives",
+  "type": "Item",
+  "planet": "Toxicity",
+  "recipe": {
+   "PristineMushroom": 1,
+   "ToxicGoo": 1,
+   "Sulfur": 1
+  }
+ },
+ {
+  "id": "AntiToxinsExplosive2",
+  "name": "T2 Toxic goo removal explosives",
+  "type": "Item",
+  "planet": "Toxicity",
+  "recipe": {
+   "PristineMushroom": 1,
+   "ToxicGoo": 1,
+   "RedPowder1": 1
+  }
+ },
+ {
+  "id": "Bacteria1",
+  "name": "Bacteria Sample",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Algae1Seed": 3,
+   "WaterBottle1": 3
+  }
+ },
+ {
+  "id": "Bioplastic1",
+  "name": "Bioplastic nugget",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Vegetable3Growable": 2,
+   "Silicon": 1,
+   "WaterBottle1": 1
+  }
+ },
+ {
+  "id": "Explosive",
+  "name": "Explosive",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "RedPowder1": 2,
+   "CircuitBoard1": 1
+  }
+ },
+ {
+  "id": "Fertilizer1",
+  "name": "Fertilizer",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Algae1Seed": 3,
+   "Sulfur": 1,
+   "Vegetable0Growable": 2
+  }
+ },
+ {
+  "id": "Fertilizer2",
+  "name": "T2 Fertilizer",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Fertilizer1": 1,
+   "Algae1Seed": 1,
+   "Vegetable1Growable": 1,
+   "MethanCapsule1": 2
+  }
+ },
+ {
+  "id": "Fertilizer3",
+  "name": "T3 Fertilizer",
+  "type": "Component",
+  "planet": "Aqualis",
+  "recipe": {
+   "Phosphorus": 2,
+   "Fertilizer2": 1
+  }
+ },
+ {
+  "id": "Flare",
+  "name": "Flare",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "RedPowder1": 1,
+   "Bioplastic1": 1
+  }
+ },
+ {
+  "id": "GeneticTrait",
+  "name": "Genetic trait",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Mutagen1",
+  "name": "Mutagen",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Bacteria1": 1,
+   "MethanCapsule1": 1,
+   "Sulfur": 1
+  }
+ },
+ {
+  "id": "Mutagen2",
+  "name": "T2 Mutagen",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Mutagen1": 1,
+   "LarvaeBase1": 1,
+   "honey": 1
+  }
+ },
+ {
+  "id": "Mutagen3",
+  "name": "T3 Mutagen",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Bacteria1": 1,
+   "NitrogenCapsule1": 1,
+   "Sulfur": 1
+  }
+ },
+ {
+  "id": "Mutagen4",
+  "name": "T4 Mutagen",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Mutagen3": 1,
+   "Mutagen1": 1
+  }
+ },
+ {
+  "id": "Phytoplankton1",
+  "name": "Phytoplankton",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "RedPowder1",
+  "name": "Explosive powder",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Sulfur": 2,
+   "Iridium": 1
+  }
+ },
+ {
+  "id": "FabricBlue",
+  "name": "Fabric",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Silk": 2
+  }
+ },
+ {
+  "id": "FuseAnimals1",
+  "name": "Animals multiplier fuse",
+  "type": "Item",
+  "planet": "Aqualis",
+  "recipe": {
+   "GeneticTrait": 2,
+   "FuseCartridge": 1,
+   "Mutagen4": 1,
+   "Phosphorus": 1,
+   "Mutagen2": 1,
+   "AnimalFood1": 1
+  }
+ },
+ {
+  "id": "FuseCartridge",
+  "name": "Fuse cartridge",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "SolarQuartz": 2,
+   "CircuitBoard1": 1
+  }
+ },
+ {
+  "id": "FuseEnergy1",
+  "name": "Energy multiplier fuse",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "PulsarQuartz": 2,
+   "FuseCartridge": 1,
+   "SolarQuartz": 2,
+   "CosmicQuartz": 1
+  }
+ },
+ {
+  "id": "FuseGrowth1",
+  "name": "Growth multiplier fuse",
+  "type": "Item",
+  "planet": "Selenea",
+  "recipe": {
+   "Fertilizer3": 2,
+   "FuseCartridge": 1,
+   "SilkWorm": 2,
+   "QuasarQuartz": 1
+  }
+ },
+ {
+  "id": "FuseHeat1",
+  "name": "Heat multiplier fuse",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "FuseInsects1",
+  "name": "Insects multiplier fuse",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Bee1Larvae": 1,
+   "FuseCartridge": 1,
+   "SilkWorm": 1,
+   "Seed4": 1,
+   "Seed5": 1,
+   "Seed6": 1,
+   "Bioplastic1": 1
+  }
+ },
+ {
+  "id": "FusePressure1",
+  "name": "Pressure multiplier fuse",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "FusePurification1",
+  "name": "Purification multiplier fuse",
+  "type": "Item",
+  "planet": "Toxicity",
+  "recipe": {
+   "PristineMushroom": 2,
+   "FuseCartridge": 1,
+   "PurificationGel": 1,
+   "Rod-plastic": 1,
+   "ToxicGoo": 1
+  }
+ },
+ {
+  "id": "FuseTradeRocketsSpeed1",
+  "name": "Trade rocket multiplier fuse",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Selenium": 2,
+   "FuseCartridge": 1,
+   "QuasarQuartz": 2,
+   "SolarQuartz": 1
+  }
+ },
+ {
+  "id": "ProceduralWreckContainer1",
+  "name": "Storage crate (ProceduralWreckContainer1)",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "ProceduralWreckContainer2",
+  "name": "Storage crate (ProceduralWreckContainer2)",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "Silk",
+  "name": "Silk",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "SmartFabric",
+  "name": "Smart fabric",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "FabricBlue": 2,
+   "CircuitBoard1": 1
+  }
+ },
+ {
+  "id": "CookCake1",
+  "name": "Birthday cake",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "CookChocolate": 3,
+   "CookFlour": 3,
+   "honey": 3
+  }
+ },
+ {
+  "id": "CookChocolate",
+  "name": "Chocolate",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "CookCocoaGrowable": 6
+  }
+ },
+ {
+  "id": "CookCocoaGrowable",
+  "name": "Cocoa",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "CookCookie1",
+  "name": "Cookie",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "CookFlour": 3,
+   "CookChocolate": 3
+  }
+ },
+ {
+  "id": "CookCroissant",
+  "name": "Croissant",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "CookFlour": 3
+  }
+ },
+ {
+  "id": "CookFlour",
+  "name": "Flour",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "CookWheatGrowable": 6
+  }
+ },
+ {
+  "id": "CookStew1",
+  "name": "Honey cooked beans",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Vegetable2Growable": 1,
+   "Vegetable0Growable": 1,
+   "Vegetable1Growable": 1,
+   "honey": 1
+  }
+ },
+ {
+  "id": "CookStewFish1",
+  "name": "Fish soup",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Fish1Eggs": 1,
+   "Fish2Eggs": 1,
+   "honey": 1
+  }
+ },
+ {
+  "id": "CookWheatGrowable",
+  "name": "Wheat",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "CircuitBoard1",
+  "name": "Circuit board",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Silicon": 1,
+   "Iron": 1,
+   "Aluminium": 1,
+   "NitrogenCapsule1": 1,
+   "Bioplastic1": 1,
+   "Zeolite": 1
+  }
+ },
+ {
+  "id": "Drone1",
+  "name": "T1 Drone",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 1,
+   "CircuitBoard1": 1,
+   "Iron": 1
+  }
+ },
+ {
+  "id": "Drone2",
+  "name": "T2 Drone",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Drone1": 1,
+   "Alloy": 1,
+   "RedPowder1": 1
+  }
+ },
+ {
+  "id": "Drone3",
+  "name": "T3 Drone",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Drone2": 1,
+   "RocketReactor2": 1,
+   "MagnetarQuartz": 1
+  }
+ },
+ {
+  "id": "FusionEnergyCell",
+  "name": "Fusion Energy Cell",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "PulsarQuartz": 3,
+   "Osmium": 2,
+   "Obsidian": 1
+  }
+ },
+ {
+  "id": "Keycard1",
+  "name": "Access card (Keycard1)",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 2
+  }
+ },
+ {
+  "id": "KeyCard2",
+  "name": "Access card (KeyCard2)",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 2
+  }
+ },
+ {
+  "id": "MethanCapsule1",
+  "name": "Methane cartridge",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "NitrogenCapsule1",
+  "name": "Nitrogen cartridge",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "OxygenCapsule1",
+  "name": "Oxygen capsule",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Cobalt": 2
+  }
+ },
+ {
+  "id": "RocketReactor",
+  "name": "Rocket Engine",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Rod-iridium": 1,
+   "Uranim": 2,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "RocketReactor2",
+  "name": "T2 Rocket Engine",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 2,
+   "SolarQuartz": 1,
+   "Phosphorus": 1,
+   "CircuitBoard1": 1,
+   "Selenium": 1
+  }
+ },
+ {
+  "id": "Rod-alloy",
+  "name": "Super Alloy Rod",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Alloy": 8,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "Rod-iridium",
+  "name": "Iridium Rod",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Iridium": 9
+  }
+ },
+ {
+  "id": "Rod-osmium",
+  "name": "Osmium Rod",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Osmium": 9
+  }
+ },
+ {
+  "id": "Rod-plastic",
+  "name": "Plastic Rod",
+  "type": "Component",
+  "planet": "Toxicity",
+  "recipe": {
+   "PlasticPolymer": 8,
+   "Toxins": 1
+  }
+ },
+ {
+  "id": "Rod-tungsten",
+  "name": "Tungsten Rod",
+  "type": "Component",
+  "planet": "Toxicity",
+  "recipe": {
+   "Minable-Tungsten": 8,
+   "Toxins": 1
+  }
+ },
+ {
+  "id": "Rod-uranium",
+  "name": "Uranium Rod",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Uranim": 9
+  }
+ },
+ {
+  "id": "ToxicityAmmo",
+  "name": "Toxic artillery shell",
+  "type": "Component",
+  "planet": "Toxicity",
+  "recipe": {
+   "ToxicGoo": 1,
+   "RedPowder1": 1,
+   "Minable-Tungsten": 1
+  }
+ },
+ {
+  "id": "ToxicityAmmoPack",
+  "name": "Toxic artillery shells pack",
+  "type": "Item",
+  "planet": "Toxicity",
+  "recipe": {
+   "ToxicityAmmo": 9
+  }
+ },
+ {
+  "id": "ToxicityMedecine",
+  "name": "Pristine purifying balm",
+  "type": "Component",
+  "planet": "Toxicity",
+  "recipe": {
+   "PurificationGel": 1,
+   "MicroPlastics": 1
+  }
+ },
+ {
+  "id": "ToxicityMedecinePack",
+  "name": "Pristine purifying balms pack",
+  "type": "Item",
+  "planet": "Toxicity",
+  "recipe": {
+   "ToxicityMedecine": 9
+  }
+ },
+ {
+  "id": "WaterBottle1",
+  "name": "Water bottle",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "ice": 1
+  }
+ },
+ {
+  "id": "AnimalFood1",
+  "name": "T1 Animal food",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "honey": 1,
+   "Vegetable2Growable": 1,
+   "LarvaeBase1": 1
+  }
+ },
+ {
+  "id": "AnimalFood2",
+  "name": "T2 Animal food",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "AnimalFood1": 1,
+   "Algae1Seed": 1,
+   "LarvaeBase3": 1
+  }
+ },
+ {
+  "id": "AnimalFood3",
+  "name": "T3 Animal food",
+  "type": "Item",
+  "planet": "Aqualis",
+  "recipe": {
+   "AnimalFood2": 1,
+   "SilkWorm": 1
+  }
+ },
+ {
+  "id": "astrofood2",
+  "name": "High quality food",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "honey": 1,
+   "Vegetable2Growable": 1
+  }
+ },
+ {
+  "id": "honey",
+  "name": "Honey",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "AirFilter1",
+  "name": "Air filter",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "FabricBlue": 1,
+   "Osmium": 1,
+   "Alloy": 1,
+   "Bioplastic1": 2,
+   "MethanCapsule1": 1
+  }
+ },
+ {
+  "id": "Backpack1",
+  "name": "T1 Backpack",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Iron": 2
+  }
+ },
+ {
+  "id": "Backpack2",
+  "name": "T2 Backpack",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Backpack1": 1,
+   "Iron": 1,
+   "Silicon": 1,
+   "Titanium": 1
+  }
+ },
+ {
+  "id": "Backpack3",
+  "name": "T3 Backpack",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Backpack2": 1,
+   "Aluminium": 2,
+   "Titanium": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "Backpack4",
+  "name": "T4 Backpack",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Backpack3": 1,
+   "Alloy": 3,
+   "Titanium": 1
+  }
+ },
+ {
+  "id": "Backpack5",
+  "name": "T5 Backpack",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Backpack4": 1,
+   "Alloy": 3,
+   "Titanium": 1
+  }
+ },
+ {
+  "id": "Backpack6",
+  "name": "T6 Backpack",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "BalzarQuartz": 1,
+   "Backpack5": 1,
+   "MagnetarQuartz": 1,
+   "CircuitBoard1": 1,
+   "Obsidian": 1
+  }
+ },
+ {
+  "id": "Backpack7",
+  "name": "T7 Backpack",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Alloy": 2,
+   "Backpack6": 1,
+   "MagnetarQuartz": 1,
+   "CosmicQuartz": 1,
+   "SolarQuartz": 1,
+   "CircuitBoard1": 3
+  }
+ },
+ {
+  "id": "BootsSpeed1",
+  "name": "T1 Agility Boots",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Aluminium": 2,
+   "FabricBlue": 2
+  }
+ },
+ {
+  "id": "BootsSpeed2",
+  "name": "T2 Agility Boots",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "BootsSpeed1": 1,
+   "Alloy": 2,
+   "FabricBlue": 2
+  }
+ },
+ {
+  "id": "BootsSpeed3",
+  "name": "T3 Agility Boots",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "BootsSpeed2": 1,
+   "Alloy": 2,
+   "RedPowder1": 1
+  }
+ },
+ {
+  "id": "EquipmentIncrease1",
+  "name": "T1 Exoskeleton",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Titanium": 1,
+   "Silicon": 1,
+   "Magnesium": 1
+  }
+ },
+ {
+  "id": "EquipmentIncrease2",
+  "name": "T2 Exoskeleton",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "EquipmentIncrease1": 1,
+   "Titanium": 1,
+   "Silicon": 1,
+   "Magnesium": 2,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "EquipmentIncrease3",
+  "name": "T3 Exoskeleton",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Osmium": 2,
+   "EquipmentIncrease2": 1,
+   "Rod-alloy": 1,
+   "Rod-uranium": 1
+  }
+ },
+ {
+  "id": "EquipmentIncrease4",
+  "name": "T4 Exoskeleton",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "BalzarQuartz": 2,
+   "EquipmentIncrease3": 1,
+   "CircuitBoard1": 1,
+   "Rod-uranium": 1
+  }
+ },
+ {
+  "id": "EquipmentIncrease5",
+  "name": "T5 Exoskeleton",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 2,
+   "EquipmentIncrease4": 1,
+   "CosmicQuartz": 1,
+   "Rod-uranium": 1,
+   "QuasarQuartz": 1
+  }
+ },
+ {
+  "id": "HudChipCleanConstruction",
+  "name": "Microchip – Construction menu filter",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Alloy": 1,
+   "Magnesium": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "HudCompass",
+  "name": "Microchip - Compass",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Silicon": 1,
+   "Magnesium": 1,
+   "Aluminium": 2
+  }
+ },
+ {
+  "id": "Jetpack1",
+  "name": "T1 Jetpack",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 2,
+   "Titanium": 1
+  }
+ },
+ {
+  "id": "Jetpack2",
+  "name": "T2 Jetpack",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Jetpack1": 1,
+   "Alloy": 1,
+   "Sulfur": 1,
+   "Osmium": 1,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "Jetpack3",
+  "name": "T3 Jetpack",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Jetpack2": 1,
+   "Alloy": 1,
+   "Osmium": 2,
+   "RedPowder1": 2
+  }
+ },
+ {
+  "id": "Jetpack4",
+  "name": "T4 Jetpack",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Rod-osmium": 1,
+   "Jetpack3": 1,
+   "Rod-iridium": 1,
+   "BalzarQuartz": 2,
+   "RedPowder1": 1
+  }
+ },
+ {
+  "id": "Jetpack5",
+  "name": "T5 Jetpack",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "RocketReactor2": 2,
+   "Jetpack4": 1,
+   "RedPowder1": 2,
+   "CosmicQuartz": 1,
+   "CircuitBoard1": 3
+  }
+ },
+ {
+  "id": "MapChip",
+  "name": "Microchip – Map",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Aluminium": 2,
+   "Obsidian": 1
+  }
+ },
+ {
+  "id": "MultiToolCleaningGooChip1",
+  "name": "Microchip – T1 Goo cleaning",
+  "type": "Equipment",
+  "planet": "Toxicity",
+  "recipe": {
+   "Magnesium": 1,
+   "ToxicSpores": 1
+  }
+ },
+ {
+  "id": "MultiToolCleaningGooChip2",
+  "name": "Microchip – T2 Goo cleaning",
+  "type": "Equipment",
+  "planet": "Toxicity",
+  "recipe": {
+   "PlasticPolymer": 2,
+   "MultiToolCleaningGooChip1": 1,
+   "PurificationCapsule": 2,
+   "PristineMushroom": 1
+  }
+ },
+ {
+  "id": "MultiToolCleaningGooChip3",
+  "name": "Microchip – T3 Goo cleaning",
+  "type": "Equipment",
+  "planet": "Toxicity",
+  "recipe": {
+   "PlasticPolymer": 2,
+   "MultiToolCleaningGooChip2": 1,
+   "Minable-Tungsten": 1,
+   "PurificationGel": 1,
+   "PurificationCapsule": 1
+  }
+ },
+ {
+  "id": "MultiToolCleaningGooChip4",
+  "name": "Microchip – T4 Goo cleaning",
+  "type": "Equipment",
+  "planet": "Toxicity",
+  "recipe": {
+   "Minable-Tungsten": 2,
+   "MultiToolCleaningGooChip3": 1,
+   "PlasticPolymer": 1,
+   "PurificationGel": 1,
+   "PurificationCapsule": 1
+  }
+ },
+ {
+  "id": "MultiBuild",
+  "name": "Microchip - Construction",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Silicon": 2,
+   "Magnesium": 2
+  }
+ },
+ {
+  "id": "MultiDeconstruct",
+  "name": "Microchip - Deconstruction",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Silicon": 1,
+   "Magnesium": 1
+  }
+ },
+ {
+  "id": "MultiToolDeconstruct2",
+  "name": "Microchip – T2 Deconstruction",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "MethanCapsule1": 1,
+   "MultiDeconstruct": 1,
+   "Zeolite": 1
+  }
+ },
+ {
+  "id": "MultiToolDeconstruct3",
+  "name": "Microchip – T3 Deconstruction",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "BalzarQuartz": 1,
+   "MultiToolDeconstruct2": 1,
+   "MagnetarQuartz": 1
+  }
+ },
+ {
+  "id": "MultiToolLight",
+  "name": "Microchip - Torch",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Silicon": 1,
+   "Magnesium": 2
+  }
+ },
+ {
+  "id": "MultiToolLight2",
+  "name": "Microchip – T2 Torch",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "MultiToolLight": 1,
+   "Aluminium": 1,
+   "Magnesium": 1,
+   "Sulfur": 1
+  }
+ },
+ {
+  "id": "MultiToolLight3",
+  "name": "Microchip – T3 Torch",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "SolarQuartz": 2,
+   "MultiToolLight2": 1
+  }
+ },
+ {
+  "id": "MultiToolMineSpeed1",
+  "name": "Microchip - T1 Mining Speed",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Magnesium": 1,
+   "Silicon": 1,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "MultiToolMineSpeed2",
+  "name": "Microchip - T2 Mining Speed",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "MultiToolMineSpeed1": 1,
+   "Silicon": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "MultiToolMineSpeed3",
+  "name": "Microchip - T3 Mining Speed",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "MultiToolMineSpeed2": 1,
+   "Silicon": 1,
+   "Aluminium": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "MultiToolMineSpeed4",
+  "name": "Microchip - T4 Mining Speed",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "MultiToolMineSpeed3": 1,
+   "Silicon": 1,
+   "Osmium": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "OxygenTank1",
+  "name": "T1 Oxygen Tank",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Cobalt": 2,
+   "Iron": 1,
+   "Magnesium": 1
+  }
+ },
+ {
+  "id": "OxygenTank2",
+  "name": "T2 Oxygen Tank",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "OxygenTank1": 1,
+   "Silicon": 1,
+   "Cobalt": 1,
+   "Titanium": 1,
+   "Magnesium": 2
+  }
+ },
+ {
+  "id": "OxygenTank3",
+  "name": "T3 Oxygen Tank",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "OxygenTank2": 1,
+   "Iron": 1,
+   "Titanium": 1,
+   "Silicon": 1,
+   "Magnesium": 1,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "OxygenTank4",
+  "name": "T4 Oxygen Tank",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Alloy": 3,
+   "OxygenTank3": 1,
+   "Cobalt": 1
+  }
+ },
+ {
+  "id": "OxygenTank5",
+  "name": "T5 Oxygen Tank",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Alloy": 2,
+   "OxygenTank4": 1,
+   "QuasarQuartz": 2,
+   "CosmicQuartz": 1,
+   "CircuitBoard1": 3
+  }
+ },
+ {
+  "id": "PinChip1",
+  "name": "Microchip – T1 Blueprint Pinning",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Aluminium": 1,
+   "Osmium": 1,
+   "Alloy": 1,
+   "Cobalt": 2,
+   "Magnesium": 1
+  }
+ },
+ {
+  "id": "PinChip2",
+  "name": "Microchip – T2 Blueprint pinning",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "PinChip1": 1,
+   "MethanCapsule1": 1,
+   "Osmium": 1,
+   "Zeolite": 1,
+   "Magnesium": 1,
+   "Cobalt": 1
+  }
+ },
+ {
+  "id": "PinChip3",
+  "name": "Microchip – T3 Blueprint pinning",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "QuasarQuartz": 1,
+   "PinChip2": 1,
+   "BalzarQuartz": 1
+  }
+ },
+ {
+  "id": "ToxicZoneHudDisplayer",
+  "name": "Microchip - Toxic Areas Informations",
+  "type": "Equipment",
+  "planet": "Toxicity",
+  "recipe": {
+   "MicroPlastics": 2,
+   "ChlorineCapsule1": 1
+  }
+ },
+ {
+  "id": "ToxicZoneHudDisplayer2",
+  "name": "Microchip – T2 Toxic Areas Informations",
+  "type": "Equipment",
+  "planet": "Toxicity",
+  "recipe": {
+   "PurificationGel": 1,
+   "ToxicZoneHudDisplayer": 1,
+   "PurificationCapsule": 1,
+   "PlasticPolymer": 3
+  }
+ },
+ {
+  "id": "ToxinsFilter1",
+  "name": "T1 Toxins Filter",
+  "type": "Equipment",
+  "planet": "Toxicity",
+  "recipe": {
+   "PlasticPolymer": 2,
+   "Silicon": 1,
+   "PurificationCapsule": 3
+  }
+ },
+ {
+  "id": "ToxinsFilter2",
+  "name": "T2 Toxins Filter",
+  "type": "Equipment",
+  "planet": "Toxicity",
+  "recipe": {
+   "PlasticPolymer": 2,
+   "ToxinsFilter1": 1,
+   "PurificationCapsule": 2,
+   "PristineMushroom": 1
+  }
+ },
+ {
+  "id": "ToxinsFilter3",
+  "name": "T3 Toxins Filter",
+  "type": "Equipment",
+  "planet": "Toxicity",
+  "recipe": {
+   "Minable-Tungsten": 2,
+   "ToxinsFilter2": 1,
+   "PurificationGel": 2,
+   "Rod-plastic": 1
+  }
+ },
+ {
+  "id": "WardensChip",
+  "name": "Warden key detector",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "SolarQuartz": 2,
+   "CircuitBoard1": 1,
+   "MagnetarQuartz": 1,
+   "BalzarQuartz": 1
+  }
+ },
+ {
+  "id": "WaterFilter",
+  "name": "Water Filter",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Aluminium": 1,
+   "Silicon": 1,
+   "FabricBlue": 1,
+   "Bioplastic1": 2,
+   "WaterBottle1": 1
+  }
+ },
+ {
+  "id": "Fish10Eggs",
+  "name": "Tiloo fish eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Phytoplankton1": 1,
+   "Mutagen2": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Fish11Eggs",
+  "name": "Golden fish eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Phytoplankton1": 1,
+   "Mutagen3": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Fish1Eggs",
+  "name": "Provios fish eggs",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Phytoplankton1": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Fish2Eggs",
+  "name": "Vilnus fish eggs",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Phytoplankton1": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Fish3Eggs",
+  "name": "Gerrero fish eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Phytoplankton1": 1,
+   "Mutagen2": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Fish4Eggs",
+  "name": "Khrom fish eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Phytoplankton1": 1,
+   "Mutagen2": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Fish5Eggs",
+  "name": "Ulani fish eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Phytoplankton1": 1,
+   "Mutagen3": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Fish6Eggs",
+  "name": "Aelera fish eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Phytoplankton1": 1,
+   "Mutagen2": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Fish7Eggs",
+  "name": "Tegede fish eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Phytoplankton1": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Fish8Eggs",
+  "name": "Ecaru fish eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Phytoplankton1": 1,
+   "Mutagen3": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Fish9Eggs",
+  "name": "Buyu fish eggs",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Phytoplankton1": 1,
+   "Mutagen3": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Bee1Larvae",
+  "name": "Bee larva",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase2": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly10Larvae",
+  "name": "Liux butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase3": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly11Larvae",
+  "name": "Nere butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase3": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly12Larvae",
+  "name": "Lorpen butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase3": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly13Larvae",
+  "name": "Fiorente butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase3": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly14Larvae",
+  "name": "Alben butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase3": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly15Larvae",
+  "name": "Futura butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase3": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly16Larvae",
+  "name": "Imeo butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase3": 1,
+   "Mutagen2": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly17Larvae",
+  "name": "Serena butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase3": 1,
+   "Mutagen2": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly18Larvae",
+  "name": "Golden butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase3": 1,
+   "Mutagen2": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly1Larvae",
+  "name": "Azurae butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase1": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly21Larvae",
+  "name": "Lucia butterfly larva",
+  "type": "Item",
+  "planet": "Skeo",
+  "recipe": {
+   "LarvaeBase3": 1,
+   "Amber": 1,
+   "Fertilizer2": 1
+  }
+ },
+ {
+  "id": "Butterfly2Larvae",
+  "name": "Leani butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase1": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly3Larvae",
+  "name": "Fensea butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase1": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly4Larvae",
+  "name": "Galaxe butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase1": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly5Larvae",
+  "name": "Abstreus butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase1": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly6Larvae",
+  "name": "Empalio butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase1": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly7Larvae",
+  "name": "Penga butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase3": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly8Larvae",
+  "name": "Chevrone butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase3": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Butterfly9Larvae",
+  "name": "Aemel butterfly larva",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase3": 1,
+   "Mutagen1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "LarvaeBase1",
+  "name": "Common larva",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Mutagen3": 1,
+   "Phytoplankton1": 1,
+   "Fertilizer2": 1
+  }
+ },
+ {
+  "id": "LarvaeBase2",
+  "name": "Uncommon larva",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "LarvaeBase3",
+  "name": "Rare larva",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Mutagen4": 1,
+   "Phytoplankton1": 1,
+   "Fertilizer2": 1
+  }
+ },
+ {
+  "id": "SilkWorm",
+  "name": "Silkworm",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "LarvaeBase2": 1,
+   "Bacteria1": 1,
+   "Fertilizer1": 1
+  }
+ },
+ {
+  "id": "Alloy",
+  "name": "Super Alloy",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Cobalt": 1,
+   "Iron": 1,
+   "Magnesium": 1,
+   "Silicon": 1,
+   "Titanium": 1,
+   "Aluminium": 1
+  }
+ },
+ {
+  "id": "Aluminium",
+  "name": "Aluminum",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Amber",
+  "name": "Amber",
+  "type": "Resource",
+  "planet": "Skeo",
+  "recipe": {}
+ },
+ {
+  "id": "Bauxite",
+  "name": "Bauxite",
+  "type": "Component",
+  "planet": "Humble",
+  "recipe": {
+   "Aluminium": 3,
+   "Iron": 1,
+   "Silicon": 1,
+   "Magnesium": 1
+  }
+ },
+ {
+  "id": "Cobalt",
+  "name": "Cobalt",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Dolomite",
+  "name": "Dolomite",
+  "type": "Component",
+  "planet": "Humble",
+  "recipe": {
+   "Cobalt": 3,
+   "Iron": 1,
+   "Magnesium": 1,
+   "Silicon": 1,
+   "Titanium": 1
+  }
+ },
+ {
+  "id": "ice",
+  "name": "Ice",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Iridium",
+  "name": "Iridium",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Iron",
+  "name": "Iron",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Magnesium",
+  "name": "Magnesium",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Obsidian",
+  "name": "Obsidian",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Osmium",
+  "name": "Osmium",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Phosphorus",
+  "name": "Phosphorus",
+  "type": "Resource",
+  "planet": "Aqualis",
+  "recipe": {}
+ },
+ {
+  "id": "Selenium",
+  "name": "Selenium",
+  "type": "Resource",
+  "planet": "Selenea",
+  "recipe": {}
+ },
+ {
+  "id": "Silicon",
+  "name": "Silicon",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Sulfur",
+  "name": "Sulfur",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Titanium",
+  "name": "Titanium",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Minable-Tungsten",
+  "name": "Tungsten",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Uraninite",
+  "name": "Uraninite",
+  "type": "Component",
+  "planet": "Humble",
+  "recipe": {
+   "Alloy": 1,
+   "Iridium": 1,
+   "Uranim": 1,
+   "Iron": 1,
+   "Dolomite": 1
+  }
+ },
+ {
+  "id": "Uranim",
+  "name": "Uranium",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Zeolite",
+  "name": "Zeolite",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "BalzarQuartz",
+  "name": "Blazar Quartz",
+  "type": "Component",
+  "planet": "Selenea",
+  "recipe": {
+   "Selenium": 2,
+   "Cobalt": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "CosmicQuartz",
+  "name": "Cosmic Quartz",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "MagnetarQuartz": 1,
+   "BalzarQuartz": 1,
+   "PulsarQuartz": 1,
+   "QuasarQuartz": 1,
+   "SolarQuartz": 1,
+   "Zeolite": 1,
+   "Osmium": 1,
+   "Obsidian": 1,
+   "NitrogenCapsule1": 1
+  }
+ },
+ {
+  "id": "MagnetarQuartz",
+  "name": "Magnetar Quartz",
+  "type": "Component",
+  "planet": "Skeo",
+  "recipe": {
+   "Amber": 2,
+   "Osmium": 1,
+   "OxygenCapsule1": 1
+  }
+ },
+ {
+  "id": "PulsarQuartz",
+  "name": "Pulsar Quartz",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Osmium": 1,
+   "Zeolite": 1,
+   "Iridium": 1,
+   "Uranim": 1,
+   "MethanCapsule1": 1
+  }
+ },
+ {
+  "id": "QuasarQuartz",
+  "name": "Quasar Quartz",
+  "type": "Component",
+  "planet": "Aqualis",
+  "recipe": {
+   "Phosphorus": 1,
+   "Bioplastic1": 1,
+   "Silk": 1,
+   "Algae1Seed": 1
+  }
+ },
+ {
+  "id": "SolarQuartz",
+  "name": "Solar Quartz",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "NitrogenCapsule1": 1,
+   "Sulfur": 1,
+   "Obsidian": 1
+  }
+ },
+ {
+  "id": "ChlorineCapsule1",
+  "name": "Chlorine dioxide",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "MicroPlastics",
+  "name": "Microplastics",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "PlasticPolymer",
+  "name": "Plastic polymer",
+  "type": "Component",
+  "planet": "Toxicity",
+  "recipe": {
+   "Toxins": 2,
+   "MicroPlastics": 1
+  }
+ },
+ {
+  "id": "PristineMushroom",
+  "name": "Pristine mushroom",
+  "type": "Component",
+  "planet": "Toxicity",
+  "recipe": {
+   "Toxins": 1,
+   "Vegetable3Growable": 1,
+   "MethanCapsule1": 1
+  }
+ },
+ {
+  "id": "PurificationCapsule",
+  "name": "Purification capsule",
+  "type": "Component",
+  "planet": "Toxicity",
+  "recipe": {
+   "ChlorineCapsule1": 1,
+   "PurifiedWater": 1,
+   "Toxins": 1
+  }
+ },
+ {
+  "id": "PurificationGel",
+  "name": "Purification gel",
+  "type": "Component",
+  "planet": "Toxicity",
+  "recipe": {
+   "PurificationCapsule": 1,
+   "PurifiedWater": 1,
+   "PristineMushroom": 1
+  }
+ },
+ {
+  "id": "PurifiedWater",
+  "name": "Purified water",
+  "type": "Component",
+  "planet": "Toxicity",
+  "recipe": {
+   "PristineMushroom": 1,
+   "WaterBottle1": 1
+  }
+ },
+ {
+  "id": "ToxicGoo",
+  "name": "Toxic Goo",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "MicroPlastics": 1,
+   "Toxins": 1
+  }
+ },
+ {
+  "id": "ToxicSpores",
+  "name": "Toxic Spores",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "ChlorineCapsule1": 1,
+   "Toxins": 1
+  }
+ },
+ {
+  "id": "ToxicWater",
+  "name": "Toxic water",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "PurifiedWater": 1,
+   "Toxins": 1
+  }
+ },
+ {
+  "id": "Toxins",
+  "name": "Toxins",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Algae1Seed",
+  "name": "Algae",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Seed0",
+  "name": "Lirma Seed",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "Mutagen3": 1,
+   "Fertilizer1": 1,
+   "Phytoplankton1": 1
+  }
+ },
+ {
+  "id": "Seed1",
+  "name": "Shanga Seed",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Seed2",
+  "name": "Pestera Seed",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Seed3",
+  "name": "Nulna Seed",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Seed4",
+  "name": "Tuska Seed",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Seed5",
+  "name": "Orema plant",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Seed6",
+  "name": "Volnus plant",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "SeedGold",
+  "name": "Golden Seed",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Tree10Seed",
+  "name": "Rosea tree seed",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1,
+   "Mutagen4": 1
+  }
+ },
+ {
+  "id": "Tree11Seed",
+  "name": "Lillia tree seed",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1,
+   "Mutagen4": 1
+  }
+ },
+ {
+  "id": "Tree12Seed",
+  "name": "Prunea tree seed",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1,
+   "Mutagen4": 1
+  }
+ },
+ {
+  "id": "Tree15Seed",
+  "name": "Redwo tree seed",
+  "type": "Item",
+  "planet": "Selenea",
+  "recipe": {
+   "TreeRoot": 1,
+   "Mutagen4": 1,
+   "Fertilizer3": 1
+  }
+ },
+ {
+  "id": "Tree16Seed",
+  "name": "Pamelia tree seed",
+  "type": "Item",
+  "planet": "Aqualis",
+  "recipe": {
+   "TreeRoot": 1,
+   "Vegetable1Growable": 1,
+   "Fertilizer3": 1
+  }
+ },
+ {
+  "id": "Tree17Seed",
+  "name": "Detoxo tree seed",
+  "type": "Item",
+  "planet": "Toxicity",
+  "recipe": {
+   "TreeRoot": 1,
+   "PurificationGel": 1,
+   "Mutagen4": 1
+  }
+ },
+ {
+  "id": "Tree18Seed",
+  "name": "Brojo tree seed",
+  "type": "Item",
+  "planet": "Skeo",
+  "recipe": {
+   "TreeRoot": 1,
+   "Amber": 1,
+   "Mutagen4": 1
+  }
+ },
+ {
+  "id": "Tree1Seed",
+  "name": "Linifolia tree seed",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1,
+   "Mutagen1": 1,
+   "Seed1": 1
+  }
+ },
+ {
+  "id": "Tree2Seed",
+  "name": "Aleatus tree seed",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1,
+   "Mutagen1": 1,
+   "Seed2": 1
+  }
+ },
+ {
+  "id": "Tree3Seed",
+  "name": "Cernea tree seed",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1,
+   "Mutagen1": 1,
+   "Seed3": 1
+  }
+ },
+ {
+  "id": "Tree4Seed",
+  "name": "Elegea tree seed",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1,
+   "Mutagen1": 1,
+   "Seed4": 1
+  }
+ },
+ {
+  "id": "Tree5Seed",
+  "name": "Humelora tree seed",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1,
+   "Mutagen1": 1,
+   "Seed5": 1
+  }
+ },
+ {
+  "id": "Tree6Seed",
+  "name": "Aemora tree seed",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1,
+   "Mutagen1": 1,
+   "Seed6": 1
+  }
+ },
+ {
+  "id": "Tree7Seed",
+  "name": "Pleom tree seed",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1,
+   "Mutagen1": 1,
+   "SeedGold": 1
+  }
+ },
+ {
+  "id": "Tree8Seed",
+  "name": "Soleus tree seed",
+  "type": "Component",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1,
+   "Mutagen1": 1,
+   "Seed0": 1
+  }
+ },
+ {
+  "id": "Tree9Seed",
+  "name": "Shreox tree seed",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "TreeRoot": 1,
+   "Mutagen1": 1,
+   "Mutagen2": 1
+  }
+ },
+ {
+  "id": "TreeRoot",
+  "name": "Tree bark",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Vegetable0Growable",
+  "name": "Eggplant",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Vegetable1Growable",
+  "name": "Squash",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Vegetable2Growable",
+  "name": "Beans",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "Vegetable3Growable",
+  "name": "Mushroom",
+  "type": "Resource",
+  "planet": "",
+  "recipe": {}
+ },
+ {
+  "id": "VehicleBeacon1",
+  "name": "Vehicle – Beacon",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Zeolite": 1,
+   "Osmium": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "VehicleEquipmentSize1",
+  "name": "Vehicle – T1 Equipment increase",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Alloy": 1,
+   "Silicon": 1,
+   "Iridium": 1
+  }
+ },
+ {
+  "id": "VehicleEquipmentSize2",
+  "name": "Vehicle – T2 Equipment increase",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "VehicleEquipmentSize1": 2,
+   "Obsidian": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "VehicleInventorySize1",
+  "name": "Vehicle – T1 Inventory increase",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Silicon": 1,
+   "FabricBlue": 1,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "VehicleInventorySize2",
+  "name": "Vehicle – T2 Inventory increase",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "VehicleInventorySize1": 2,
+   "Osmium": 1,
+   "FabricBlue": 2
+  }
+ },
+ {
+  "id": "VehicleInventorySize3",
+  "name": "Vehicle – T3 Inventory increase",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "VehicleInventorySize2": 2,
+   "MagnetarQuartz": 1,
+   "FabricBlue": 3
+  }
+ },
+ {
+  "id": "VehicleJetpack1",
+  "name": "Jetpack for vehicle",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 4,
+   "SolarQuartz": 1,
+   "Explosive": 1
+  }
+ },
+ {
+  "id": "VehicleLights1",
+  "name": "Vehicle – T1 Lights",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Sulfur": 1,
+   "Cobalt": 1,
+   "Silicon": 1
+  }
+ },
+ {
+  "id": "VehicleLights2",
+  "name": "Vehicle – T2 Lights",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "VehicleLights1": 2,
+   "SolarQuartz": 1
+  }
+ },
+ {
+  "id": "VehicleLogistic1",
+  "name": "Vehicle – Logistics",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 2,
+   "Rod-osmium": 1,
+   "Bioplastic1": 2,
+   "Rod-alloy": 1
+  }
+ },
+ {
+  "id": "VehicleOxygen1",
+  "name": "Vehicle – Unlimited oxygen",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Zeolite": 4,
+   "OxygenCapsule1": 2
+  }
+ },
+ {
+  "id": "VehicleSpeed1",
+  "name": "Vehicle – T1 Speed increase",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "Zeolite": 2,
+   "RocketReactor": 1
+  }
+ },
+ {
+  "id": "VehicleSpeed2",
+  "name": "Vehicle – T2 Speed increase",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "VehicleSpeed1": 2,
+   "RedPowder1": 1
+  }
+ },
+ {
+  "id": "VehicleSpeed3",
+  "name": "Vehicle – T3 Speed increase",
+  "type": "Equipment",
+  "planet": "",
+  "recipe": {
+   "VehicleSpeed2": 2,
+   "RedPowder1": 1,
+   "BalzarQuartz": 2,
+   "PulsarQuartz": 1
+  }
+ },
+ {
+  "id": "VehicleSpeed4",
+  "name": "Vehicle – T4 Speed increase",
+  "type": "Equipment",
+  "planet": "Selenea",
+  "recipe": {
+   "Explosive": 2,
+   "VehicleSpeed3": 1,
+   "Selenium": 2,
+   "BalzarQuartz": 1
+  }
+ },
+ {
+  "id": "RocketAnimals1",
+  "name": "Animals spreader rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 1,
+   "Rod-osmium": 1,
+   "Mutagen4": 1,
+   "GeneticTrait": 6
+  }
+ },
+ {
+  "id": "RocketAnimals2",
+  "name": "T2 Animals spreader rocket",
+  "type": "Item",
+  "planet": "Skeo",
+  "recipe": {
+   "RocketReactor2": 1,
+   "Rod-osmium": 1,
+   "Fertilizer3": 1,
+   "GeneticTrait": 4,
+   "Amber": 2
+  }
+ },
+ {
+  "id": "RocketBiomass1",
+  "name": "Plant Rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 1,
+   "Alloy": 2,
+   "Fertilizer1": 1,
+   "Seed0": 1,
+   "TreeRoot": 1
+  }
+ },
+ {
+  "id": "RocketBiomass2",
+  "name": "T2 Plant Rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Fertilizer3": 1,
+   "RocketReactor2": 1,
+   "TreeRoot": 1,
+   "Seed2": 1,
+   "Seed3": 1,
+   "Seed4": 1
+  }
+ },
+ {
+  "id": "RocketDeparture1",
+  "name": "Extraction rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Rod-alloy": 1,
+   "RocketReactor": 1,
+   "Rod-osmium": 1,
+   "BalzarQuartz": 1,
+   "Obsidian": 1,
+   "SolarQuartz": 1
+  }
+ },
+ {
+  "id": "RocketDrones1",
+  "name": "Drone visualization rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 2,
+   "RocketReactor": 1,
+   "Rod-alloy": 1
+  }
+ },
+ {
+  "id": "RocketHeat1",
+  "name": "Asteroid attraction rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 1,
+   "Alloy": 2,
+   "Cobalt": 3
+  }
+ },
+ {
+  "id": "RocketHeat2",
+  "name": "T2 Asteroid attraction rocket",
+  "type": "Item",
+  "planet": "Selenea",
+  "recipe": {
+   "Rod-iridium": 2,
+   "RocketReactor2": 1,
+   "SolarQuartz": 2,
+   "FuseHeat1": 1,
+   "Selenium": 3
+  }
+ },
+ {
+  "id": "RocketInformations1",
+  "name": "Map information rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 1,
+   "HudCompass": 1,
+   "Osmium": 2,
+   "Rod-alloy": 1
+  }
+ },
+ {
+  "id": "RocketInformations2",
+  "name": "T2 Map information rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 1,
+   "HudCompass": 1,
+   "Rod-alloy": 1,
+   "Zeolite": 2,
+   "BalzarQuartz": 1
+  }
+ },
+ {
+  "id": "RocketInsects1",
+  "name": "Insect spreader rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 1,
+   "Rod-osmium": 1,
+   "Mutagen2": 1,
+   "Bee1Larvae": 3
+  }
+ },
+ {
+  "id": "RocketInsects2",
+  "name": "T2 Insect spreader rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Fertilizer3": 1,
+   "RocketReactor2": 1,
+   "Mutagen4": 1,
+   "Bee1Larvae": 2,
+   "SilkWorm": 1,
+   "Phosphorus": 3
+  }
+ },
+ {
+  "id": "RocketMap1",
+  "name": "T1 GPS Satellite",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 1,
+   "HudCompass": 1,
+   "Alloy": 2
+  }
+ },
+ {
+  "id": "RocketMap2",
+  "name": "T2 GPS Satellite",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 1,
+   "HudCompass": 2,
+   "Alloy": 3
+  }
+ },
+ {
+  "id": "RocketMap3",
+  "name": "T3 GPS Satellite",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 1,
+   "HudCompass": 2,
+   "Osmium": 1,
+   "Rod-alloy": 1
+  }
+ },
+ {
+  "id": "RocketMap4",
+  "name": "T4 GPS Satellite",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 2,
+   "RocketReactor": 1,
+   "Rod-alloy": 2,
+   "HudCompass": 1
+  }
+ },
+ {
+  "id": "RocketOxygen1",
+  "name": "Seed spreader rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 1,
+   "Alloy": 2,
+   "Bacteria1": 1,
+   "Mutagen1": 1,
+   "TreeRoot": 1
+  }
+ },
+ {
+  "id": "RocketOxygen2",
+  "name": "T2 Oxygen Rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Rod-alloy": 2,
+   "RocketReactor2": 1,
+   "Amber": 2,
+   "Tree8Seed": 1
+  }
+ },
+ {
+  "id": "RocketPressure1",
+  "name": "Magnetic field protection rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "RocketReactor": 1,
+   "Alloy": 2,
+   "Silicon": 3
+  }
+ },
+ {
+  "id": "RocketPressure2",
+  "name": "T2 Magnetic field protection rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Rod-osmium": 2,
+   "RocketReactor2": 1,
+   "MagnetarQuartz": 2,
+   "FusePressure1": 1,
+   "Selenium": 3
+  }
+ },
+ {
+  "id": "RocketPurification1",
+  "name": "Purification rocket",
+  "type": "Item",
+  "planet": "Toxicity",
+  "recipe": {
+   "RocketReactor": 1,
+   "PurificationGel": 2,
+   "PlasticPolymer": 2,
+   "Minable-Tungsten": 1
+  }
+ },
+ {
+  "id": "RocketToxicInformations1",
+  "name": "Toxic area information rocket",
+  "type": "Item",
+  "planet": "Toxicity",
+  "recipe": {
+   "RocketReactor": 1,
+   "HudCompass": 1,
+   "PristineMushroom": 1,
+   "Rod-tungsten": 1,
+   "Rod-plastic": 1
+  }
+ },
+ {
+  "id": "RocketTravel1",
+  "name": "Interplanetary travel rocket",
+  "type": "Item",
+  "planet": "",
+  "recipe": {
+   "Rod-alloy": 1,
+   "RocketReactor": 1,
+   "Rod-osmium": 1,
+   "BalzarQuartz": 1,
+   "SolarQuartz": 1,
+   "QuasarQuartz": 1,
+   "FusionEnergyCell": 2,
+   "FuseEnergy1": 1
+  }
+ },
+ {
+  "id": "TrashAluminiumScraps1",
+  "name": "Aluminum scraps",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Aluminium": 2,
+   "Alloy": 1
+  }
+ },
+ {
+  "id": "TrashElectronics1",
+  "name": "Electronics scraps",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Silicon": 1,
+   "Cobalt": 1
+  }
+ },
+ {
+  "id": "TrashMetalsCanisters1",
+  "name": "Metal scraps (TrashMetalsCanisters1)",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Magnesium": 1
+  }
+ },
+ {
+  "id": "TrashMetalsScraps1",
+  "name": "Metal scraps (TrashMetalsScraps1)",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1,
+   "Titanium": 1
+  }
+ },
+ {
+  "id": "TrashUraniumScraps1",
+  "name": "Uranium scraps",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Uranim": 2
+  }
+ },
+ {
+  "id": "canister",
+  "name": "Canister",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "ProceduralWreckSafe",
+  "name": "Big safe (ProceduralWreckSafe)",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "WreckEntryLocked1",
+  "name": "Access Console (WreckEntryLocked1)",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "WreckEntryLocked2",
+  "name": "Access Console (WreckEntryLocked2)",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "WreckFusionGenerator",
+  "name": "Fusion reactor (WreckFusionGenerator)",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "wreckpilar",
+  "name": "Debris",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "WreckSafe",
+  "name": "Big safe (WreckSafe)",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "Iron": 1
+  }
+ },
+ {
+  "id": "WreckServer",
+  "name": "Technical debris",
+  "type": "Other Building",
+  "planet": "",
+  "recipe": {
+   "CircuitBoard1": 1
+  }
+ }
+]

@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/generated/prisma
+
+!.env.example
+
+# game extraction scratch (raw game files stay local)
+/scripts/extract/work/
