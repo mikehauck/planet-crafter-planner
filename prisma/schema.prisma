@@ -27,6 +27,7 @@ model Item {
 
   ingredients RecipeIngredient[] @relation("recipe")
   usedIn      RecipeIngredient[] @relation("ingredient")
+  planItems   PlanItem[]
 
   @@map("items")
 }
@@ -62,6 +63,7 @@ model User {
   banExpires    DateTime? @map("ban_expires")
   sessions      Session[]
   accounts      Account[]
+  plans         Plan[]
 
   @@unique([email])
   @@map("users")
@@ -114,4 +116,31 @@ model Verification {
 
   @@index([identifier])
   @@map("verifications")
+}
+
+/// A user's named plan. Signed-out visitors keep theirs in localStorage instead.
+model Plan {
+  id        String     @id @default(cuid())
+  userId    String     @map("user_id")
+  name      String
+  createdAt DateTime   @default(now()) @map("created_at")
+  updatedAt DateTime   @updatedAt @map("updated_at")
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items     PlanItem[]
+
+  @@unique([userId, name])
+  @@map("plans")
+}
+
+/// `qty` of `item` to build in a plan. Items are never deleted (imports retire them), so Restrict is safe.
+model PlanItem {
+  planId String @map("plan_id")
+  itemId String @map("item_id")
+  qty    Int
+  plan   Plan   @relation(fields: [planId], references: [id], onDelete: Cascade)
+  item   Item   @relation(fields: [itemId], references: [id], onDelete: Restrict)
+
+  @@id([planId, itemId])
+  @@index([itemId])
+  @@map("plan_items")
 }

@@ -19,11 +19,25 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { IngredientsPanel } from "@/components/planner/ingredients-panel";
 import { ItemSearch } from "@/components/planner/item-search";
 import { QtyField } from "@/components/planner/qty-field";
+import { PlanSwitcher } from "@/components/planner/plan-switcher";
+import { useAccountPlans } from "@/lib/account-plans";
 import { directTotals, rawTotals, type Catalog } from "@/lib/plan";
-import { usePlan } from "@/lib/plan-store";
+import { useLocalPlans, type PlanStore } from "@/lib/plan-store";
+import type { NamedPlan } from "@/services/plans/schema";
 
-export function Planner({ catalog }: { catalog: Catalog }) {
-  const { plan, add, setQty, remove, clear } = usePlan();
+/** Signed out: plans live in this browser. */
+export function LocalPlanner({ catalog }: { catalog: Catalog }) {
+  return <Planner catalog={catalog} store={useLocalPlans()} />;
+}
+
+/** Signed in: plans live in the account. */
+export function AccountPlanner({ catalog, plans }: { catalog: Catalog; plans: NamedPlan[] }) {
+  return <Planner catalog={catalog} store={useAccountPlans(plans)} />;
+}
+
+function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
+  const plan = store.active.items;
+  const { add, setQty, removeItem: remove, clear } = store;
   const [rawOnly, setRawOnly] = useState(true);
   const [confirmClear, setConfirmClear] = useState(false);
   // Retired items stay in the catalog so plans can show and total them, but cannot be added again.
@@ -44,7 +58,9 @@ export function Planner({ catalog }: { catalog: Catalog }) {
     <>
       <Card>
         <CardHeader>
-          <CardTitle>Plan</CardTitle>
+          <CardTitle>
+            <PlanSwitcher store={store} />
+          </CardTitle>
           {entries.length > 0 && (
             <CardAction className="flex gap-2">
               {/* Narrow screens: the ingredients panel slides in from the right. */}
@@ -68,7 +84,7 @@ export function Planner({ catalog }: { catalog: Catalog }) {
                 <AlertDialogTrigger render={<Button variant="ghost" size="sm" />}>Clear</AlertDialogTrigger>
                 <AlertDialogContent>
                   <AlertDialogHeader>
-                    <AlertDialogTitle>Clear the plan?</AlertDialogTitle>
+                    <AlertDialogTitle>Clear &ldquo;{store.active.name}&rdquo;?</AlertDialogTitle>
                     <AlertDialogDescription>
                       This removes all {entries.length} item{entries.length === 1 ? "" : "s"} from your plan.
                     </AlertDialogDescription>
@@ -91,6 +107,11 @@ export function Planner({ catalog }: { catalog: Catalog }) {
           )}
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
+          {store.error && (
+            <p role="alert" className="text-sm text-destructive">
+              {store.error}
+            </p>
+          )}
           <ItemSearch items={items} onPick={add} />
           {entries.length === 0 ? (
             <p className="text-sm text-muted-foreground">Search above to add something to build.</p>

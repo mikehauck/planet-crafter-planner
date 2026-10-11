@@ -3,7 +3,8 @@
 Pick what you want to build in [The Planet Crafter](https://store.steampowered.com/app/1284190/The_Planet_Crafter/)
 and see the raw resources it takes, expanded all the way down through every component.
 
-Your plan is kept in your browser. Game data lives in Postgres.
+Make as many named plans as you like. Signed out, they are kept in your browser; signed in, in your account.
+Game data lives in Postgres.
 
 ## Stack
 
@@ -34,11 +35,14 @@ After a game update, see [scripts/extract/README.md](scripts/extract/README.md).
 | `components/planner/` | Plan list, search, totals |
 | `services/<feature>/` | Everything that touches the database, one folder per feature (see below) |
 | `services/catalog/` | Game data: zod schemas, cached catalog query (`catalog` tag), totals check, import reconciler |
+| `services/plans/` | Named plans: schema, `listPlans`, ownership-checked mutations |
+| `app/plans/actions.ts` | Server actions for the planner: `requireUser`, zod, then `services/plans` |
 | `services/auth/` | `getSession`, `requireUser`, `requireAdmin` for pages and server actions |
 | `lib/auth.ts`, `lib/auth-client.ts` | Better Auth setup (server) and client; email + password, admin plugin |
 | `app/api/auth/[...all]/` | Better Auth's endpoints: the only API route |
 | `lib/plan.ts` | Recipe expansion (pure, used in the browser too) |
-| `lib/plan-store.ts` | Plan in localStorage, validated with the plan schema |
+| `lib/plan-store.ts` | `PlanStore` interface; plans in localStorage (signed out) |
+| `lib/account-plans.ts` | `PlanStore` over the server actions (signed in); quantity saves are debounced |
 | `prisma/` | Schema, migrations, seed and seed data |
 
 ## Services

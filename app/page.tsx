@@ -1,8 +1,10 @@
 import { Suspense } from "react";
 import { connection } from "next/server";
 import { UserMenu } from "@/components/auth/user-menu";
-import { Planner } from "@/components/planner/planner";
+import { AccountPlanner, LocalPlanner } from "@/components/planner/planner";
+import { getSession } from "@/services/auth/queries";
 import { getCatalog } from "@/services/catalog/queries";
+import { listPlans } from "@/services/plans/queries";
 
 export default function Home() {
   return (
@@ -29,5 +31,8 @@ export default function Home() {
 async function PlannerWithData() {
   // Read the database per request, not at build time, so builds need no database.
   await connection();
-  return <Planner catalog={await getCatalog()} />;
+  const [catalog, session] = await Promise.all([getCatalog(), getSession()]);
+  if (!session) return <LocalPlanner catalog={catalog} />;
+  // Keyed by user so signing in as someone else starts from their plans, not the last state.
+  return <AccountPlanner key={session.user.id} catalog={catalog} plans={await listPlans(session.user.id)} />;
 }
