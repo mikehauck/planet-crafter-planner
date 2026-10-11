@@ -13,8 +13,9 @@ import {
 import { importPlans } from "@/app/plans/actions";
 import type { Catalog } from "@/lib/plan";
 import { clearLocalPlans, useBrowserPlans } from "@/lib/plan-store";
+import { Input } from "@/components/ui/input";
 import { previewImport } from "@/services/plans/import";
-import type { NamedPlan } from "@/services/plans/schema";
+import { PlanName, type NamedPlan } from "@/services/plans/schema";
 
 /**
  * Signed in with plans still in this browser: offer to move them into the account.
@@ -33,6 +34,8 @@ export function ImportDialog({
   const [dismissed, setDismissed] = useState(false);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  /** browser plan name -> the name the user typed; untouched plans keep the suggested one */
+  const [names, setNames] = useState<Record<string, string>>({});
 
   const preview = previewImport(
     browserPlans,
@@ -41,10 +44,17 @@ export function ImportDialog({
   );
   if (dismissed || !preview.plans.length) return null;
 
+  const chosen = preview.plans.map((p) => ({ ...p, name: (names[p.from] ?? p.name).trim() }));
+  const taken = new Set(accountPlans.map((p) => p.name));
+  const problem = (name: string, i: number) =>
+    PlanName.safeParse(name).error?.issues[0].message ??
+    (taken.has(name) || chosen.some((c, j) => j !== i && c.name === name) ? "Name already used" : null);
+  const invalid = chosen.some((c, i) => problem(c.name, i));
+
   async function confirm() {
     setPending(true);
     setError(null);
-    const r = await importPlans(browserPlans.map(({ name, items }) => ({ name, items })));
+    const r = await importPlans(chosen.map(({ name, items }) => ({ name, items })));
     setPending(false);
     if (!r.ok) return setError(r.error);
     onImported(r.data);
@@ -59,23 +69,33 @@ export function ImportDialog({
           <AlertDialogTitle>Move this browser&rsquo;s plans into your account?</AlertDialogTitle>
           <AlertDialogDescription>
             They are saved here, on this device only. Once moved, they are in your account and removed from this browser.
+            Name each one as you want it in your account.
           </AlertDialogDescription>
         </AlertDialogHeader>
-        <ul className="flex flex-col gap-1 text-sm">
-          {preview.plans.map((p) => (
-            <li key={p.from} className="flex justify-between gap-4">
-              <span>
-                {p.from}
-                {p.name !== p.from && <span className="text-muted-foreground"> → {p.name}</span>}
-              </span>
-              <span className="text-muted-foreground">
-                {count(p.items)} item{count(p.items) === 1 ? "" : "s"}
-              </span>
-            </li>
-          ))}
+        <ul className="flex flex-col gap-3 text-sm">
+          {chosen.map((p, i) => {
+            const msg = problem(p.name, i);
+            return (
+              <li key={p.from} className="flex flex-col gap-1">
+                <div className="flex items-center gap-3">
+                  <Input
+                    aria-label={`Name for "${p.from}"`}
+                    value={names[p.from] ?? preview.plans[i].name}
+                    onChange={(e) => setNames((n) => ({ ...n, [p.from]: e.target.value }))}
+                    aria-invalid={msg ? true : undefined}
+                    maxLength={60}
+                  />
+                  <span className="shrink-0 text-muted-foreground">
+                    {count(p.items)} item{count(p.items) === 1 ? "" : "s"}
+                  </span>
+                </div>
+                {msg && <span className="text-destructive">{msg}</span>}
+              </li>
+            );
+          })}
         </ul>
         {preview.plans.some((p) => p.name !== p.from) && (
-          <p className="text-sm text-muted-foreground">Your account already has plans with those names, so they get a number.</p>
+          <p className="text-sm text-muted-foreground">Names your account already uses were given a number; change them if you like.</p>
         )}
         {preview.dropped.length > 0 && (
           <p className="text-sm text-muted-foreground">
@@ -89,7 +109,7 @@ export function ImportDialog({
         )}
         <AlertDialogFooter>
           <AlertDialogCancel>Not now</AlertDialogCancel>
-          <AlertDialogAction disabled={pending} onClick={confirm}>
+          <AlertDialogAction disabled={pending || invalid} onClick={confirm}>
             Move {preview.plans.length} plan{preview.plans.length === 1 ? "" : "s"}
           </AlertDialogAction>
         </AlertDialogFooter>
