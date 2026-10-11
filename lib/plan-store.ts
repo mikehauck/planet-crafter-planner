@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useRef, useSyncExternalStore } from "react";
 import { Plan } from "@/services/catalog/schema";
 import { LocalPlan, PlanName, uniqueName, type NamedPlan } from "@/services/plans/schema";
 
@@ -8,6 +8,8 @@ export type PlanStore = {
   plans: NamedPlan[];
   /** always set: a store with no plans yet offers an empty unnamed plan (name "") */
   active: NamedPlan;
+  /** false until the browser's storage has been read (server render and hydration): show a skeleton, not a plan */
+  ready: boolean;
   /** true when plans are saved to the account, so an unnamed plan must be named before anything is added */
   namesRequired: boolean;
   select(id: string): void;
@@ -54,7 +56,9 @@ function subscribe(listener: () => void) {
   };
 }
 
-const useStored = (key: string) => useSyncExternalStore(subscribe, () => read(key), () => null);
+/** A stored value; `undefined` until the browser has been read (the server has no localStorage). */
+const NOT_READ = () => undefined;
+const useStored = (key: string): string | null | undefined => useSyncExternalStore(subscribe, () => read(key), NOT_READ);
 
 /** Keep the valid entries of a stored item list; drop the rest. */
 export function cleanItems(value: unknown): Plan {
@@ -67,18 +71,44 @@ export function cleanItems(value: unknown): Plan {
   return items;
 }
 
-function parseJson(raw: string | null): unknown {
+function parseJson(raw: string | null | undefined): unknown {
   try {
-    return raw === null ? null : JSON.parse(raw);
+    return raw == null ? null : JSON.parse(raw);
   } catch {
     return null;
   }
 }
 
-/** Which plan is showing, per browser, for either store. */
-const ACTIVE_KEY = "planet-crafter:active-plan";
-export function useActiveId(): [string | null, (id: string) => void] {
-  return [useStored(ACTIVE_KEY), (id) => write(ACTIVE_KEY, id)];
+/** The working plan, remembered per browser: one key for the browser's own plans, one per signed-in account. */
+export const activePlanKey = (userId?: string) => (userId ? `planet-crafter:active-plan:${userId}` : "planet-crafter:active-plan");
+
+/**
+ * Which of `plans` is the working one. A missing or stale stored id falls back to the first plan; on page load
+ * that fallback is also written back (only then: mid-session, a newly selected plan can briefly be missing from
+ * `plans`, and writing back would undo the selection). `afterDelete(id)` moves to the plan that takes its place.
+ */
+export function useWorkingPlan(key: string, plans: NamedPlan[]) {
+  const stored = useStored(key);
+  const select = (id: string) => write(key, id);
+  const active = plans.find((p) => p.id === stored) ?? plans[0];
+  const ready = stored !== undefined;
+  const checked = useRef(false);
+  useEffect(() => {
+    if (!ready || checked.current) return;
+    checked.current = true;
+    if (active.id && stored !== active.id) write(key, active.id);
+  }, [ready, stored, active.id, key]);
+  return {
+    active,
+    ready,
+    select,
+    afterDelete(id: string) {
+      if (id !== active.id) return;
+      const i = plans.findIndex((p) => p.id === id);
+      const next = plans[i + 1] ?? plans[i - 1];
+      if (next) select(next.id);
+    },
+  };
 }
 
 // --- Plans kept in this browser (signed out) ---
@@ -89,7 +119,7 @@ const LEGACY_KEY = "planet-crafter:plan";
 const LOCAL_DEFAULT_ID = "local-default";
 
 /** The browser's plans as stored, without the empty default. Phase-C import reads this too. */
-export function parseLocalPlans(raw: string | null, legacy: string | null): NamedPlan[] {
+export function parseLocalPlans(raw: string | null | undefined, legacy: string | null | undefined): NamedPlan[] {
   const stored = parseJson(raw);
   if (Array.isArray(stored)) {
     const plans: NamedPlan[] = [];
@@ -108,9 +138,8 @@ const withDefault = (plans: NamedPlan[]) => (plans.length ? plans : [{ id: LOCAL
 export function useLocalPlans(): PlanStore {
   const raw = useStored(PLANS_KEY);
   const legacy = useStored(LEGACY_KEY);
-  const [activeId, setActiveId] = useActiveId();
   const plans = useMemo(() => withDefault(parseLocalPlans(raw, legacy)), [raw, legacy]);
-  const active = plans.find((p) => p.id === activeId) ?? plans[0];
+  const { active, ready, select: setActiveId, afterDelete } = useWorkingPlan(activePlanKey(), plans);
 
   // Changes read storage afresh, so two in a row (name this plan, then make a new one) see each other.
   const latest = () => withDefault(parseLocalPlans(read(PLANS_KEY), read(LEGACY_KEY)));
@@ -121,6 +150,7 @@ export function useLocalPlans(): PlanStore {
   return {
     plans,
     active,
+    ready,
     namesRequired: false,
     error: null,
     select: setActiveId,
@@ -145,6 +175,7 @@ export function useLocalPlans(): PlanStore {
     async remove(id) {
       const now = latest();
       if (now.length < 2) return "You need at least one plan.";
+      afterDelete(id);
       save(now.filter((p) => p.id !== id));
       return null;
     },

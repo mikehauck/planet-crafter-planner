@@ -32,6 +32,8 @@ export function PlanSwitcher({ store }: { store: PlanStore }) {
   const [pending, setPending] = useState(false);
 
   const unnamed = !active.name;
+  // Nothing to pick between until a named plan exists (the start is one unnamed plan, or the account placeholder).
+  const showPicker = plans.some((p) => p.name);
   const empty = Object.keys(active.items).length === 0;
   // "+" on an empty unnamed plan just names it; on an unnamed plan with items, it names it and makes the new one.
   const nameOnly = kind === "new" && unnamed && empty;
@@ -69,18 +71,20 @@ export function PlanSwitcher({ store }: { store: PlanStore }) {
 
   return (
     <div className="flex items-center gap-1">
-      <select
-        aria-label="Plan"
-        value={active.id}
-        onChange={(e) => store.select(e.target.value)}
-        className="h-8 max-w-56 truncate rounded-lg border border-input bg-background px-2 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
-      >
-        {plans.map((p) => (
-          <option key={p.id} value={p.id}>
-            {planLabel(p)}
-          </option>
-        ))}
-      </select>
+      {showPicker && (
+        <select
+          aria-label="Plan"
+          value={active.id}
+          onChange={(e) => store.select(e.target.value)}
+          className="h-8 max-w-56 truncate rounded-lg border border-input bg-background px-2 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
+        >
+          {plans.map((p) => (
+            <option key={p.id} value={p.id}>
+              {planLabel(p)}
+            </option>
+          ))}
+        </select>
+      )}
       <Button variant="ghost" size="icon" aria-label="New plan" onClick={() => open("new")}>
         <PlusIcon />
       </Button>

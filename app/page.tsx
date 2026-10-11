@@ -34,5 +34,10 @@ async function PlannerWithData() {
   const [catalog, session] = await Promise.all([getCatalog(), getSession()]);
   if (!session) return <LocalPlanner catalog={catalog} />;
   // Keyed by user so signing in as someone else starts from their plans, not the last state.
-  return <AccountPlanner key={session.user.id} catalog={catalog} plans={await listPlans(session.user.id)} />;
+  return <AccountPlanner
+      key={session.user.id}
+      catalog={catalog}
+      userId={session.user.id}
+      plans={await listPlans(session.user.id)}
+    />;
 }

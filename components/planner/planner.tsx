@@ -33,8 +33,8 @@ export function LocalPlanner({ catalog }: { catalog: Catalog }) {
 }
 
 /** Signed in: plans live in the account. Plans left in this browser are offered for import. */
-export function AccountPlanner({ catalog, plans }: { catalog: Catalog; plans: NamedPlan[] }) {
-  const store = useAccountPlans(plans);
+export function AccountPlanner({ catalog, userId, plans }: { catalog: Catalog; userId: string; plans: NamedPlan[] }) {
+  const store = useAccountPlans(userId, plans);
   return (
     <>
       {/* The placeholder (no id) is not a saved plan, so its name is not taken. */}
@@ -76,6 +76,9 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
   const totals = Object.entries((rawOnly ? rawTotals : directTotals)(catalog, plan))
     .map(([id, qty]) => ({ name: catalog[id].name, qty }))
     .sort((a, b) => a.name.localeCompare(b.name));
+
+  // Until the browser's storage is read, which plan is the working one is unknown: show a skeleton, not a guess.
+  if (!store.ready) return <PlannerSkeleton />;
 
   const title = rawOnly ? "Raw resources needed" : "Ingredients needed";
   const panel = <IngredientsPanel totals={totals} rawOnly={rawOnly} onRawOnlyChange={setRawOnly} />;
@@ -202,5 +205,19 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
         </aside>
       )}
     </>
+  );
+}
+
+function PlannerSkeleton() {
+  return (
+    <Card aria-busy="true" aria-label="Loading your plan">
+      <CardHeader>
+        <div className="h-8 w-48 animate-pulse rounded-lg bg-muted" />
+      </CardHeader>
+      <CardContent className="flex flex-col gap-4">
+        <div className="h-8 animate-pulse rounded-lg bg-muted" />
+        <div className="h-8 w-2/3 animate-pulse rounded-lg bg-muted" />
+      </CardContent>
+    </Card>
   );
 }

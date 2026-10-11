@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import * as actions from "@/app/plans/actions";
 import type { NamedPlan } from "@/services/plans/schema";
-import { useActiveId, type PlanStore } from "@/lib/plan-store";
+import { activePlanKey, useWorkingPlan, type PlanStore } from "@/lib/plan-store";
 
 /** Stands in, unnamed, until the account has a plan. Nothing can be added to it: the planner asks for a name first. */
 const PLACEHOLDER_ID = "";
@@ -10,10 +10,9 @@ const PLACEHOLDER_ID = "";
 const QTY_SAVE_DELAY_MS = 400;
 
 /** Plans saved in the signed-in account. Changes show at once and save in the background. */
-export function useAccountPlans(initial: NamedPlan[]): PlanStore & { addPlans(added: NamedPlan[]): void } {
+export function useAccountPlans(userId: string, initial: NamedPlan[]): PlanStore & { addPlans(added: NamedPlan[]): void } {
   const [plans, setPlans] = useState<NamedPlan[]>(initial);
   const [error, setError] = useState<string | null>(null);
-  const [activeId, setActiveId] = useActiveId();
   const timers = useRef(new Map<string, ReturnType<typeof setTimeout>>());
 
   useEffect(() => {
@@ -22,7 +21,7 @@ export function useAccountPlans(initial: NamedPlan[]): PlanStore & { addPlans(ad
   }, []);
 
   const shown = plans.length ? plans : [{ id: PLACEHOLDER_ID, name: "", items: {} }];
-  const active = shown.find((p) => p.id === activeId) ?? shown[0];
+  const { active, ready, select: setActiveId, afterDelete } = useWorkingPlan(activePlanKey(userId), shown);
 
   const setItems = (planId: string, change: (items: NamedPlan["items"]) => NamedPlan["items"]) =>
     setPlans((ps) => ps.map((p) => (p.id === planId ? { ...p, items: change(p.items) } : p)));
@@ -48,6 +47,7 @@ export function useAccountPlans(initial: NamedPlan[]): PlanStore & { addPlans(ad
   return {
     plans: shown,
     active,
+    ready,
     namesRequired: true,
     error,
     select: setActiveId,
@@ -81,6 +81,7 @@ export function useAccountPlans(initial: NamedPlan[]): PlanStore & { addPlans(ad
       if (plans.length < 2) return "You need at least one plan.";
       const r = await actions.deletePlan(id);
       if (!r.ok) return r.error;
+      afterDelete(id);
       setPlans((ps) => ps.filter((p) => p.id !== id));
       return null;
     },
