@@ -18,7 +18,10 @@ rejected before anything is written.
 |---|---|
 | `dump.py` | Every item, buildable and recipe from `resources.assets` |
 | `loc.py` | The game's English names |
-| `build_data.py` | Merges them, assigns types, drops blueprint chips and uncraftable items |
+| `build_data.py` | Merges them, assigns types (uncraftable named items are "Not craftable"), drops blueprint chips, skins, Terra Tokens and internal states |
+
+To rebuild from the dumps already in `work/` without reading the game: `cd scripts/extract/work && python3 -I ../build_data.py`,
+then `cp clean.json ../../../prisma/data/items.json`.
 
 Set `GAME_DATA` to point at a different `Planet Crafter_Data` folder.
 First extracted 2026-10-11 (game data Unity 6000.3.2f1).

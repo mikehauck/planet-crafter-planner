@@ -2591,6 +2591,38 @@
   }
  },
  {
+  "id": "Frog10Eggs",
+  "name": "Kenjoss frog eggs",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Frog11Eggs",
+  "name": "Lavaum frog eggs",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Frog12Eggs",
+  "name": "Leglus frog eggs",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Frog13Eggs",
+  "name": "Jumi frog eggs",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
   "id": "Frog14Eggs",
   "name": "Seren frog eggs",
   "type": "Item",
@@ -2745,6 +2777,14 @@
   }
  },
  {
+  "id": "AnimalBones",
+  "name": "Ancient animal bones",
+  "type": "Not craftable",
+  "planet": "Skeo",
+  "categories": [],
+  "recipe": {}
+ },
+ {
   "id": "AntiToxinsExplosive1",
   "name": "T1 Toxic goo removal explosives",
   "type": "Item",
@@ -2790,6 +2830,14 @@
    "Silicon": 1,
    "WaterBottle1": 1
   }
+ },
+ {
+  "id": "DNASequence",
+  "name": "Creature DNA",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
  },
  {
   "id": "Explosive",
@@ -2913,6 +2961,30 @@
   "recipe": {}
  },
  {
+  "id": "Phytoplankton2",
+  "name": "Phytoplankton B",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Phytoplankton3",
+  "name": "Phytoplankton C",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Phytoplankton4",
+  "name": "Phytoplankton D",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
   "id": "RedPowder1",
   "name": "Explosive powder",
   "type": "Component",
@@ -2922,6 +2994,22 @@
    "Sulfur": 2,
    "Iridium": 1
   }
+ },
+ {
+  "id": "DebrisContainer1",
+  "name": "Container from space",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "DroneLog",
+  "name": "Drone's Log",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
  },
  {
   "id": "FabricBlue",
@@ -3010,9 +3098,33 @@
   }
  },
  {
+  "id": "FuseOxygen1",
+  "name": "Oxygen multiplier fuse",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "FusePlants1",
+  "name": "Plant multiplier fuse",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
   "id": "FusePressure1",
   "name": "Pressure multiplier fuse",
   "type": "Resource",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "FuseProduction1",
+  "name": "Production multiplier fuse",
+  "type": "Not craftable",
   "planet": "",
   "categories": [],
   "recipe": {}
@@ -3084,6 +3196,14 @@
   }
  },
  {
+  "id": "WardenKey",
+  "name": "Warden's key",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
   "id": "CookCake1",
   "name": "Birthday cake",
   "type": "Item",
@@ -3109,6 +3229,14 @@
   "id": "CookCocoaGrowable",
   "name": "Cocoa",
   "type": "Resource",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "CookCocoaSeed",
+  "name": "Cocoa seed",
+  "type": "Not craftable",
   "planet": "",
   "categories": [],
   "recipe": {}
@@ -3173,6 +3301,14 @@
   "id": "CookWheatGrowable",
   "name": "Wheat",
   "type": "Resource",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "CookWheatSeed",
+  "name": "Wheat seeds",
+  "type": "Not craftable",
   "planet": "",
   "categories": [],
   "recipe": {}
@@ -3462,6 +3598,14 @@
    "AnimalFood2": 1,
    "SilkWorm": 1
   }
+ },
+ {
+  "id": "astrofood",
+  "name": "Space Food",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
  },
  {
   "id": "astrofood2",
@@ -4192,6 +4336,38 @@
   }
  },
  {
+  "id": "Fish12Eggs",
+  "name": "Velkia fish eggs",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Fish13Eggs",
+  "name": "Galbea fish eggs",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Fish14Eggs",
+  "name": "Stabu fish eggs",
+  "type": "Not craftable",
+  "planet": "Selenea",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Fish15Eggs",
+  "name": "Atabu fish eggs",
+  "type": "Not craftable",
+  "planet": "Aqualis",
+  "categories": [],
+  "recipe": {}
+ },
+ {
   "id": "Fish1Eggs",
   "name": "Provios fish eggs",
   "type": "Component",
@@ -4420,6 +4596,14 @@
   }
  },
  {
+  "id": "Butterfly19Larvae",
+  "name": "Faleria butterfly larva",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
   "id": "Butterfly1Larvae",
   "name": "Azurae butterfly larva",
   "type": "Item",
@@ -4430,6 +4614,14 @@
    "Mutagen1": 1,
    "Fertilizer1": 1
   }
+ },
+ {
+  "id": "Butterfly20Larvae",
+  "name": "Oesbe butterfly larva",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
  },
  {
   "id": "Butterfly21Larvae",
@@ -5000,6 +5192,22 @@
   "recipe": {}
  },
  {
+  "id": "Seed10Humble",
+  "name": "Furteo Seed",
+  "type": "Not craftable",
+  "planet": "Humble",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Seed11Humble",
+  "name": "Humblea Seed",
+  "type": "Not craftable",
+  "planet": "Humble",
+  "categories": [],
+  "recipe": {}
+ },
+ {
   "id": "Seed2",
   "name": "Pestera Seed",
   "type": "Resource",
@@ -5040,9 +5248,41 @@
   "recipe": {}
  },
  {
+  "id": "Seed7Humble",
+  "name": "Snepea Seed",
+  "type": "Not craftable",
+  "planet": "Humble",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Seed8Humble",
+  "name": "Brelea Seed",
+  "type": "Not craftable",
+  "planet": "Humble",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Seed9Humble",
+  "name": "Seleus Seed",
+  "type": "Not craftable",
+  "planet": "Humble",
+  "categories": [],
+  "recipe": {}
+ },
+ {
   "id": "SeedGold",
   "name": "Golden Seed",
   "type": "Resource",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Tree0Seed",
+  "name": "Iterra tree seed",
+  "type": "Not craftable",
   "planet": "",
   "categories": [],
   "recipe": {}
@@ -5079,6 +5319,22 @@
    "TreeRoot": 1,
    "Mutagen4": 1
   }
+ },
+ {
+  "id": "Tree13Seed",
+  "name": "Ruberu tree seed",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Tree14Seed",
+  "name": "Malissea tree seed",
+  "type": "Not craftable",
+  "planet": "Humble",
+  "categories": [],
+  "recipe": {}
  },
  {
   "id": "Tree15Seed",
@@ -5253,9 +5509,25 @@
   "recipe": {}
  },
  {
+  "id": "Vegetable0Seed",
+  "name": "Eggplant seeds",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
   "id": "Vegetable1Growable",
   "name": "Squash",
   "type": "Resource",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Vegetable1Seed",
+  "name": "Squash seeds",
+  "type": "Not craftable",
   "planet": "",
   "categories": [],
   "recipe": {}
@@ -5269,9 +5541,25 @@
   "recipe": {}
  },
  {
+  "id": "Vegetable2Seed",
+  "name": "Bean seeds",
+  "type": "Not craftable",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
   "id": "Vegetable3Growable",
   "name": "Mushroom",
   "type": "Resource",
+  "planet": "",
+  "categories": [],
+  "recipe": {}
+ },
+ {
+  "id": "Vegetable3Seed",
+  "name": "Mushroom seeds",
+  "type": "Not craftable",
   "planet": "",
   "categories": [],
   "recipe": {}

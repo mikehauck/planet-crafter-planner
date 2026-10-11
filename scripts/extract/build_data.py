@@ -16,8 +16,14 @@ for id_, r in it.items():
         typ = CAT.get(r["groupCategory"], "Other") if r["groupCategory"] else "Other Building"
     else:
         if id_.startswith("Blueprint"): continue   # blueprint chips, not real crafts
-        if not has and not used[id_]: continue
-        if not has: typ = "Resource"
+        if not has and not used[id_]:
+            # Found, not crafted (fuses, eggs, seeds...): kept so a plan can list them as things to bring.
+            # Left out: unnamed internal states, placed plants and hatched animals, cosmetic skins, currency.
+            if not loc.get("GROUP_NAME_" + id_) or id_.endswith(("Growable", "Hatched")) \
+                    or id_.startswith(("Skin-", "TerraTokens")):
+                continue
+            typ = "Not craftable"
+        elif not has: typ = "Resource"
         elif r["itemCategory"] == 1: typ = "Equipment"
         elif used[id_]: typ = "Component"
         else: typ = "Item"
