@@ -4,7 +4,6 @@ import { ListIcon, XIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -19,6 +18,7 @@ import {
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { IngredientsPanel } from "@/components/planner/ingredients-panel";
 import { ItemSearch } from "@/components/planner/item-search";
+import { QtyField } from "@/components/planner/qty-field";
 import { directTotals, rawTotals, type Catalog } from "@/lib/plan";
 import { usePlan } from "@/lib/plan-store";
 
@@ -99,14 +99,7 @@ export function Planner({ catalog }: { catalog: Catalog }) {
                 <li key={id} className="flex items-center gap-3 py-2">
                   <span className="flex-1 truncate">{catalog[id].name}</span>
                   <Badge variant="secondary">{catalog[id].type}</Badge>
-                  <Input
-                    type="number"
-                    min={1}
-                    value={qty}
-                    onChange={(e) => setQty(id, e.target.valueAsNumber)}
-                    className="w-20"
-                    aria-label={`How many ${catalog[id].name}`}
-                  />
+                  <QtyField value={qty} onChange={(q) => setQty(id, q)} label={catalog[id].name} />
                   <Button variant="ghost" size="icon" onClick={() => remove(id)} aria-label={`Remove ${catalog[id].name}`}>
                     <XIcon />
                   </Button>
