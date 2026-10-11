@@ -144,7 +144,7 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
               {store.error}
             </p>
           )}
-          <ItemSearch items={items} onPick={pick} />
+          <ItemSearch items={items} onPick={pick} inPlan={(id) => id in plan} />
           {entries.length === 0 ? (
             <p className="text-sm text-muted-foreground">Search above to add something to build.</p>
           ) : (

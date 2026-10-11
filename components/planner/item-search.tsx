@@ -1,15 +1,27 @@
 "use client";
 import { useState } from "react";
-import { SearchIcon } from "lucide-react";
+import { CheckIcon, PlusIcon, SearchIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
 import { cn } from "@/lib/utils";
 import type { CatalogItem } from "@/lib/plan";
 
 const MAX_RESULTS = 50;
 
-/** Type to find an item (name, type or category); arrows + Enter or a click adds it to the plan. */
-export function ItemSearch({ items, onPick }: { items: CatalogItem[]; onPick: (id: string) => void }) {
+/**
+ * Type to find an item (name, type or category); arrows + Enter or a click adds it to the plan and closes the list.
+ * A row's + adds it and keeps the list open, to add several from one search.
+ */
+export function ItemSearch({
+  items,
+  onPick,
+  inPlan,
+}: {
+  items: CatalogItem[];
+  onPick: (id: string) => void;
+  inPlan: (id: string) => boolean;
+}) {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
 
@@ -76,6 +88,26 @@ export function ItemSearch({ items, onPick }: { items: CatalogItem[]; onPick: (i
                 </Badge>
               ))}
               <span className="text-xs text-muted-foreground">{item.type}</span>
+              {inPlan(item.id) ? (
+                <span className="flex size-6 items-center justify-center text-muted-foreground" title="In the plan">
+                  <CheckIcon className="size-4" />
+                  <span className="sr-only">In the plan</span>
+                </span>
+              ) : (
+                <Button
+                  variant="ghost"
+                  size="icon-xs"
+                  aria-label={`Add ${item.name}`}
+                  title="Add and keep searching"
+                  onMouseDown={(e) => {
+                    e.preventDefault(); // keep focus in the search box
+                    e.stopPropagation(); // the row's own click would close the list
+                    onPick(item.id);
+                  }}
+                >
+                  <PlusIcon />
+                </Button>
+              )}
             </li>
           ))}
         </ul>
