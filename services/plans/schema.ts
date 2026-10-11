@@ -12,6 +12,8 @@ export const NamedPlan = z.object({
   items: Plan,
   /** item ids counted as themselves in the totals, not broken down. Missing in plans saved before it existed. */
   keepWhole: z.array(z.string().min(1)).default([]),
+  /** totals drawer: raw resources (true) or one level down. Missing in plans saved before it existed. */
+  rawOnly: z.boolean().default(true),
 });
 export type NamedPlan = z.infer<typeof NamedPlan>;
 

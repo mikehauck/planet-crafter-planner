@@ -22,6 +22,8 @@ export type PlanStore = {
   removeItem(itemId: string): void;
   /** Count an item as itself in the totals (`whole`), or break it down again. */
   setKeepWhole(itemId: string, whole: boolean): void;
+  /** Totals drawer view: raw resources, or one level down. */
+  setRawOnly(rawOnly: boolean): void;
   clear(): void;
   /** last failed background save, if any */
   error: string | null;
@@ -64,13 +66,6 @@ const useStored = (key: string): string | null | undefined => useSyncExternalSto
 
 /** `ids` with `itemId` added (`whole`) or removed. */
 export const toggled = (ids: string[], itemId: string, whole: boolean) => [...ids.filter((i) => i !== itemId), ...(whole ? [itemId] : [])];
-
-/** An on/off setting remembered in this browser; `fallback` until it has been read or when never set. */
-export function useStoredFlag(key: string, fallback: boolean): [boolean, (on: boolean) => void] {
-  const stored = useStored(key);
-  const value = stored == null ? fallback : stored === "true";
-  return [value, (on) => write(key, String(on))];
-}
 
 /** Keep the valid entries of a stored item list; drop the rest. */
 export function cleanItems(value: unknown): Plan {
@@ -137,17 +132,18 @@ export function parseLocalPlans(raw: string | null | undefined, legacy: string |
     const plans: NamedPlan[] = [];
     for (const p of stored) {
       const keepWhole = Array.isArray(p?.keepWhole) ? p.keepWhole.filter((id: unknown) => typeof id === "string" && id) : [];
-      const plan = LocalPlan.safeParse({ ...p, items: cleanItems(p?.items), keepWhole });
+      const rawOnly = typeof p?.rawOnly === "boolean" ? p.rawOnly : true;
+      const plan = LocalPlan.safeParse({ ...p, items: cleanItems(p?.items), keepWhole, rawOnly });
       if (plan.success && !plans.some((q) => q.id === plan.data.id || q.name === plan.data.name)) plans.push(plan.data);
     }
     return plans;
   }
   const old = cleanItems(parseJson(legacy));
-  return Object.keys(old).length ? [{ id: LOCAL_DEFAULT_ID, name: "", items: old, keepWhole: [] }] : [];
+  return Object.keys(old).length ? [{ id: LOCAL_DEFAULT_ID, name: "", items: old, keepWhole: [], rawOnly: true }] : [];
 }
 
 const withDefault = (plans: NamedPlan[]) =>
-  plans.length ? plans : [{ id: LOCAL_DEFAULT_ID, name: "", items: {}, keepWhole: [] }];
+  plans.length ? plans : [{ id: LOCAL_DEFAULT_ID, name: "", items: {}, keepWhole: [], rawOnly: true }];
 
 export function useLocalPlans(): PlanStore {
   const raw = useStored(PLANS_KEY);
@@ -174,7 +170,7 @@ export function useLocalPlans(): PlanStore {
       if (!name.success) return name.error.issues[0].message;
       const now = latest();
       if (now.some((p) => !p.name)) return "Name your current plan first.";
-      const plan = { id: crypto.randomUUID(), name: uniqueName(name.data, now.map((p) => p.name)), items, keepWhole: [] };
+      const plan = { id: crypto.randomUUID(), name: uniqueName(name.data, now.map((p) => p.name)), items, keepWhole: [], rawOnly: true };
       save([...now, plan]);
       setActiveId(plan.id);
       return null;
@@ -203,6 +199,7 @@ export function useLocalPlans(): PlanStore {
         return rest;
       }),
     setKeepWhole: (itemId, whole) => updatePlan((p) => ({ ...p, keepWhole: toggled(p.keepWhole, itemId, whole) })),
+    setRawOnly: (rawOnly) => updatePlan((p) => ({ ...p, rawOnly })),
     clear: () => update(() => ({})),
   };
 }

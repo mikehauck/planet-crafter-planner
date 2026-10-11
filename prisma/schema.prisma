@@ -125,6 +125,8 @@ model Plan {
   name      String
   /// items counted as themselves in the totals, not broken down into what they are made of
   keepWhole String[]   @default([]) @map("keep_whole")
+  /// totals drawer: true shows raw resources, false one level down
+  rawOnly   Boolean    @default(true) @map("raw_only")
   createdAt DateTime   @default(now()) @map("created_at")
   updatedAt DateTime   @updatedAt @map("updated_at")
   user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)

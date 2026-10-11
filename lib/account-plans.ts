@@ -20,7 +20,7 @@ export function useAccountPlans(userId: string, initial: NamedPlan[]): PlanStore
     return () => pending.forEach(clearTimeout);
   }, []);
 
-  const shown = plans.length ? plans : [{ id: PLACEHOLDER_ID, name: "", items: {}, keepWhole: [] }];
+  const shown = plans.length ? plans : [{ id: PLACEHOLDER_ID, name: "", items: {}, keepWhole: [], rawOnly: true }];
   const { active, ready, select: setActiveId, afterDelete } = useWorkingPlan(activePlanKey(userId), shown);
 
   const setItems = (planId: string, change: (items: NamedPlan["items"]) => NamedPlan["items"]) =>
@@ -110,6 +110,12 @@ export function useAccountPlans(userId: string, initial: NamedPlan[]): PlanStore
       if (planId === PLACEHOLDER_ID) return;
       setPlans((ps) => ps.map((p) => (p.id === planId ? { ...p, keepWhole: toggled(p.keepWhole, itemId, whole) } : p)));
       void actions.setKeepWhole(planId, itemId, whole).then(report);
+    },
+    setRawOnly(rawOnly) {
+      const planId = active.id;
+      if (planId === PLACEHOLDER_ID) return;
+      setPlans((ps) => ps.map((p) => (p.id === planId ? { ...p, rawOnly } : p)));
+      void actions.setRawOnly(planId, rawOnly).then(report);
     },
     clear() {
       for (const [key, t] of timers.current)

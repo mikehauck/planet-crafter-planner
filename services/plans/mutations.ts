@@ -32,7 +32,7 @@ export async function createPlan(userId: string, name: string, items: Plan = {})
         items: { create: Object.entries(items).map(([itemId, qty]) => ({ itemId, qty })) },
       },
     });
-    return { id: plan.id, name: plan.name, items, keepWhole: [] };
+    return { id: plan.id, name: plan.name, items, keepWhole: [], rawOnly: plan.rawOnly };
   });
 }
 
@@ -83,6 +83,12 @@ export async function setKeepWhole(userId: string, planId: string, itemId: strin
   if (!count) throw new PlanError("That plan no longer exists.");
 }
 
+/** Totals drawer view for this plan: raw resources, or one level down. */
+export async function setRawOnly(userId: string, planId: string, rawOnly: boolean): Promise<void> {
+  const { count } = await db.plan.updateMany({ where: { id: planId, userId }, data: { rawOnly } });
+  if (!count) throw new PlanError("That plan no longer exists.");
+}
+
 export async function clearPlan(userId: string, planId: string): Promise<void> {
   await db.$transaction(async (tx) => {
     await ownPlan(tx, userId, planId);
@@ -103,10 +109,11 @@ export async function importPlans(userId: string, incoming: IncomingPlan[]): Pro
           userId,
           name: p.name,
           keepWhole: p.keepWhole,
+          rawOnly: p.rawOnly,
           items: { create: Object.entries(p.items).map(([itemId, qty]) => ({ itemId, qty })) },
         },
       });
-      created.push({ id: plan.id, name: plan.name, items: p.items, keepWhole: p.keepWhole });
+      created.push({ id: plan.id, name: plan.name, items: p.items, keepWhole: p.keepWhole, rawOnly: p.rawOnly });
     }
     return created;
   });

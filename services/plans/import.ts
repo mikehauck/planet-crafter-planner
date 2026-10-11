@@ -2,10 +2,10 @@
 import type { Plan } from "@/services/catalog/schema";
 import { uniqueName } from "./schema";
 
-export type IncomingPlan = { name: string; items: Plan; keepWhole: string[] };
+export type IncomingPlan = { name: string; items: Plan; keepWhole: string[]; rawOnly: boolean };
 export type ImportPreview = {
   /** in order: the browser plan's name, the name it will get, the items that go across */
-  plans: { from: string; name: string; items: Plan; keepWhole: string[] }[];
+  plans: { from: string; name: string; items: Plan; keepWhole: string[]; rawOnly: boolean }[];
   /** item ids not in the game data at all; retired items still go across */
   dropped: { plan: string; itemId: string }[];
 };
@@ -22,7 +22,7 @@ export function previewImport(incoming: IncomingPlan[], accountNames: string[], 
     if (!Object.keys(items).length) continue;
     const name = uniqueName(p.name, taken);
     taken.push(name);
-    preview.plans.push({ from: p.name, name, items, keepWhole: p.keepWhole.filter(knownItem) });
+    preview.plans.push({ from: p.name, name, items, keepWhole: p.keepWhole.filter(knownItem), rawOnly: p.rawOnly });
   }
   return preview;
 }

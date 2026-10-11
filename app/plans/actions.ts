@@ -48,11 +48,15 @@ export async function setKeepWhole(planId: string, itemId: string, whole: boolea
   return run((u) => plans.setKeepWhole(u, id.parse(planId), id.parse(itemId), z.boolean().parse(whole)));
 }
 
+export async function setRawOnly(planId: string, rawOnly: boolean): Promise<ActionResult> {
+  return run((u) => plans.setRawOnly(u, id.parse(planId), z.boolean().parse(rawOnly)));
+}
+
 export async function clearPlan(planId: string): Promise<ActionResult> {
   return run((u) => plans.clearPlan(u, id.parse(planId)));
 }
 
-const Incoming = z.array(z.object({ name: PlanName, items: Plan, keepWhole: z.array(id).default([]) })).max(100);
+const Incoming = z.array(z.object({ name: PlanName, items: Plan, keepWhole: z.array(id).default([]), rawOnly: z.boolean().default(true) })).max(100);
 
 /** Move the browser's plans into the account; returns the plans as created. */
 export async function importPlans(incoming: unknown): Promise<ActionResult<NamedPlan[]>> {

@@ -14,5 +14,6 @@ export async function listPlans(userId: string): Promise<NamedPlan[]> {
     name: p.name,
     items: Object.fromEntries(p.items.map((i) => [i.itemId, i.qty])),
     keepWhole: p.keepWhole,
+    rawOnly: p.rawOnly,
   }));
 }
