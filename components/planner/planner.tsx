@@ -27,7 +27,6 @@ import { directTotals, rawTotals, type Catalog } from "@/lib/plan";
 import { useLocalPlans, type PlanStore } from "@/lib/plan-store";
 import { planLabel, type NamedPlan } from "@/services/plans/schema";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 
 /** Signed out: plans live in this browser. */
 export function LocalPlanner({ catalog }: { catalog: Catalog }) {
@@ -149,32 +148,57 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
           {entries.length === 0 ? (
             <p className="text-sm text-muted-foreground">Search above to add something to build.</p>
           ) : (
-            <ul className="divide-y">
-              {entries.map(([id, qty]) => (
-                <li key={id} className="flex items-center gap-3 py-2">
-                  <span className="flex-1 truncate">{catalog[id].name}</span>
-                  {catalog[id].retired && <Badge variant="destructive">No longer in the game</Badge>}
-                  <Badge variant="secondary">{catalog[id].type}</Badge>
-                  {/* Ticked: the totals show what it is made of. Unticked: you will have it, so it counts as itself.
-                      Raw resources cannot be broken down; the empty slot keeps the columns lined up. */}
-                  <Label
-                    className={`shrink-0 text-xs font-normal text-muted-foreground ${craftable(id) ? "" : "invisible"}`}
-                    title="Count what it is made of in the totals. Untick if you will already have it."
-                  >
-                    <Checkbox
-                      checked={!whole.has(id)}
-                      onCheckedChange={(on) => setKeepWhole(id, !on)}
-                      disabled={!craftable(id)}
-                    />
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b text-left text-xs text-muted-foreground">
+                  <th className="pb-2 font-normal">Item</th>
+                  <th className="pb-2 font-normal">Type</th>
+                  {/* Ticked: the totals show what it is made of. Unticked: you will have it, so it counts as itself. */}
+                  <th className="px-3 pb-2 text-center font-normal whitespace-nowrap" title="Count what it is made of in the totals. Untick if you will already have it.">
                     Break down
-                  </Label>
-                  <QtyField value={qty} onChange={(q) => setQty(id, q)} label={catalog[id].name} />
-                  <Button variant="ghost" size="icon" onClick={() => remove(id)} aria-label={`Remove ${catalog[id].name}`}>
-                    <XIcon />
-                  </Button>
-                </li>
-              ))}
-            </ul>
+                  </th>
+                  <th className="pb-2 text-center font-normal">Qty</th>
+                  <th className="pb-2">
+                    <span className="sr-only">Remove</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y">
+                {entries.map(([id, qty]) => (
+                  <tr key={id}>
+                    <td className="max-w-0 py-2 pr-3">
+                      <div className="flex items-center gap-2">
+                        <span className="truncate">{catalog[id].name}</span>
+                        {catalog[id].retired && <Badge variant="destructive">No longer in the game</Badge>}
+                      </div>
+                    </td>
+                    <td className="w-px py-2">
+                      <Badge variant="secondary">{catalog[id].type}</Badge>
+                    </td>
+                    <td className="w-px px-3 py-2">
+                      {/* Raw resources cannot be broken down. */}
+                      {craftable(id) && (
+                        <div className="flex justify-center">
+                          <Checkbox
+                            checked={!whole.has(id)}
+                            onCheckedChange={(on) => setKeepWhole(id, !on)}
+                            aria-label={`Break down ${catalog[id].name}`}
+                          />
+                        </div>
+                      )}
+                    </td>
+                    <td className="w-px py-2">
+                      <QtyField value={qty} onChange={(q) => setQty(id, q)} label={catalog[id].name} />
+                    </td>
+                    <td className="w-px py-2 pl-3">
+                      <Button variant="ghost" size="icon" onClick={() => remove(id)} aria-label={`Remove ${catalog[id].name}`}>
+                        <XIcon />
+                      </Button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           )}
         </CardContent>
       </Card>
