@@ -3,10 +3,10 @@ import "dotenv/config";
 import { readFileSync } from "node:fs";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "../generated/prisma/client";
+import { SeedFile } from "../services/catalog/schema";
 
-type Row = { id: string; name: string; type: string; planet: string; categories: string[]; recipe: Record<string, number> };
-
-const rows: Row[] = JSON.parse(readFileSync(new URL("./data/items.json", import.meta.url), "utf8"));
+// Validate before touching the database: a bad file must not wipe the tables.
+const rows = SeedFile.parse(JSON.parse(readFileSync(new URL("./data/items.json", import.meta.url), "utf8")));
 const db = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL }) });
 
 async function main() {

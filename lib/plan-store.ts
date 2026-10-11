@@ -1,6 +1,6 @@
 "use client";
 import { useMemo, useSyncExternalStore } from "react";
-import type { Plan } from "@/lib/plan";
+import { Plan } from "@/services/catalog/schema";
 
 // The plan lives in this browser only (no accounts yet). Falls back to memory when storage is blocked.
 const KEY = "planet-crafter:plan";
@@ -33,13 +33,21 @@ function write(plan: Plan) {
   listeners.forEach((l) => l());
 }
 
+/** Keep the valid entries of whatever is stored; drop the rest. */
 function parse(raw: string): Plan {
+  let value: unknown;
   try {
-    const value = JSON.parse(raw);
-    return value && typeof value === "object" ? value : {};
+    value = JSON.parse(raw);
   } catch {
     return {};
   }
+  if (!value || typeof value !== "object") return {};
+  const plan: Plan = {};
+  for (const [id, qty] of Object.entries(value)) {
+    const entry = Plan.safeParse({ [id]: qty });
+    if (entry.success) Object.assign(plan, entry.data);
+  }
+  return plan;
 }
 
 export function usePlan() {

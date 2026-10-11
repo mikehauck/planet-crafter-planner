@@ -1,19 +1,7 @@
-// Pure planning maths, shared by the page and scripts/verify-totals.mts.
+// Pure planning maths, shared by the page and services/catalog/checks.ts.
+import type { Catalog, Plan } from "@/services/catalog/schema";
 
-export type CatalogItem = {
-  id: string;
-  name: string;
-  type: string;
-  /** what it produces, e.g. ["Energy"]; empty for most items */
-  categories: string[];
-  /** ingredient id -> qty per one of this item; empty for raw resources */
-  recipe: Record<string, number>;
-};
-
-export type Catalog = Record<string, CatalogItem>;
-
-/** plan: item id -> how many you want to build */
-export type Plan = Record<string, number>;
+export type { Catalog, CatalogItem, Plan } from "@/services/catalog/schema";
 
 /** One level down: the ingredients the planned items' own recipes call for. Raw items count as themselves. */
 export function directTotals(catalog: Catalog, plan: Plan): Record<string, number> {

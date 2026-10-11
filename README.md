@@ -31,9 +31,22 @@ After a game update, see [scripts/extract/README.md](scripts/extract/README.md).
 |---|---|
 | `app/page.tsx` | The page; loads the catalog per request |
 | `components/planner/` | Plan list, search, totals |
-| `lib/plan.ts` | Recipe expansion (pure) |
-| `lib/catalog.ts` | Cached catalog query (`catalog` tag, for revalidating after data edits) |
-| `lib/plan-store.ts` | Plan in localStorage |
+| `services/<feature>/` | Everything that touches the database, one folder per feature (see below) |
+| `services/catalog/` | Game data: zod schemas, cached catalog query (`catalog` tag), totals check |
+| `lib/plan.ts` | Recipe expansion (pure, used in the browser too) |
+| `lib/plan-store.ts` | Plan in localStorage, validated with the plan schema |
 | `prisma/` | Schema, migrations, seed and seed data |
+
+## Services
+
+Server components and server actions call services; there is no API layer, and nothing outside `services/` uses `db`.
+Services are split by feature, not by table (an item and its recipe lines change together), and each feature by file:
+
+| File | What | Server only |
+|---|---|---|
+| `schema.ts` | zod schemas and the types inferred from them | no, the browser imports it |
+| `queries.ts`, `mutations.ts` | Reads and writes for the app | yes (`import "server-only"`) |
+| `load.ts` | Uncached loaders that take a Prisma client, for scripts run with tsx | no |
+| `checks.ts` | The feature's own validation for complex operations (e.g. `verifyTotals`) | no, pure |
 
 Game data © Miju Games; this is an unofficial fan tool.

@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { connection } from "next/server";
 import { Planner } from "@/components/planner/planner";
-import { getCatalog } from "@/lib/catalog";
+import { getCatalog } from "@/services/catalog/queries";
 
 export default function Home() {
   return (
