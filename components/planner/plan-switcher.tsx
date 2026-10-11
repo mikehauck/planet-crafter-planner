@@ -71,8 +71,12 @@ export function PlanSwitcher({ store }: { store: PlanStore }) {
 
   return (
     <div className="flex items-center gap-1">
+      <label htmlFor="plan-picker" className="mr-1 text-sm font-medium">
+        Plans
+      </label>
       {showPicker && (
         <select
+          id="plan-picker"
           aria-label="Plan"
           value={active.id}
           onChange={(e) => store.select(e.target.value)}
