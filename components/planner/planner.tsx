@@ -27,6 +27,7 @@ import { directTotals, rawTotals, type Catalog } from "@/lib/plan";
 import { useLocalPlans, type PlanStore } from "@/lib/plan-store";
 import { planLabel, type NamedPlan } from "@/services/plans/schema";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 /** Signed out: plans live in this browser. */
 export function LocalPlanner({ catalog }: { catalog: Catalog }) {
@@ -77,16 +78,14 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
   const whole = new Set(store.active.keepWhole);
   const craftable = (id: string) => Object.keys(catalog[id]?.recipe ?? {}).length > 0;
   const totals = Object.entries((rawOnly ? rawTotals : directTotals)(catalog, plan, whole))
-    .map(([id, qty]) => ({ id, name: catalog[id].name, qty, craftable: craftable(id), whole: whole.has(id) }))
+    .map(([id, qty]) => ({ name: catalog[id].name, qty }))
     .sort((a, b) => a.name.localeCompare(b.name));
 
   // Until the browser's storage is read, which plan is the working one is unknown: show a skeleton, not a guess.
   if (!store.ready) return <PlannerSkeleton />;
 
   const title = rawOnly ? "Raw resources needed" : "Ingredients needed";
-  const panel = (
-    <IngredientsPanel totals={totals} rawOnly={rawOnly} onRawOnlyChange={setRawOnly} onBreakDownChange={(id, on) => setKeepWhole(id, !on)} />
-  );
+  const panel = <IngredientsPanel totals={totals} rawOnly={rawOnly} onRawOnlyChange={setRawOnly} />;
 
   return (
     <>
@@ -153,20 +152,22 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
             <ul className="divide-y">
               {entries.map(([id, qty]) => (
                 <li key={id} className="flex items-center gap-3 py-2">
-                  {/* Ticked: the totals show what it is made of. Unticked: you will have it, so it counts as itself. */}
-                  {craftable(id) ? (
-                    <Checkbox
-                      checked={!whole.has(id)}
-                      onCheckedChange={(on) => setKeepWhole(id, !on)}
-                      aria-label={`Break down ${catalog[id].name}`}
-                      title="Break down into what it is made of"
-                    />
-                  ) : (
-                    <span className="size-4 shrink-0" />
-                  )}
                   <span className="flex-1 truncate">{catalog[id].name}</span>
                   {catalog[id].retired && <Badge variant="destructive">No longer in the game</Badge>}
                   <Badge variant="secondary">{catalog[id].type}</Badge>
+                  {/* Ticked: the totals show what it is made of. Unticked: you will have it, so it counts as itself.
+                      Raw resources cannot be broken down; the empty slot keeps the columns lined up. */}
+                  <Label
+                    className={`shrink-0 text-xs font-normal text-muted-foreground ${craftable(id) ? "" : "invisible"}`}
+                    title="Count what it is made of in the totals. Untick if you will already have it."
+                  >
+                    <Checkbox
+                      checked={!whole.has(id)}
+                      onCheckedChange={(on) => setKeepWhole(id, !on)}
+                      disabled={!craftable(id)}
+                    />
+                    Break down
+                  </Label>
                   <QtyField value={qty} onChange={(q) => setQty(id, q)} label={catalog[id].name} />
                   <Button variant="ghost" size="icon" onClick={() => remove(id)} aria-label={`Remove ${catalog[id].name}`}>
                     <XIcon />
