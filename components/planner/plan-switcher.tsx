@@ -14,38 +14,58 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import type { PlanStore } from "@/lib/plan-store";
+import { planLabel } from "@/services/plans/schema";
 
-type Dialog = { kind: "new" | "rename" | "delete" } | null;
+/**
+ * new: a second plan. When the current plan is unnamed it is named in the same step
+ *      (or, if it is still empty, naming it is all "new" does).
+ */
+type Kind = "new" | "rename" | "delete";
 
 /** Pick the plan to show; make, rename or delete plans. */
 export function PlanSwitcher({ store }: { store: PlanStore }) {
   const { plans, active } = store;
-  const [dialog, setDialog] = useState<Dialog>(null);
+  const [kind, setKind] = useState<Kind | null>(null);
   const [name, setName] = useState("");
+  const [currentName, setCurrentName] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
 
-  const open = (kind: "new" | "rename" | "delete") => {
-    setName(kind === "rename" ? active.name : "");
+  const unnamed = !active.name;
+  const empty = Object.keys(active.items).length === 0;
+  // "+" on an empty unnamed plan just names it; on an unnamed plan with items, it names it and makes the new one.
+  const nameOnly = kind === "new" && unnamed && empty;
+  const nameBoth = kind === "new" && unnamed && !empty;
+
+  const open = (k: Kind) => {
+    setName(k === "rename" ? active.name : "");
+    setCurrentName("");
     setError(null);
-    setDialog({ kind });
+    setKind(k);
   };
 
   async function confirm() {
-    if (!dialog) return;
+    if (!kind) return;
     setPending(true);
-    const err =
-      dialog.kind === "new"
-        ? await store.create(name)
-        : dialog.kind === "rename"
-          ? await store.rename(active.id, name)
-          : await store.remove(active.id);
+    let err: string | null;
+    if (kind === "delete") err = await store.remove(active.id);
+    else if (kind === "rename" || nameOnly) err = await store.rename(active.id, name);
+    else if (nameBoth) err = (await store.rename(active.id, currentName)) ?? (await store.create(name));
+    else err = await store.create(name);
     setPending(false);
     if (err) setError(err);
-    else setDialog(null);
+    else setKind(null);
   }
 
-  const title = { new: "New plan", rename: "Rename plan", delete: `Delete "${active.name}"?` };
+  const title =
+    kind === "delete"
+      ? `Delete "${planLabel(active)}"?`
+      : kind === "rename" || nameOnly
+        ? unnamed
+          ? "Name your plan"
+          : "Rename plan"
+        : "New plan";
+  const count = Object.keys(active.items).length;
 
   return (
     <div className="flex items-center gap-1">
@@ -57,21 +77,21 @@ export function PlanSwitcher({ store }: { store: PlanStore }) {
       >
         {plans.map((p) => (
           <option key={p.id} value={p.id}>
-            {p.name}
+            {planLabel(p)}
           </option>
         ))}
       </select>
       <Button variant="ghost" size="icon" aria-label="New plan" onClick={() => open("new")}>
         <PlusIcon />
       </Button>
-      <Button variant="ghost" size="icon" aria-label="Rename plan" onClick={() => open("rename")}>
+      <Button variant="ghost" size="icon" aria-label={unnamed ? "Name plan" : "Rename plan"} onClick={() => open("rename")}>
         <PencilIcon />
       </Button>
       <Button variant="ghost" size="icon" aria-label="Delete plan" disabled={plans.length < 2} onClick={() => open("delete")}>
         <Trash2Icon />
       </Button>
 
-      <AlertDialog open={dialog !== null} onOpenChange={(o) => !o && setDialog(null)}>
+      <AlertDialog open={kind !== null} onOpenChange={(o) => !o && setKind(null)}>
         <AlertDialogContent>
           <form
             onSubmit={(e) => {
@@ -81,12 +101,22 @@ export function PlanSwitcher({ store }: { store: PlanStore }) {
             className="flex flex-col gap-4"
           >
             <AlertDialogHeader>
-              <AlertDialogTitle>{dialog && title[dialog.kind]}</AlertDialogTitle>
-              {dialog?.kind === "delete" ? (
+              <AlertDialogTitle>{title}</AlertDialogTitle>
+              {kind === "delete" ? (
                 <AlertDialogDescription>
-                  This deletes the plan and its {Object.keys(active.items).length} item
-                  {Object.keys(active.items).length === 1 ? "" : "s"}.
+                  This deletes the plan and its {count} item{count === 1 ? "" : "s"}.
                 </AlertDialogDescription>
+              ) : nameBoth ? (
+                <div className="flex flex-col gap-3 text-sm">
+                  <label className="flex flex-col gap-1">
+                    Your current plan needs a name first
+                    <Input value={currentName} onChange={(e) => setCurrentName(e.target.value)} maxLength={60} autoFocus />
+                  </label>
+                  <label className="flex flex-col gap-1">
+                    New plan
+                    <Input value={name} onChange={(e) => setName(e.target.value)} maxLength={60} />
+                  </label>
+                </div>
               ) : (
                 <Input aria-label="Plan name" value={name} onChange={(e) => setName(e.target.value)} maxLength={60} autoFocus />
               )}
@@ -98,8 +128,8 @@ export function PlanSwitcher({ store }: { store: PlanStore }) {
             </AlertDialogHeader>
             <AlertDialogFooter>
               <AlertDialogCancel type="button">Cancel</AlertDialogCancel>
-              <AlertDialogAction type="submit" disabled={pending} variant={dialog?.kind === "delete" ? "destructive" : "default"}>
-                {dialog?.kind === "delete" ? "Delete plan" : dialog?.kind === "new" ? "Create" : "Rename"}
+              <AlertDialogAction type="submit" disabled={pending} variant={kind === "delete" ? "destructive" : "default"}>
+                {kind === "delete" ? "Delete plan" : kind === "rename" || nameOnly ? "Save name" : "Create"}
               </AlertDialogAction>
             </AlertDialogFooter>
           </form>

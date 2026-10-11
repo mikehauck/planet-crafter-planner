@@ -24,7 +24,8 @@ import { PlanSwitcher } from "@/components/planner/plan-switcher";
 import { useAccountPlans } from "@/lib/account-plans";
 import { directTotals, rawTotals, type Catalog } from "@/lib/plan";
 import { useLocalPlans, type PlanStore } from "@/lib/plan-store";
-import type { NamedPlan } from "@/services/plans/schema";
+import { planLabel, type NamedPlan } from "@/services/plans/schema";
+import { Input } from "@/components/ui/input";
 
 /** Signed out: plans live in this browser. */
 export function LocalPlanner({ catalog }: { catalog: Catalog }) {
@@ -48,6 +49,23 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
   const { add, setQty, removeItem: remove, clear } = store;
   const [rawOnly, setRawOnly] = useState(true);
   const [confirmClear, setConfirmClear] = useState(false);
+  // Saving to the account needs a named plan: the first pick into the unnamed placeholder asks for one.
+  const [pendingItem, setPendingItem] = useState<string | null>(null);
+  const [firstName, setFirstName] = useState("");
+  const [nameError, setNameError] = useState<string | null>(null);
+  const pick = (id: string) => {
+    if (store.namesRequired && !store.active.name) {
+      setFirstName("");
+      setNameError(null);
+      setPendingItem(id);
+    } else add(id);
+  };
+  async function createFirst() {
+    if (!pendingItem) return;
+    const err = await store.create(firstName, { [pendingItem]: 1 });
+    if (err) setNameError(err);
+    else setPendingItem(null);
+  }
   // Retired items stay in the catalog so plans can show and total them, but cannot be added again.
   const items = useMemo(
     () => Object.values(catalog).filter((i) => !i.retired).sort((a, b) => a.name.localeCompare(b.name)),
@@ -92,7 +110,7 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
                 <AlertDialogTrigger render={<Button variant="ghost" size="sm" />}>Clear</AlertDialogTrigger>
                 <AlertDialogContent>
                   <AlertDialogHeader>
-                    <AlertDialogTitle>Clear &ldquo;{store.active.name}&rdquo;?</AlertDialogTitle>
+                    <AlertDialogTitle>Clear &ldquo;{planLabel(store.active)}&rdquo;?</AlertDialogTitle>
                     <AlertDialogDescription>
                       This removes all {entries.length} item{entries.length === 1 ? "" : "s"} from your plan.
                     </AlertDialogDescription>
@@ -120,7 +138,7 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
               {store.error}
             </p>
           )}
-          <ItemSearch items={items} onPick={add} />
+          <ItemSearch items={items} onPick={pick} />
           {entries.length === 0 ? (
             <p className="text-sm text-muted-foreground">Search above to add something to build.</p>
           ) : (
@@ -140,6 +158,37 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
           )}
         </CardContent>
       </Card>
+
+      <AlertDialog open={pendingItem !== null} onOpenChange={(o) => !o && setPendingItem(null)}>
+        <AlertDialogContent>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              void createFirst();
+            }}
+            className="flex flex-col gap-4"
+          >
+            <AlertDialogHeader>
+              <AlertDialogTitle>Name your plan</AlertDialogTitle>
+              <AlertDialogDescription>
+                It is saved to your account, so it needs a name.
+              </AlertDialogDescription>
+              <Input aria-label="Plan name" value={firstName} onChange={(e) => setFirstName(e.target.value)} maxLength={60} autoFocus />
+              {nameError && (
+                <p role="alert" className="text-sm text-destructive">
+                  {nameError}
+                </p>
+              )}
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel type="button">Cancel</AlertDialogCancel>
+              <AlertDialogAction type="submit">
+                Create and add {pendingItem && catalog[pendingItem]?.name}
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </form>
+        </AlertDialogContent>
+      </AlertDialog>
 
       {entries.length > 0 && (
         // Wide screens: a drawer pinned to the right edge, like a shopping cart. The page makes room for it.

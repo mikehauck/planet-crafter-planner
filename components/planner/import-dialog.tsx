@@ -15,7 +15,7 @@ import type { Catalog } from "@/lib/plan";
 import { clearLocalPlans, useBrowserPlans } from "@/lib/plan-store";
 import { Input } from "@/components/ui/input";
 import { previewImport } from "@/services/plans/import";
-import { PlanName, type NamedPlan } from "@/services/plans/schema";
+import { PlanName, planLabel, type NamedPlan } from "@/services/plans/schema";
 
 /**
  * Signed in with plans still in this browser: offer to move them into the account.
@@ -79,7 +79,8 @@ export function ImportDialog({
               <li key={p.from} className="flex flex-col gap-1">
                 <div className="flex items-center gap-3">
                   <Input
-                    aria-label={`Name for "${p.from}"`}
+                    aria-label={`Name for "${planLabel({ name: p.from })}"`}
+                    placeholder={p.from ? undefined : "Name this plan"}
                     value={names[p.from] ?? preview.plans[i].name}
                     onChange={(e) => setNames((n) => ({ ...n, [p.from]: e.target.value }))}
                     aria-invalid={msg ? true : undefined}

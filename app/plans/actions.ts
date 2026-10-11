@@ -24,8 +24,8 @@ async function run<T>(fn: (userId: string) => Promise<T>): Promise<ActionResult<
   }
 }
 
-export async function createPlan(name: string): Promise<ActionResult<NamedPlan>> {
-  return run((u) => plans.createPlan(u, PlanName.parse(name)));
+export async function createPlan(name: string, items: unknown = {}): Promise<ActionResult<NamedPlan>> {
+  return run((u) => plans.createPlan(u, PlanName.parse(name), Plan.parse(items)));
 }
 
 export async function renamePlan(planId: string, name: string): Promise<ActionResult> {

@@ -1,6 +1,7 @@
 import "server-only";
 import { Prisma } from "@/generated/prisma/client";
 import { db } from "@/lib/db";
+import type { Plan } from "@/services/catalog/schema";
 import { previewImport, type IncomingPlan } from "./import";
 import { uniqueName, type NamedPlan } from "./schema";
 
@@ -17,12 +18,21 @@ async function ownPlan(tx: Tx, userId: string, planId: string) {
 
 const isNameClash = (e: unknown) => e instanceof Prisma.PrismaClientKnownRequestError && e.code === "P2002";
 
-/** New empty plan. A taken name gets -1, -2...; the name actually used is returned. */
-export async function createPlan(userId: string, name: string): Promise<NamedPlan> {
+/** New plan, empty or with starting items. A taken name gets -1, -2...; the name actually used is returned. */
+export async function createPlan(userId: string, name: string, items: Plan = {}): Promise<NamedPlan> {
   return db.$transaction(async (tx) => {
+    const ids = Object.keys(items);
+    const usable = await tx.item.count({ where: { id: { in: ids }, retiredAt: null } });
+    if (usable !== ids.length) throw new PlanError("Some of those items are not in the game.");
     const taken = await tx.plan.findMany({ where: { userId }, select: { name: true } });
-    const plan = await tx.plan.create({ data: { userId, name: uniqueName(name, taken.map((p) => p.name)) } });
-    return { id: plan.id, name: plan.name, items: {} };
+    const plan = await tx.plan.create({
+      data: {
+        userId,
+        name: uniqueName(name, taken.map((p) => p.name)),
+        items: { create: Object.entries(items).map(([itemId, qty]) => ({ itemId, qty })) },
+      },
+    });
+    return { id: plan.id, name: plan.name, items };
   });
 }
 

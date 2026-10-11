@@ -2,9 +2,9 @@
 import { useEffect, useRef, useState } from "react";
 import * as actions from "@/app/plans/actions";
 import type { NamedPlan } from "@/services/plans/schema";
-import { DEFAULT_NAME, useActiveId, type PlanStore } from "@/lib/plan-store";
+import { useActiveId, type PlanStore } from "@/lib/plan-store";
 
-/** Stands in until the account has a plan; the first change creates it for real. */
+/** Stands in, unnamed, until the account has a plan. Nothing can be added to it: the planner asks for a name first. */
 const PLACEHOLDER_ID = "";
 /** Holding the stepper fires a change per step; save the quantity once it settles. */
 const QTY_SAVE_DELAY_MS = 400;
@@ -15,14 +15,13 @@ export function useAccountPlans(initial: NamedPlan[]): PlanStore & { addPlans(ad
   const [error, setError] = useState<string | null>(null);
   const [activeId, setActiveId] = useActiveId();
   const timers = useRef(new Map<string, ReturnType<typeof setTimeout>>());
-  const creating = useRef<Promise<string | null> | null>(null);
 
   useEffect(() => {
     const pending = timers.current;
     return () => pending.forEach(clearTimeout);
   }, []);
 
-  const shown = plans.length ? plans : [{ id: PLACEHOLDER_ID, name: DEFAULT_NAME, items: {} }];
+  const shown = plans.length ? plans : [{ id: PLACEHOLDER_ID, name: "", items: {} }];
   const active = shown.find((p) => p.id === activeId) ?? shown[0];
 
   const setItems = (planId: string, change: (items: NamedPlan["items"]) => NamedPlan["items"]) =>
@@ -32,28 +31,16 @@ export function useAccountPlans(initial: NamedPlan[]): PlanStore & { addPlans(ad
     return r.ok ? null : r.error;
   };
 
-  /** The active plan's real id, creating "My plan" first if the account has none. */
-  async function activePlanId(): Promise<string | null> {
-    if (active.id !== PLACEHOLDER_ID) return active.id;
-    creating.current ??= actions.createPlan(DEFAULT_NAME).then((r) => {
-      if (!r.ok) return report(r), null;
-      // Keep what was added to the placeholder while the plan was being created.
-      setPlans((ps) => [{ ...r.data, items: ps.find((p) => p.id === PLACEHOLDER_ID)?.items ?? {} }]);
-      setActiveId(r.data.id);
-      return r.data.id;
-    });
-    return creating.current;
-  }
-
   function saveQty(itemId: string, qty: number) {
-    const key = `${active.id}:${itemId}`;
+    if (active.id === PLACEHOLDER_ID) return;
+    const planId = active.id;
+    const key = `${planId}:${itemId}`;
     clearTimeout(timers.current.get(key));
     timers.current.set(
       key,
       setTimeout(async () => {
         timers.current.delete(key);
-        const planId = await activePlanId();
-        if (planId) report(await actions.setItemQty(planId, itemId, qty));
+        report(await actions.setItemQty(planId, itemId, qty));
       }, QTY_SAVE_DELAY_MS),
     );
   }
@@ -61,6 +48,7 @@ export function useAccountPlans(initial: NamedPlan[]): PlanStore & { addPlans(ad
   return {
     plans: shown,
     active,
+    namesRequired: true,
     error,
     select: setActiveId,
     addPlans(added) {
@@ -69,8 +57,8 @@ export function useAccountPlans(initial: NamedPlan[]): PlanStore & { addPlans(ad
       setPlans((ps) => [...ps.filter((p) => p.id !== PLACEHOLDER_ID), ...added]);
       setActiveId(added[0].id);
     },
-    async create(name) {
-      const r = await actions.createPlan(name);
+    async create(name, items = {}) {
+      const r = await actions.createPlan(name, items);
       if (!r.ok) return r.error;
       setPlans((ps) => [...ps, r.data]);
       setActiveId(r.data.id);
@@ -78,7 +66,7 @@ export function useAccountPlans(initial: NamedPlan[]): PlanStore & { addPlans(ad
     },
     async rename(id, name) {
       if (id === PLACEHOLDER_ID) {
-        const r = await actions.createPlan(name);
+        const r = await actions.createPlan(name, {});
         if (!r.ok) return r.error;
         setPlans([r.data]);
         setActiveId(r.data.id);
@@ -97,9 +85,8 @@ export function useAccountPlans(initial: NamedPlan[]): PlanStore & { addPlans(ad
       return null;
     },
     add(itemId) {
-      if (active.items[itemId]) return;
+      if (active.id === PLACEHOLDER_ID || active.items[itemId]) return;
       setItems(active.id, (items) => ({ ...items, [itemId]: 1 }));
-      if (active.id === PLACEHOLDER_ID) setPlans([{ ...active, items: { [itemId]: 1 } }]);
       saveQty(itemId, 1);
     },
     setQty(itemId, qty) {

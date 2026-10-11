@@ -13,6 +13,13 @@ export const NamedPlan = z.object({
 });
 export type NamedPlan = z.infer<typeof NamedPlan>;
 
+/** A plan in the browser may be unnamed (name ""): the one you start in. It is named before a second plan
+ *  is made or it moves into an account; plans in the database always have a name. */
+export const LocalPlan = NamedPlan.extend({ name: z.union([PlanName, z.literal("")]) });
+
+/** What to show for a plan's name. */
+export const planLabel = (p: { name: string }) => p.name || "Unnamed plan";
+
 /** `name`, or `name-1`, `name-2`... : the first one not in `taken`. */
 export function uniqueName(name: string, taken: Iterable<string>): string {
   const used = new Set(taken);
