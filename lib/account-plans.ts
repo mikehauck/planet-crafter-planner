@@ -10,7 +10,7 @@ const PLACEHOLDER_ID = "";
 const QTY_SAVE_DELAY_MS = 400;
 
 /** Plans saved in the signed-in account. Changes show at once and save in the background. */
-export function useAccountPlans(initial: NamedPlan[]): PlanStore {
+export function useAccountPlans(initial: NamedPlan[]): PlanStore & { addPlans(added: NamedPlan[]): void } {
   const [plans, setPlans] = useState<NamedPlan[]>(initial);
   const [error, setError] = useState<string | null>(null);
   const [activeId, setActiveId] = useActiveId();
@@ -63,6 +63,12 @@ export function useAccountPlans(initial: NamedPlan[]): PlanStore {
     active,
     error,
     select: setActiveId,
+    addPlans(added) {
+      if (!added.length) return;
+      // An untouched placeholder gives way to the imported plans.
+      setPlans((ps) => [...ps.filter((p) => p.id !== PLACEHOLDER_ID), ...added]);
+      setActiveId(added[0].id);
+    },
     async create(name) {
       const r = await actions.createPlan(name);
       if (!r.ok) return r.error;

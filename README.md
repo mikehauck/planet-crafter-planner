@@ -42,6 +42,7 @@ After a game update, see [scripts/extract/README.md](scripts/extract/README.md).
 | `app/api/auth/[...all]/` | Better Auth's endpoints: the only API route |
 | `lib/plan.ts` | Recipe expansion (pure, used in the browser too) |
 | `lib/plan-store.ts` | `PlanStore` interface; plans in localStorage (signed out) |
+| `services/plans/import.ts` | Moving browser plans into an account: renames clashes (-1, -2), drops unknown items |
 | `lib/account-plans.ts` | `PlanStore` over the server actions (signed in); quantity saves are debounced |
 | `prisma/` | Schema, migrations, seed and seed data |
 

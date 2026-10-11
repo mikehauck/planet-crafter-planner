@@ -1,6 +1,7 @@
 import "server-only";
 import { Prisma } from "@/generated/prisma/client";
 import { db } from "@/lib/db";
+import { previewImport, type IncomingPlan } from "./import";
 import { uniqueName, type NamedPlan } from "./schema";
 
 /** A failure the user can act on; the message is shown to them. */
@@ -64,5 +65,22 @@ export async function clearPlan(userId: string, planId: string): Promise<void> {
   await db.$transaction(async (tx) => {
     await ownPlan(tx, userId, planId);
     await tx.planItem.deleteMany({ where: { planId } });
+  });
+}
+
+/** Create the browser's plans in the account, in one transaction. Names and items are worked out again here. */
+export async function importPlans(userId: string, incoming: IncomingPlan[]): Promise<NamedPlan[]> {
+  return db.$transaction(async (tx) => {
+    const ids = [...new Set(incoming.flatMap((p) => Object.keys(p.items)))];
+    const known = new Set((await tx.item.findMany({ where: { id: { in: ids } }, select: { id: true } })).map((i) => i.id));
+    const taken = (await tx.plan.findMany({ where: { userId }, select: { name: true } })).map((p) => p.name);
+    const created: NamedPlan[] = [];
+    for (const p of previewImport(incoming, taken, (id) => known.has(id)).plans) {
+      const plan = await tx.plan.create({
+        data: { userId, name: p.name, items: { create: Object.entries(p.items).map(([itemId, qty]) => ({ itemId, qty })) } },
+      });
+      created.push({ id: plan.id, name: plan.name, items: p.items });
+    }
+    return created;
   });
 }

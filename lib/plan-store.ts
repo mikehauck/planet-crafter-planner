@@ -155,6 +155,13 @@ export function useLocalPlans(): PlanStore {
   };
 }
 
+/** The plans kept in this browser, as stored (no empty default). The signed-in page offers to import them. */
+export function useBrowserPlans(): NamedPlan[] {
+  const raw = useStored(PLANS_KEY);
+  const legacy = useStored(LEGACY_KEY);
+  return useMemo(() => parseLocalPlans(raw, legacy), [raw, legacy]);
+}
+
 /** Empty the browser's plans (after moving them into an account). An empty list also hides the legacy key for good. */
 export function clearLocalPlans() {
   write(PLANS_KEY, JSON.stringify([]));

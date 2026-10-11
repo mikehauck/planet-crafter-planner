@@ -19,6 +19,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { IngredientsPanel } from "@/components/planner/ingredients-panel";
 import { ItemSearch } from "@/components/planner/item-search";
 import { QtyField } from "@/components/planner/qty-field";
+import { ImportDialog } from "@/components/planner/import-dialog";
 import { PlanSwitcher } from "@/components/planner/plan-switcher";
 import { useAccountPlans } from "@/lib/account-plans";
 import { directTotals, rawTotals, type Catalog } from "@/lib/plan";
@@ -30,9 +31,16 @@ export function LocalPlanner({ catalog }: { catalog: Catalog }) {
   return <Planner catalog={catalog} store={useLocalPlans()} />;
 }
 
-/** Signed in: plans live in the account. */
+/** Signed in: plans live in the account. Plans left in this browser are offered for import. */
 export function AccountPlanner({ catalog, plans }: { catalog: Catalog; plans: NamedPlan[] }) {
-  return <Planner catalog={catalog} store={useAccountPlans(plans)} />;
+  const store = useAccountPlans(plans);
+  return (
+    <>
+      {/* The placeholder (no id) is not a saved plan, so its name is not taken. */}
+      <ImportDialog catalog={catalog} accountPlans={store.plans.filter((p) => p.id)} onImported={store.addPlans} />
+      <Planner catalog={catalog} store={store} />
+    </>
+  );
 }
 
 function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {

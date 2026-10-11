@@ -3,6 +3,7 @@
 import { z } from "zod";
 import { logger } from "@/lib/logger";
 import { requireUser } from "@/services/auth/queries";
+import { Plan } from "@/services/catalog/schema";
 import { PlanName, type NamedPlan } from "@/services/plans/schema";
 import * as plans from "@/services/plans/mutations";
 
@@ -45,4 +46,11 @@ export async function removeItem(planId: string, itemId: string): Promise<Action
 
 export async function clearPlan(planId: string): Promise<ActionResult> {
   return run((u) => plans.clearPlan(u, id.parse(planId)));
+}
+
+const Incoming = z.array(z.object({ name: PlanName, items: Plan })).max(100);
+
+/** Move the browser's plans into the account; returns the plans as created. */
+export async function importPlans(incoming: unknown): Promise<ActionResult<NamedPlan[]>> {
+  return run((u) => plans.importPlans(u, Incoming.parse(incoming)));
 }
