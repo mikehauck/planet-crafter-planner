@@ -6,7 +6,13 @@ Reads items, buildables and recipes from the installed game's `resources.assets`
 Needs `uv`. The first run creates `work/venv` with UnityPy and TypeTreeGeneratorAPI.
 
     bash scripts/extract/extract.sh
-    pnpm db:seed
+    pnpm db:seed -- --dry-run   # read the report: added, changed, restored, retired
+    pnpm db:seed                # apply it
+    pnpm verify                 # must print MATCH
+
+The seed reconciles rather than reloading: items missing from the new file are marked retired, never deleted,
+because saved plans point at them. A file with duplicate ids or names, unknown ingredients or a recipe loop is
+rejected before anything is written.
 
 | Script | Does |
 |---|---|

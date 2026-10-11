@@ -26,8 +26,9 @@ export function Planner({ catalog }: { catalog: Catalog }) {
   const { plan, add, setQty, remove, clear } = usePlan();
   const [rawOnly, setRawOnly] = useState(true);
   const [confirmClear, setConfirmClear] = useState(false);
+  // Retired items stay in the catalog so plans can show and total them, but cannot be added again.
   const items = useMemo(
-    () => Object.values(catalog).sort((a, b) => a.name.localeCompare(b.name)),
+    () => Object.values(catalog).filter((i) => !i.retired).sort((a, b) => a.name.localeCompare(b.name)),
     [catalog],
   );
   // Drop ids a data re-import removed, so a stale plan cannot break the page.
@@ -98,6 +99,7 @@ export function Planner({ catalog }: { catalog: Catalog }) {
               {entries.map(([id, qty]) => (
                 <li key={id} className="flex items-center gap-3 py-2">
                   <span className="flex-1 truncate">{catalog[id].name}</span>
+                  {catalog[id].retired && <Badge variant="destructive">No longer in the game</Badge>}
                   <Badge variant="secondary">{catalog[id].type}</Badge>
                   <QtyField value={qty} onChange={(q) => setQty(id, q)} label={catalog[id].name} />
                   <Button variant="ghost" size="icon" onClick={() => remove(id)} aria-label={`Remove ${catalog[id].name}`}>

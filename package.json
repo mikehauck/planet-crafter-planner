@@ -10,7 +10,8 @@
     "postinstall": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:seed": "prisma db seed",
-    "verify": "tsx scripts/verify-totals.mts"
+    "verify": "tsx scripts/verify-totals.mts",
+    "verify-reconcile": "tsx scripts/verify-reconcile.mts"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",

@@ -16,6 +16,7 @@ export async function loadCatalog(db: PrismaClient): Promise<Catalog> {
       name: i.name,
       type: i.type,
       categories: i.categories,
+      retired: i.retiredAt !== null,
       recipe: Object.fromEntries(i.ingredients.map((r) => [r.ingredientId, r.qty])),
     };
   }

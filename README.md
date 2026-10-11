@@ -16,10 +16,11 @@ Needs Node 24, pnpm and a Postgres database.
     cp .env.example .env        # then set DATABASE_URL
     pnpm install
     pnpm db:migrate             # create tables
-    pnpm db:seed                # load prisma/data/items.json
+    pnpm db:seed                # load prisma/data/items.json (reconciles; `-- --dry-run` to preview)
     pnpm dev
 
 `pnpm verify` checks the totals against an independent expansion of the seed data; it should print `MATCH`.
+`pnpm verify-reconcile` checks the seed reconciler on copies of the data (no database).
 
 ## Updating game data
 
@@ -47,6 +48,7 @@ Services are split by feature, not by table (an item and its recipe lines change
 | `schema.ts` | zod schemas and the types inferred from them | no, the browser imports it |
 | `queries.ts`, `mutations.ts` | Reads and writes for the app | yes (`import "server-only"`) |
 | `load.ts` | Uncached loaders that take a Prisma client, for scripts run with tsx | no |
-| `checks.ts` | The feature's own validation for complex operations (e.g. `verifyTotals`) | no, pure |
+| `checks.ts` | The feature's own validation for complex operations (e.g. `verifyTotals`, `checkReconcile`) | no, pure |
+| other files | Feature-specific operations, e.g. `catalog/reconcile.ts` for game data imports | as needed |
 
 Game data © Miju Games; this is an unofficial fan tool.

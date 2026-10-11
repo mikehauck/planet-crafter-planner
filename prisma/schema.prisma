@@ -13,13 +13,16 @@ datasource db {
 model Item {
   /// The game's own id, e.g. "OreExtractor2"
   id     String  @id
-  name   String  @unique
+  /// Not unique: a retired item may share a name with a current one. The seed file checks names are unique.
+  name   String
   /// Resource, Component, Item, Equipment, Machine, Base Building, ...
   type   String
   /// Comma-separated planets this unlocks on; empty means every planet
   planet String  @default("")
   /// What it produces in the terraformation: Energy, Oxygen, Heat, Pressure, Plants, Insects, Animals, Purification
   categories String[] @default([])
+  /// Set when a game data import no longer has this item. Kept, not deleted, so plans that use it still work.
+  retiredAt  DateTime? @map("retired_at")
 
   ingredients RecipeIngredient[] @relation("recipe")
   usedIn      RecipeIngredient[] @relation("ingredient")
