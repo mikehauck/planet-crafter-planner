@@ -50,6 +50,8 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
   const { add, setQty, removeItem: remove, clear, setKeepWhole } = store;
   const { rawOnly } = store.active;
   const [confirmClear, setConfirmClear] = useState(false);
+  // The item whose X was clicked; removing asks first, since the X sits next to the quantity stepper.
+  const [confirmRemove, setConfirmRemove] = useState<string | null>(null);
   // Saving to the account needs a named plan: the first pick into the unnamed placeholder asks for one.
   const [pendingItem, setPendingItem] = useState<string | null>(null);
   const [firstName, setFirstName] = useState("");
@@ -193,7 +195,7 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
                         <QtyField value={qty} onChange={(q) => setQty(id, q)} label={catalog[id].name} />
                       </td>
                       <td className="w-px py-2 pl-3">
-                        <Button variant="ghost" size="icon" onClick={() => remove(id)} aria-label={`Remove ${catalog[id].name}`}>
+                        <Button variant="ghost" size="icon" onClick={() => setConfirmRemove(id)} aria-label={`Remove ${catalog[id].name}`}>
                           <XIcon />
                         </Button>
                       </td>
@@ -205,6 +207,27 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
           )}
         </CardContent>
       </Card>
+
+      <AlertDialog open={confirmRemove !== null} onOpenChange={(o) => !o && setConfirmRemove(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Remove &ldquo;{confirmRemove && catalog[confirmRemove]?.name}&rdquo;?</AlertDialogTitle>
+            <AlertDialogDescription>It comes out of &ldquo;{planLabel(store.active)}&rdquo;.</AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              variant="destructive"
+              onClick={() => {
+                if (confirmRemove) remove(confirmRemove);
+                setConfirmRemove(null);
+              }}
+            >
+              Remove
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
 
       <AlertDialog open={pendingItem !== null} onOpenChange={(o) => !o && setPendingItem(null)}>
         <AlertDialogContent>
