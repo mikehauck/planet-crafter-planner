@@ -88,7 +88,8 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
 
   return (
     <>
-      <Card>
+      {/* Shrinks to fit the screen once the list is long; the list scrolls inside it. */}
+      <Card className="min-h-0">
         <CardHeader>
           <CardTitle>
             <PlanSwitcher store={store} />
@@ -138,7 +139,7 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
             </CardAction>
           )}
         </CardHeader>
-        <CardContent className="flex flex-col gap-4">
+        <CardContent className="flex min-h-0 flex-col gap-4">
           {store.error && (
             <p role="alert" className="text-sm text-destructive">
               {store.error}
@@ -148,57 +149,59 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
           {entries.length === 0 ? (
             <p className="text-sm text-muted-foreground">Search above to add something to build.</p>
           ) : (
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b text-left text-xs text-muted-foreground">
-                  <th className="pb-2 font-normal">Item</th>
-                  <th className="pb-2 font-normal">Type</th>
-                  {/* Ticked: the totals show what it is made of. Unticked: you will have it, so it counts as itself. */}
-                  <th className="px-3 pb-2 text-center font-normal whitespace-nowrap" title="Count what it is made of in the totals. Untick if you will already have it.">
-                    Break down
-                  </th>
-                  <th className="pb-2 text-center font-normal">Qty</th>
-                  <th className="pb-2">
-                    <span className="sr-only">Remove</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y">
-                {entries.map(([id, qty]) => (
-                  <tr key={id}>
-                    <td className="max-w-0 py-2 pr-3">
-                      <div className="flex items-center gap-2">
-                        <span className="truncate">{catalog[id].name}</span>
-                        {catalog[id].retired && <Badge variant="destructive">No longer in the game</Badge>}
-                      </div>
-                    </td>
-                    <td className="w-px py-2">
-                      <Badge variant="secondary">{catalog[id].type}</Badge>
-                    </td>
-                    <td className="w-px px-3 py-2">
-                      {/* Raw resources cannot be broken down. */}
-                      {craftable(id) && (
-                        <div className="flex justify-center">
-                          <Checkbox
-                            checked={!whole.has(id)}
-                            onCheckedChange={(on) => setKeepWhole(id, !on)}
-                            aria-label={`Break down ${catalog[id].name}`}
-                          />
-                        </div>
-                      )}
-                    </td>
-                    <td className="w-px py-2">
-                      <QtyField value={qty} onChange={(q) => setQty(id, q)} label={catalog[id].name} />
-                    </td>
-                    <td className="w-px py-2 pl-3">
-                      <Button variant="ghost" size="icon" onClick={() => remove(id)} aria-label={`Remove ${catalog[id].name}`}>
-                        <XIcon />
-                      </Button>
-                    </td>
+            <div className="min-h-0 overflow-y-auto">
+              <table className="w-full text-sm">
+                <thead className="sticky top-0 z-10 bg-card">
+                  <tr className="border-b text-left text-xs text-muted-foreground">
+                    <th className="pb-2 font-normal">Item</th>
+                    <th className="pb-2 font-normal">Type</th>
+                    {/* Ticked: the totals show what it is made of. Unticked: you will have it, so it counts as itself. */}
+                    <th className="px-3 pb-2 text-center font-normal whitespace-nowrap" title="Count what it is made of in the totals. Untick if you will already have it.">
+                      Break down
+                    </th>
+                    <th className="pb-2 text-center font-normal">Qty</th>
+                    <th className="pb-2">
+                      <span className="sr-only">Remove</span>
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="divide-y">
+                  {entries.map(([id, qty]) => (
+                    <tr key={id}>
+                      <td className="max-w-0 py-2 pr-3">
+                        <div className="flex items-center gap-2">
+                          <span className="truncate">{catalog[id].name}</span>
+                          {catalog[id].retired && <Badge variant="destructive">No longer in the game</Badge>}
+                        </div>
+                      </td>
+                      <td className="w-px py-2">
+                        <Badge variant="secondary">{catalog[id].type}</Badge>
+                      </td>
+                      <td className="w-px px-3 py-2">
+                        {/* Raw resources cannot be broken down. */}
+                        {craftable(id) && (
+                          <div className="flex justify-center">
+                            <Checkbox
+                              checked={!whole.has(id)}
+                              onCheckedChange={(on) => setKeepWhole(id, !on)}
+                              aria-label={`Break down ${catalog[id].name}`}
+                            />
+                          </div>
+                        )}
+                      </td>
+                      <td className="w-px py-2">
+                        <QtyField value={qty} onChange={(q) => setQty(id, q)} label={catalog[id].name} />
+                      </td>
+                      <td className="w-px py-2 pl-3">
+                        <Button variant="ghost" size="icon" onClick={() => remove(id)} aria-label={`Remove ${catalog[id].name}`}>
+                          <XIcon />
+                        </Button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           )}
         </CardContent>
       </Card>

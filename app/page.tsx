@@ -9,8 +9,9 @@ import { listPlans } from "@/services/plans/queries";
 export default function Home() {
   return (
     // The ingredients drawer is fixed to the right edge; leave room for it while it is open.
-    <div className="flex-1 lg:has-[[data-ingredients-drawer]]:pr-80">
-      <main className="mx-auto w-full max-w-4xl px-4 py-8">
+    // One screen high: the header and search stay put and only the plan's item list scrolls.
+    <div className="flex h-dvh flex-col lg:has-[[data-ingredients-drawer]]:pr-80">
+      <main className="mx-auto flex min-h-0 w-full max-w-4xl flex-1 flex-col px-4 py-8">
         <div className="mb-1 flex items-center justify-between gap-4">
           <h1 className="text-2xl font-semibold">Planet Crafter planner</h1>
           <Suspense fallback={null}>
