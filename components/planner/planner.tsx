@@ -24,7 +24,7 @@ import { ImportDialog } from "@/components/planner/import-dialog";
 import { PlanSwitcher } from "@/components/planner/plan-switcher";
 import { useAccountPlans } from "@/lib/account-plans";
 import { directTotals, rawTotals, type Catalog } from "@/lib/plan";
-import { useLocalPlans, type PlanStore } from "@/lib/plan-store";
+import { useLocalPlans, useStoredFlag, type PlanStore } from "@/lib/plan-store";
 import { planLabel, type NamedPlan } from "@/services/plans/schema";
 import { Input } from "@/components/ui/input";
 
@@ -48,7 +48,8 @@ export function AccountPlanner({ catalog, userId, plans }: { catalog: Catalog; u
 function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
   const plan = store.active.items;
   const { add, setQty, removeItem: remove, clear, setKeepWhole } = store;
-  const [rawOnly, setRawOnly] = useState(true);
+  // A view setting for this browser, not part of the plan.
+  const [rawOnly, setRawOnly] = useStoredFlag("planet-crafter:raw-only", true);
   const [confirmClear, setConfirmClear] = useState(false);
   // Saving to the account needs a named plan: the first pick into the unnamed placeholder asks for one.
   const [pendingItem, setPendingItem] = useState<string | null>(null);

@@ -65,6 +65,13 @@ const useStored = (key: string): string | null | undefined => useSyncExternalSto
 /** `ids` with `itemId` added (`whole`) or removed. */
 export const toggled = (ids: string[], itemId: string, whole: boolean) => [...ids.filter((i) => i !== itemId), ...(whole ? [itemId] : [])];
 
+/** An on/off setting remembered in this browser; `fallback` until it has been read or when never set. */
+export function useStoredFlag(key: string, fallback: boolean): [boolean, (on: boolean) => void] {
+  const stored = useStored(key);
+  const value = stored == null ? fallback : stored === "true";
+  return [value, (on) => write(key, String(on))];
+}
+
 /** Keep the valid entries of a stored item list; drop the rest. */
 export function cleanItems(value: unknown): Plan {
   const items: Plan = {};
