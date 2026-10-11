@@ -7,13 +7,13 @@ Your plan is kept in your browser. Game data lives in Postgres.
 
 ## Stack
 
-Next.js 16 (App Router, Cache Components) · Tailwind 4 · shadcn/ui · Prisma 7 + PostgreSQL · pino
+Next.js 16 (App Router, Cache Components) · Tailwind 4 · shadcn/ui · Prisma 7 + PostgreSQL · Better Auth · zod · pino
 
 ## Run locally
 
 Needs Node 24, pnpm and a Postgres database.
 
-    cp .env.example .env        # then set DATABASE_URL
+    cp .env.example .env        # then set DATABASE_URL and BETTER_AUTH_SECRET
     pnpm install
     pnpm db:migrate             # create tables
     pnpm db:seed                # load prisma/data/items.json (reconciles; `-- --dry-run` to preview)
@@ -33,7 +33,10 @@ After a game update, see [scripts/extract/README.md](scripts/extract/README.md).
 | `app/page.tsx` | The page; loads the catalog per request |
 | `components/planner/` | Plan list, search, totals |
 | `services/<feature>/` | Everything that touches the database, one folder per feature (see below) |
-| `services/catalog/` | Game data: zod schemas, cached catalog query (`catalog` tag), totals check |
+| `services/catalog/` | Game data: zod schemas, cached catalog query (`catalog` tag), totals check, import reconciler |
+| `services/auth/` | `getSession`, `requireUser`, `requireAdmin` for pages and server actions |
+| `lib/auth.ts`, `lib/auth-client.ts` | Better Auth setup (server) and client; email + password, admin plugin |
+| `app/api/auth/[...all]/` | Better Auth's endpoints: the only API route |
 | `lib/plan.ts` | Recipe expansion (pure, used in the browser too) |
 | `lib/plan-store.ts` | Plan in localStorage, validated with the plan schema |
 | `prisma/` | Schema, migrations, seed and seed data |
