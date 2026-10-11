@@ -10,6 +10,8 @@ export const NamedPlan = z.object({
   name: PlanName,
   /** item id -> qty */
   items: Plan,
+  /** item ids counted as themselves in the totals, not broken down. Missing in plans saved before it existed. */
+  keepWhole: z.array(z.string().min(1)).default([]),
 });
 export type NamedPlan = z.infer<typeof NamedPlan>;
 

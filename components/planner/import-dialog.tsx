@@ -54,7 +54,7 @@ export function ImportDialog({
   async function confirm() {
     setPending(true);
     setError(null);
-    const r = await importPlans(chosen.map(({ name, items }) => ({ name, items })));
+    const r = await importPlans(chosen.map(({ name, items, keepWhole }) => ({ name, items, keepWhole })));
     setPending(false);
     if (!r.ok) return setError(r.error);
     onImported(r.data);

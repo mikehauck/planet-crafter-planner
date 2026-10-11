@@ -2,6 +2,7 @@
 import { useMemo, useState } from "react";
 import { ListIcon, XIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -46,7 +47,7 @@ export function AccountPlanner({ catalog, userId, plans }: { catalog: Catalog; u
 
 function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
   const plan = store.active.items;
-  const { add, setQty, removeItem: remove, clear } = store;
+  const { add, setQty, removeItem: remove, clear, setKeepWhole } = store;
   const [rawOnly, setRawOnly] = useState(true);
   const [confirmClear, setConfirmClear] = useState(false);
   // Saving to the account needs a named plan: the first pick into the unnamed placeholder asks for one.
@@ -73,15 +74,19 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
   );
   // Drop ids a data re-import removed, so a stale plan cannot break the page.
   const entries = Object.entries(plan).filter(([id]) => catalog[id]);
-  const totals = Object.entries((rawOnly ? rawTotals : directTotals)(catalog, plan))
-    .map(([id, qty]) => ({ name: catalog[id].name, qty }))
+  const whole = new Set(store.active.keepWhole);
+  const craftable = (id: string) => Object.keys(catalog[id]?.recipe ?? {}).length > 0;
+  const totals = Object.entries((rawOnly ? rawTotals : directTotals)(catalog, plan, whole))
+    .map(([id, qty]) => ({ id, name: catalog[id].name, qty, craftable: craftable(id), whole: whole.has(id) }))
     .sort((a, b) => a.name.localeCompare(b.name));
 
   // Until the browser's storage is read, which plan is the working one is unknown: show a skeleton, not a guess.
   if (!store.ready) return <PlannerSkeleton />;
 
   const title = rawOnly ? "Raw resources needed" : "Ingredients needed";
-  const panel = <IngredientsPanel totals={totals} rawOnly={rawOnly} onRawOnlyChange={setRawOnly} />;
+  const panel = (
+    <IngredientsPanel totals={totals} rawOnly={rawOnly} onRawOnlyChange={setRawOnly} onBreakDownChange={(id, on) => setKeepWhole(id, !on)} />
+  );
 
   return (
     <>
@@ -148,6 +153,17 @@ function Planner({ catalog, store }: { catalog: Catalog; store: PlanStore }) {
             <ul className="divide-y">
               {entries.map(([id, qty]) => (
                 <li key={id} className="flex items-center gap-3 py-2">
+                  {/* Ticked: the totals show what it is made of. Unticked: you will have it, so it counts as itself. */}
+                  {craftable(id) ? (
+                    <Checkbox
+                      checked={!whole.has(id)}
+                      onCheckedChange={(on) => setKeepWhole(id, !on)}
+                      aria-label={`Break down ${catalog[id].name}`}
+                      title="Break down into what it is made of"
+                    />
+                  ) : (
+                    <span className="size-4 shrink-0" />
+                  )}
                   <span className="flex-1 truncate">{catalog[id].name}</span>
                   {catalog[id].retired && <Badge variant="destructive">No longer in the game</Badge>}
                   <Badge variant="secondary">{catalog[id].type}</Badge>

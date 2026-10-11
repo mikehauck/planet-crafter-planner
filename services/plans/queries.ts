@@ -9,5 +9,10 @@ export async function listPlans(userId: string): Promise<NamedPlan[]> {
     orderBy: { createdAt: "asc" },
     include: { items: { select: { itemId: true, qty: true } } },
   });
-  return plans.map((p) => ({ id: p.id, name: p.name, items: Object.fromEntries(p.items.map((i) => [i.itemId, i.qty])) }));
+  return plans.map((p) => ({
+    id: p.id,
+    name: p.name,
+    items: Object.fromEntries(p.items.map((i) => [i.itemId, i.qty])),
+    keepWhole: p.keepWhole,
+  }));
 }

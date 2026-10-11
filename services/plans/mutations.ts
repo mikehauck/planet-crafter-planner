@@ -32,7 +32,7 @@ export async function createPlan(userId: string, name: string, items: Plan = {})
         items: { create: Object.entries(items).map(([itemId, qty]) => ({ itemId, qty })) },
       },
     });
-    return { id: plan.id, name: plan.name, items };
+    return { id: plan.id, name: plan.name, items, keepWhole: [] };
   });
 }
 
@@ -71,6 +71,18 @@ export async function removeItem(userId: string, planId: string, itemId: string)
   });
 }
 
+/** Count an item as itself in this plan's totals (`whole`), or break it down again. */
+export async function setKeepWhole(userId: string, planId: string, itemId: string, whole: boolean): Promise<void> {
+  if (!(await db.item.findUnique({ where: { id: itemId }, select: { id: true } })))
+    throw new PlanError("That item is not in the game data.");
+  // One statement, so quick clicks on different items cannot overwrite each other's change.
+  const add = whole ? [itemId] : [];
+  const count = await db.$executeRaw`
+    UPDATE plans SET keep_whole = array_remove(coalesce(keep_whole, '{}'), ${itemId}) || ${add}::text[]
+    WHERE id = ${planId} AND user_id = ${userId}`;
+  if (!count) throw new PlanError("That plan no longer exists.");
+}
+
 export async function clearPlan(userId: string, planId: string): Promise<void> {
   await db.$transaction(async (tx) => {
     await ownPlan(tx, userId, planId);
@@ -87,9 +99,14 @@ export async function importPlans(userId: string, incoming: IncomingPlan[]): Pro
     const created: NamedPlan[] = [];
     for (const p of previewImport(incoming, taken, (id) => known.has(id)).plans) {
       const plan = await tx.plan.create({
-        data: { userId, name: p.name, items: { create: Object.entries(p.items).map(([itemId, qty]) => ({ itemId, qty })) } },
+        data: {
+          userId,
+          name: p.name,
+          keepWhole: p.keepWhole,
+          items: { create: Object.entries(p.items).map(([itemId, qty]) => ({ itemId, qty })) },
+        },
       });
-      created.push({ id: plan.id, name: plan.name, items: p.items });
+      created.push({ id: plan.id, name: plan.name, items: p.items, keepWhole: p.keepWhole });
     }
     return created;
   });

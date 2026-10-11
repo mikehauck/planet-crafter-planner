@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import * as actions from "@/app/plans/actions";
 import type { NamedPlan } from "@/services/plans/schema";
-import { activePlanKey, useWorkingPlan, type PlanStore } from "@/lib/plan-store";
+import { activePlanKey, toggled, useWorkingPlan, type PlanStore } from "@/lib/plan-store";
 
 /** Stands in, unnamed, until the account has a plan. Nothing can be added to it: the planner asks for a name first. */
 const PLACEHOLDER_ID = "";
@@ -20,7 +20,7 @@ export function useAccountPlans(userId: string, initial: NamedPlan[]): PlanStore
     return () => pending.forEach(clearTimeout);
   }, []);
 
-  const shown = plans.length ? plans : [{ id: PLACEHOLDER_ID, name: "", items: {} }];
+  const shown = plans.length ? plans : [{ id: PLACEHOLDER_ID, name: "", items: {}, keepWhole: [] }];
   const { active, ready, select: setActiveId, afterDelete } = useWorkingPlan(activePlanKey(userId), shown);
 
   const setItems = (planId: string, change: (items: NamedPlan["items"]) => NamedPlan["items"]) =>
@@ -104,6 +104,12 @@ export function useAccountPlans(userId: string, initial: NamedPlan[]): PlanStore
       });
       const planId = active.id;
       if (planId !== PLACEHOLDER_ID) void actions.removeItem(planId, itemId).then(report);
+    },
+    setKeepWhole(itemId, whole) {
+      const planId = active.id;
+      if (planId === PLACEHOLDER_ID) return;
+      setPlans((ps) => ps.map((p) => (p.id === planId ? { ...p, keepWhole: toggled(p.keepWhole, itemId, whole) } : p)));
+      void actions.setKeepWhole(planId, itemId, whole).then(report);
     },
     clear() {
       for (const [key, t] of timers.current)

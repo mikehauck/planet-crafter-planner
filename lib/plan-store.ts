@@ -20,6 +20,8 @@ export type PlanStore = {
   add(itemId: string): void;
   setQty(itemId: string, qty: number): void;
   removeItem(itemId: string): void;
+  /** Count an item as itself in the totals (`whole`), or break it down again. */
+  setKeepWhole(itemId: string, whole: boolean): void;
   clear(): void;
   /** last failed background save, if any */
   error: string | null;
@@ -59,6 +61,9 @@ function subscribe(listener: () => void) {
 /** A stored value; `undefined` until the browser has been read (the server has no localStorage). */
 const NOT_READ = () => undefined;
 const useStored = (key: string): string | null | undefined => useSyncExternalStore(subscribe, () => read(key), NOT_READ);
+
+/** `ids` with `itemId` added (`whole`) or removed. */
+export const toggled = (ids: string[], itemId: string, whole: boolean) => [...ids.filter((i) => i !== itemId), ...(whole ? [itemId] : [])];
 
 /** Keep the valid entries of a stored item list; drop the rest. */
 export function cleanItems(value: unknown): Plan {
@@ -124,16 +129,18 @@ export function parseLocalPlans(raw: string | null | undefined, legacy: string |
   if (Array.isArray(stored)) {
     const plans: NamedPlan[] = [];
     for (const p of stored) {
-      const plan = LocalPlan.safeParse({ ...p, items: cleanItems(p?.items) });
+      const keepWhole = Array.isArray(p?.keepWhole) ? p.keepWhole.filter((id: unknown) => typeof id === "string" && id) : [];
+      const plan = LocalPlan.safeParse({ ...p, items: cleanItems(p?.items), keepWhole });
       if (plan.success && !plans.some((q) => q.id === plan.data.id || q.name === plan.data.name)) plans.push(plan.data);
     }
     return plans;
   }
   const old = cleanItems(parseJson(legacy));
-  return Object.keys(old).length ? [{ id: LOCAL_DEFAULT_ID, name: "", items: old }] : [];
+  return Object.keys(old).length ? [{ id: LOCAL_DEFAULT_ID, name: "", items: old, keepWhole: [] }] : [];
 }
 
-const withDefault = (plans: NamedPlan[]) => (plans.length ? plans : [{ id: LOCAL_DEFAULT_ID, name: "", items: {} }]);
+const withDefault = (plans: NamedPlan[]) =>
+  plans.length ? plans : [{ id: LOCAL_DEFAULT_ID, name: "", items: {}, keepWhole: [] }];
 
 export function useLocalPlans(): PlanStore {
   const raw = useStored(PLANS_KEY);
@@ -144,8 +151,9 @@ export function useLocalPlans(): PlanStore {
   // Changes read storage afresh, so two in a row (name this plan, then make a new one) see each other.
   const latest = () => withDefault(parseLocalPlans(read(PLANS_KEY), read(LEGACY_KEY)));
   const save = (next: NamedPlan[]) => write(PLANS_KEY, JSON.stringify(next));
-  const update = (change: (items: Plan) => Plan) =>
-    save(latest().map((p) => (p.id === active.id ? { ...p, items: change(p.items) } : p)));
+  const updatePlan = (change: (plan: NamedPlan) => NamedPlan) =>
+    save(latest().map((p) => (p.id === active.id ? change(p) : p)));
+  const update = (change: (items: Plan) => Plan) => updatePlan((p) => ({ ...p, items: change(p.items) }));
 
   return {
     plans,
@@ -159,7 +167,7 @@ export function useLocalPlans(): PlanStore {
       if (!name.success) return name.error.issues[0].message;
       const now = latest();
       if (now.some((p) => !p.name)) return "Name your current plan first.";
-      const plan = { id: crypto.randomUUID(), name: uniqueName(name.data, now.map((p) => p.name)), items };
+      const plan = { id: crypto.randomUUID(), name: uniqueName(name.data, now.map((p) => p.name)), items, keepWhole: [] };
       save([...now, plan]);
       setActiveId(plan.id);
       return null;
@@ -187,6 +195,7 @@ export function useLocalPlans(): PlanStore {
         delete rest[itemId];
         return rest;
       }),
+    setKeepWhole: (itemId, whole) => updatePlan((p) => ({ ...p, keepWhole: toggled(p.keepWhole, itemId, whole) })),
     clear: () => update(() => ({})),
   };
 }
