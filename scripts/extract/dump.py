@@ -26,6 +26,7 @@ for pid, r in recs.items():
     if r["_class"] == "PlanetData": continue
     ing = collections.Counter(idof.get(p["m_PathID"], f"?{p['m_PathID']}") for p in r["recipeIngredients"])
     keep = {k: r.get(k) for k in ("id","hideInCrafter","craftableInList","itemCategory","itemSubCategory","groupCategory","equipableType","usableType","unlockingWorldUnit","unlockingValue","cantBeRecycled")}
+    keep.update({k: v for k, v in r.items() if k.startswith("unitGeneration")})
     keep["class"] = r["_class"]
     keep["recipe"] = dict(ing)
     keep["planets"] = [idof.get(p["m_PathID"], "?") for p in r.get("unlockInPlanets", [])]

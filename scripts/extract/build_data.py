@@ -5,6 +5,7 @@ loc = {}
 for line in open("loc.txt", encoding="utf-8", errors="replace"):
     p = line.rstrip("\n").split("*")
     if len(p) > 2: loc.setdefault(p[0], p[2].strip())
+GENERATES = ["Energy", "Oxygen", "Heat", "Pressure", "Plants", "Insects", "Animals", "Purification"]
 CAT = {0:"Other",1:"Base Building",2:"Machine",3:"Screen",4:"Furniture",6:"Biomass",7:"Purification"}
 used = collections.Counter(i for r in it.values() for i in r["recipe"])
 rows = {}
@@ -21,7 +22,9 @@ for id_, r in it.items():
         elif used[id_]: typ = "Component"
         else: typ = "Item"
     name = loc.get("GROUP_NAME_" + id_) or id_
-    rows[id_] = dict(id=id_, name=name, type=typ, planet=",".join(r["planets"]), recipe=r["recipe"])
+    # what a building produces in the terraformation (energy, oxygen, ...) doubles as its search categories
+    cats = [c for c in GENERATES if (r.get("unitGeneration" + c) or 0) > 0]
+    rows[id_] = dict(id=id_, name=name, type=typ, planet=",".join(r["planets"]), categories=cats, recipe=r["recipe"])
 # ingredients referenced but not in rows
 missing = {i for r in rows.values() for i in r["recipe"] if i not in rows}
 print("missing ingredients:", missing)

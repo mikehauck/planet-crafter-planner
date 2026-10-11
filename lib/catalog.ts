@@ -22,6 +22,7 @@ export async function getCatalog(): Promise<Catalog> {
       id: i.id,
       name: i.name,
       type: i.type,
+      categories: i.categories,
       recipe: Object.fromEntries(i.ingredients.map((r) => [r.ingredientId, r.qty])),
     };
   }

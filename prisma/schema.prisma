@@ -18,6 +18,8 @@ model Item {
   type   String
   /// Comma-separated planets this unlocks on; empty means every planet
   planet String  @default("")
+  /// What it produces in the terraformation: Energy, Oxygen, Heat, Pressure, Plants, Insects, Animals, Purification
+  categories String[] @default([])
 
   ingredients RecipeIngredient[] @relation("recipe")
   usedIn      RecipeIngredient[] @relation("ingredient")

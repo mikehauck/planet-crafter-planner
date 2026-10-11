@@ -1,13 +1,14 @@
 "use client";
 import { useState } from "react";
 import { SearchIcon } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
 import { cn } from "@/lib/utils";
 import type { CatalogItem } from "@/lib/plan";
 
 const MAX_RESULTS = 50;
 
-/** Type to find an item (name or type); arrows + Enter or a click adds it to the plan. */
+/** Type to find an item (name, type or category); arrows + Enter or a click adds it to the plan. */
 export function ItemSearch({ items, onPick }: { items: CatalogItem[]; onPick: (id: string) => void }) {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
@@ -15,7 +16,7 @@ export function ItemSearch({ items, onPick }: { items: CatalogItem[]; onPick: (i
   const words = query.toLowerCase().split(/\s+/).filter(Boolean);
   const results = words.length
     ? items
-        .filter((i) => words.every((w) => `${i.name} ${i.type}`.toLowerCase().includes(w)))
+        .filter((i) => words.every((w) => `${i.name} ${i.type} ${i.categories.join(" ")}`.toLowerCase().includes(w)))
         .slice(0, MAX_RESULTS)
     : [];
 
@@ -45,7 +46,7 @@ export function ItemSearch({ items, onPick }: { items: CatalogItem[]; onPick: (i
             else return;
             e.preventDefault();
           }}
-          placeholder="Search items — name or type, e.g. “drone” or “machine”"
+          placeholder="Search items — name, type or category, e.g. “drone”, “machine”, “energy”"
           aria-label="Search items"
           autoFocus
         />
@@ -69,6 +70,11 @@ export function ItemSearch({ items, onPick }: { items: CatalogItem[]; onPick: (i
               )}
             >
               <span className="flex-1">{item.name}</span>
+              {item.categories.map((c) => (
+                <Badge key={c} variant="outline">
+                  {c}
+                </Badge>
+              ))}
               <span className="text-xs text-muted-foreground">{item.type}</span>
             </li>
           ))}

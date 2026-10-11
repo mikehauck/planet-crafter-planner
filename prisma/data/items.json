@@ -4,6 +4,7 @@
   "name": "Metal arch",
   "type": "Base Building",
   "planet": "Selenea",
+  "categories": [],
   "recipe": {
    "Silicon": 1,
    "Selenium": 1
@@ -14,6 +15,9 @@
   "name": "Biodome",
   "type": "Base Building",
   "planet": "",
+  "categories": [
+   "Oxygen"
+  ],
   "recipe": {
    "Seed0": 1,
    "Titanium": 2,
@@ -27,6 +31,10 @@
   "name": "T2 Biodome",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "Fertilizer1": 2,
    "Bacteria1": 2,
@@ -39,6 +47,7 @@
   "name": "Biolab",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Osmium": 2,
    "Alloy": 3,
@@ -50,6 +59,7 @@
   "name": "Extraction platform",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "FusionEnergyCell": 1,
    "FuseEnergy1": 1,
@@ -64,6 +74,7 @@
   "name": "Fence",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 1
   }
@@ -73,6 +84,7 @@
   "name": "Rounded fence",
   "type": "Base Building",
   "planet": "Aqualis",
+  "categories": [],
   "recipe": {
    "Silicon": 1
   }
@@ -82,6 +94,7 @@
   "name": "Rounded glass floor",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Titanium": 1,
    "Cobalt": 1
@@ -92,6 +105,7 @@
   "name": "Living compartment glass",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Titanium": 1,
    "Cobalt": 1
@@ -102,6 +116,7 @@
   "name": "Foundation grid",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -111,6 +126,7 @@
   "name": "Foundation – Angle",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -120,6 +136,7 @@
   "name": "Foundation – Slope",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 2
   }
@@ -129,6 +146,7 @@
   "name": "Area Lamp",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Magnesium": 1,
    "Cobalt": 1
@@ -139,6 +157,7 @@
   "name": "Intense area lamp",
   "type": "Furniture",
   "planet": "Skeo",
+  "categories": [],
   "recipe": {
    "Phosphorus": 1,
    "Cobalt": 1
@@ -149,6 +168,7 @@
   "name": "Interior stairs",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 2,
    "Aluminium": 2,
@@ -160,6 +180,7 @@
   "name": "Interplanetary exchange shuttle",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CircuitBoard1": 2,
    "CosmicQuartz": 1,
@@ -173,6 +194,7 @@
   "name": "Indoor ladder",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Cobalt": 1
@@ -183,6 +205,7 @@
   "name": "Launch Platform",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 3,
    "Titanium": 3,
@@ -194,6 +217,7 @@
   "name": "Light Box",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 2,
    "SolarQuartz": 1
@@ -204,6 +228,7 @@
   "name": "Megadome",
   "type": "Base Building",
   "planet": "Selenea",
+  "categories": [],
   "recipe": {
    "BalzarQuartz": 4,
    "Selenium": 3,
@@ -215,6 +240,7 @@
   "name": "Outdoor lamp",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Magnesium": 1
@@ -225,6 +251,7 @@
   "name": "Planetary Delivery Depot",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CosmicQuartz": 1,
    "FuseTradeRocketsSpeed1": 1,
@@ -236,6 +263,7 @@
   "name": "Living compartment",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 2,
    "Titanium": 1
@@ -246,6 +274,7 @@
   "name": "Big living compartment",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 3,
    "Titanium": 3,
@@ -257,6 +286,7 @@
   "name": "Rounded living compartment",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 3,
    "Titanium": 3,
@@ -268,6 +298,7 @@
   "name": "Living compartment with dome",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 3,
    "Cobalt": 3,
@@ -279,6 +310,7 @@
   "name": "3x3 Living compartment",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 3,
    "Titanium": 3,
@@ -290,6 +322,7 @@
   "name": "Living compartment corner",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Titanium": 1,
@@ -301,6 +334,7 @@
   "name": "Underground living compartment",
   "type": "Base Building",
   "planet": "Skeo",
+  "categories": [],
   "recipe": {
    "Rod-osmium": 2,
    "Rod-alloy": 1,
@@ -313,6 +347,7 @@
   "name": "Outdoor stairs",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -322,6 +357,7 @@
   "name": "Trade space rocket",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CircuitBoard1": 3,
    "Rod-alloy": 1,
@@ -334,6 +370,7 @@
   "name": "Vehicle station",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Aluminium": 3,
    "Alloy": 2,
@@ -345,6 +382,7 @@
   "name": "Living compartment door",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Titanium": 1,
@@ -356,6 +394,7 @@
   "name": "Interior wall",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 2
   }
@@ -365,6 +404,7 @@
   "name": "Plain wall",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -374,6 +414,7 @@
   "name": "Aquatic life wall",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Seed0": 1,
@@ -385,6 +426,7 @@
   "name": "Living compartment window",
   "type": "Base Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Cobalt": 1
@@ -395,6 +437,9 @@
   "name": "Aquarium tube",
   "type": "Furniture",
   "planet": "",
+  "categories": [
+   "Oxygen"
+  ],
   "recipe": {
    "OxygenCapsule1": 1,
    "WaterBottle1": 1,
@@ -407,6 +452,7 @@
   "name": "Arcade machine",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CircuitBoard1": 2,
    "Aluminium": 1
@@ -417,6 +463,7 @@
   "name": "Double Bed",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "FabricBlue": 6
@@ -427,6 +474,7 @@
   "name": "Customizable bed",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "SmartFabric": 4,
    "Alloy": 2
@@ -437,6 +485,7 @@
   "name": "Bed",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "FabricBlue": 3
@@ -447,6 +496,7 @@
   "name": "Butterfly display box",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "FabricBlue": 1
@@ -457,6 +507,7 @@
   "name": "Chair",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "FabricBlue": 2
@@ -467,6 +518,7 @@
   "name": "Cozy chair",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "SmartFabric": 2
@@ -477,6 +529,7 @@
   "name": "Storage crate (Container1)",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -486,6 +539,7 @@
   "name": "Locker Storage",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 3
   }
@@ -495,6 +549,7 @@
   "name": "T2 Locker Storage",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 2,
    "CircuitBoard1": 1
@@ -505,6 +560,7 @@
   "name": "Clam",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phosphorus": 1,
    "Alloy": 1
@@ -515,6 +571,7 @@
   "name": "Golden clam",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phosphorus": 1,
    "Alloy": 1,
@@ -526,6 +583,7 @@
   "name": "Toxic goo storage",
   "type": "Purification",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PlasticPolymer": 1,
    "Silicon": 1
@@ -536,6 +594,7 @@
   "name": "Cooking station",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CircuitBoard1": 1,
    "Alloy": 1
@@ -546,6 +605,7 @@
   "name": "Countertop (Counter1)",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 2
   }
@@ -555,6 +615,7 @@
   "name": "Countertop (Counter2)",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 2
   }
@@ -564,6 +625,7 @@
   "name": "Desktop (Desktop1)",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 2
   }
@@ -573,6 +635,7 @@
   "name": "Desktop (Desktop2)",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 1
   }
@@ -582,6 +645,7 @@
   "name": "Display case",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Cobalt": 1,
    "Iron": 1,
@@ -593,6 +657,7 @@
   "name": "Indoor bike",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "FabricBlue": 1,
@@ -604,6 +669,7 @@
   "name": "Faucet",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "WaterBottle1": 1,
    "Alloy": 1,
@@ -615,6 +681,9 @@
   "name": "Fireplace",
   "type": "Furniture",
   "planet": "",
+  "categories": [
+   "Heat"
+  ],
   "recipe": {
    "RedPowder1": 1,
    "TreeRoot": 1,
@@ -626,6 +695,7 @@
   "name": "Fish display",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1
   }
@@ -635,6 +705,9 @@
   "name": "Flower Pot",
   "type": "Furniture",
   "planet": "",
+  "categories": [
+   "Oxygen"
+  ],
   "recipe": {
    "Magnesium": 1,
    "Cobalt": 1,
@@ -646,6 +719,10 @@
   "name": "Hanging flower Pot",
   "type": "Furniture",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "Magnesium": 1,
    "Bacteria1": 1
@@ -656,6 +733,10 @@
   "name": "Big flower pot",
   "type": "Furniture",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "Iron": 1,
    "Fertilizer1": 1
@@ -666,6 +747,7 @@
   "name": "Fountain",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Alloy": 1,
@@ -677,6 +759,7 @@
   "name": "Fridge",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 1,
    "MethanCapsule1": 1,
@@ -688,6 +771,7 @@
   "name": "Frog displayer",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1
   }
@@ -697,6 +781,7 @@
   "name": "Golden Crate",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 1,
    "Aluminium": 1
@@ -707,6 +792,7 @@
   "name": "Hologram projector",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "BalzarQuartz": 1,
    "Rod-alloy": 1
@@ -717,6 +803,10 @@
   "name": "Ivy",
   "type": "Furniture",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "Seed0": 1
   }
@@ -726,6 +816,7 @@
   "name": "Lava lamp",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 1,
    "CircuitBoard1": 1,
@@ -737,6 +828,7 @@
   "name": "Library",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -746,6 +838,7 @@
   "name": "Locker",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -755,6 +848,7 @@
   "name": "Planet viewer",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 1,
    "SolarQuartz": 1,
@@ -767,6 +861,7 @@
   "name": "Pool table",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Aluminium": 2,
    "SmartFabric": 1
@@ -777,6 +872,7 @@
   "name": "Server",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CircuitBoard1": 1
   }
@@ -786,6 +882,7 @@
   "name": "Shelves",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -795,6 +892,7 @@
   "name": "Shower",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Aluminium": 1,
    "Bioplastic1": 1,
@@ -806,6 +904,7 @@
   "name": "Sign",
   "type": "Screen",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Magnesium": 1
   }
@@ -815,6 +914,7 @@
   "name": "Spacesuit Displayer",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "QuasarQuartz": 1,
    "Rod-alloy": 1
@@ -825,6 +925,7 @@
   "name": "Sofa",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "FabricBlue": 2,
    "Iron": 1
@@ -835,6 +936,7 @@
   "name": "Corner sofa",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "FabricBlue": 2
@@ -845,6 +947,7 @@
   "name": "Customizable corner sofa",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "SmartFabric": 2
@@ -855,6 +958,7 @@
   "name": "Customizable sofa",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "SmartFabric": 2,
    "Alloy": 1
@@ -865,6 +969,7 @@
   "name": "Starform Crate",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 1,
    "Aluminium": 1
@@ -875,6 +980,7 @@
   "name": "Big table",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 2
   }
@@ -884,6 +990,7 @@
   "name": "Table",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Titanium": 1
@@ -894,6 +1001,7 @@
   "name": "Small table",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Titanium": 1
@@ -904,6 +1012,7 @@
   "name": "Glass table",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Cobalt": 1,
    "Titanium": 1
@@ -914,6 +1023,7 @@
   "name": "Toilet",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 1,
    "Bioplastic1": 1
@@ -924,6 +1034,7 @@
   "name": "Trash can",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 1
   }
@@ -933,6 +1044,7 @@
   "name": "Treadmill",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CircuitBoard1": 1,
    "Alloy": 1
@@ -943,6 +1055,10 @@
   "name": "Bonzaï pot",
   "type": "Furniture",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "Iron": 1,
    "Fertilizer1": 1
@@ -953,6 +1069,7 @@
   "name": "Safe Vault",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Rod-alloy": 1
   }
@@ -962,6 +1079,7 @@
   "name": "Vending machine",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Rod-alloy": 1,
    "Bioplastic1": 1
@@ -972,6 +1090,10 @@
   "name": "T1 Algae Generator",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "Bioplastic1": 1,
    "Vegetable0Growable": 1,
@@ -985,6 +1107,10 @@
   "name": "T2 Algae Generator",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "Bioplastic1": 2,
    "Fertilizer1": 1,
@@ -998,6 +1124,10 @@
   "name": "Amphibian farm",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Plants",
+   "Animals"
+  ],
   "recipe": {
    "Fertilizer1": 1,
    "LarvaeBase1": 1,
@@ -1009,6 +1139,7 @@
   "name": "Animal feeder",
   "type": "Biomass",
   "planet": "",
+  "categories": [],
   "recipe": {
    "WaterBottle1": 1,
    "CircuitBoard1": 1,
@@ -1022,6 +1153,9 @@
   "name": "Animal shelter",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Animals"
+  ],
   "recipe": {
    "WaterBottle1": 1,
    "CircuitBoard1": 1,
@@ -1036,6 +1170,9 @@
   "name": "T1 Aquarium",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Animals"
+  ],
   "recipe": {
    "Fertilizer2": 1,
    "OxygenCapsule1": 1,
@@ -1048,6 +1185,10 @@
   "name": "T2 Aquarium",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Insects",
+   "Animals"
+  ],
   "recipe": {
    "CircuitBoard1": 1,
    "Rod-alloy": 1,
@@ -1060,6 +1201,7 @@
   "name": "Auto-Crafter",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Osmium": 2,
    "Rod-alloy": 1
@@ -1070,6 +1212,7 @@
   "name": "Beacon",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Titanium": 1,
    "Silicon": 1,
@@ -1081,6 +1224,10 @@
   "name": "Beehive",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Plants",
+   "Insects"
+  ],
   "recipe": {
    "Bee1Larvae": 1,
    "Alloy": 1,
@@ -1093,6 +1240,10 @@
   "name": "T2 Beehive",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Plants",
+   "Insects"
+  ],
   "recipe": {
    "Bee1Larvae": 1,
    "TreeRoot": 1,
@@ -1105,6 +1256,9 @@
   "name": "Butterfly dome",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Insects"
+  ],
   "recipe": {
    "Fertilizer2": 1,
    "Fertilizer1": 1,
@@ -1118,6 +1272,9 @@
   "name": "Butterfly farm",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Insects"
+  ],
   "recipe": {
    "Fertilizer2": 1,
    "Zeolite": 1,
@@ -1129,6 +1286,9 @@
   "name": "T2 Butterfly Farm",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Insects"
+  ],
   "recipe": {
    "Fertilizer2": 1,
    "Zeolite": 1,
@@ -1141,6 +1301,9 @@
   "name": "T3 Butterfly Farm",
   "type": "Biomass",
   "planet": "Aqualis",
+  "categories": [
+   "Insects"
+  ],
   "recipe": {
    "Fertilizer3": 1,
    "Zeolite": 1,
@@ -1155,6 +1318,7 @@
   "name": "Communication Antenna",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 1,
    "Titanium": 1,
@@ -1167,6 +1331,7 @@
   "name": "T2 Craft Station",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Silicon": 1
@@ -1177,6 +1342,7 @@
   "name": "Advanced Craft Station",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Aluminium": 3,
    "Titanium": 1,
@@ -1189,6 +1355,7 @@
   "name": "Shredder machine",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 1,
    "Uranim": 1,
@@ -1201,6 +1368,9 @@
   "name": "T1 Detoxification machine",
   "type": "Purification",
   "planet": "Toxicity",
+  "categories": [
+   "Purification"
+  ],
   "recipe": {
    "Titanium": 2,
    "PristineMushroom": 1,
@@ -1213,6 +1383,9 @@
   "name": "T2 Detoxification machine",
   "type": "Purification",
   "planet": "Toxicity",
+  "categories": [
+   "Purification"
+  ],
   "recipe": {
    "PurificationCapsule": 2,
    "PristineMushroom": 1,
@@ -1224,6 +1397,9 @@
   "name": "T3 Detoxification machine",
   "type": "Purification",
   "planet": "Toxicity",
+  "categories": [
+   "Purification"
+  ],
   "recipe": {
    "PurificationGel": 2,
    "Rod-plastic": 1,
@@ -1235,6 +1411,9 @@
   "name": "T1 Drill",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Pressure"
+  ],
   "recipe": {
    "Titanium": 1,
    "Iron": 1
@@ -1245,6 +1424,10 @@
   "name": "T2 Drill",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat",
+   "Pressure"
+  ],
   "recipe": {
    "Iron": 1,
    "Titanium": 2
@@ -1255,6 +1438,10 @@
   "name": "T3 Drill",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat",
+   "Pressure"
+  ],
   "recipe": {
    "Iron": 2,
    "Titanium": 2,
@@ -1266,6 +1453,10 @@
   "name": "T4 Drill",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat",
+   "Pressure"
+  ],
   "recipe": {
    "Alloy": 6,
    "Osmium": 3
@@ -1276,6 +1467,10 @@
   "name": "T5 Drill",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat",
+   "Pressure"
+  ],
   "recipe": {
    "Rod-alloy": 2,
    "Rod-osmium": 1
@@ -1286,6 +1481,7 @@
   "name": "Drone station",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Rod-osmium": 1,
    "FusionEnergyCell": 1,
@@ -1298,6 +1494,10 @@
   "name": "Ecosystem",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Plants",
+   "Insects"
+  ],
   "recipe": {
    "Fertilizer2": 1,
    "LarvaeBase1": 1,
@@ -1312,6 +1512,9 @@
   "name": "Wind turbine",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Energy"
+  ],
   "recipe": {
    "Iron": 1
   }
@@ -1321,6 +1524,9 @@
   "name": "T1 Solar Panel",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Energy"
+  ],
   "recipe": {
    "Iron": 1,
    "Cobalt": 2,
@@ -1332,6 +1538,9 @@
   "name": "T2 Solar Panel",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Energy"
+  ],
   "recipe": {
    "Iron": 1,
    "Magnesium": 1,
@@ -1345,6 +1554,9 @@
   "name": "T1 Nuclear Reactor",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Energy"
+  ],
   "recipe": {
    "Alloy": 3,
    "WaterBottle1": 2,
@@ -1356,6 +1568,9 @@
   "name": "T2 Nuclear Reactor",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Energy"
+  ],
   "recipe": {
    "WaterBottle1": 3,
    "Alloy": 1,
@@ -1368,6 +1583,9 @@
   "name": "Nuclear Fusion generator",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Energy"
+  ],
   "recipe": {
    "PulsarQuartz": 5,
    "Alloy": 4
@@ -1378,6 +1596,10 @@
   "name": "Outdoor farm",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Plants",
+   "Insects"
+  ],
   "recipe": {
    "Bee1Larvae": 2,
    "WaterBottle1": 1,
@@ -1391,6 +1613,11 @@
   "name": "T2 Outdoor farm",
   "type": "Biomass",
   "planet": "Aqualis",
+  "categories": [
+   "Oxygen",
+   "Plants",
+   "Insects"
+  ],
   "recipe": {
    "Bee1Larvae": 2,
    "Bioplastic1": 1,
@@ -1404,6 +1631,10 @@
   "name": "Fish farm",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Plants",
+   "Animals"
+  ],
   "recipe": {
    "Bioplastic1": 2,
    "Phytoplankton1": 1,
@@ -1415,6 +1646,12 @@
   "name": "T2 Fish farm",
   "type": "Biomass",
   "planet": "Aqualis",
+  "categories": [
+   "Oxygen",
+   "Plants",
+   "Insects",
+   "Animals"
+  ],
   "recipe": {
    "Bioplastic1": 2,
    "Phytoplankton1": 1,
@@ -1427,6 +1664,7 @@
   "name": "Fusion reactor (FusionGenerator1)",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "PulsarQuartz": 3,
    "Osmium": 2,
@@ -1438,6 +1676,9 @@
   "name": "Gas Extractor",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat"
+  ],
   "recipe": {
    "Alloy": 3,
    "Zeolite": 2,
@@ -1449,6 +1690,10 @@
   "name": "T2 Gas Extractor",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat",
+   "Pressure"
+  ],
   "recipe": {
    "Alloy": 2,
    "CircuitBoard1": 1,
@@ -1461,6 +1706,7 @@
   "name": "Genetic extractor",
   "type": "Biomass",
   "planet": "",
+  "categories": [],
   "recipe": {
    "BalzarQuartz": 1,
    "PulsarQuartz": 1,
@@ -1475,6 +1721,7 @@
   "name": "Tree seed sequencer",
   "type": "Biomass",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 1,
    "Bioplastic1": 1,
@@ -1488,6 +1735,7 @@
   "name": "Genetic synthesizer",
   "type": "Biomass",
   "planet": "",
+  "categories": [],
   "recipe": {
    "MagnetarQuartz": 1,
    "BalzarQuartz": 1,
@@ -1502,6 +1750,10 @@
   "name": "Grass Spreader",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "WaterBottle1": 2,
    "Magnesium": 1,
@@ -1514,6 +1766,7 @@
   "name": "Harvesting robot",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "QuasarQuartz": 2,
    "Rod-alloy": 1,
@@ -1525,6 +1778,9 @@
   "name": "T1 Heater",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat"
+  ],
   "recipe": {
    "Iridium": 1,
    "Iron": 1,
@@ -1536,6 +1792,9 @@
   "name": "T2 Heater",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat"
+  ],
   "recipe": {
    "Iridium": 2,
    "Silicon": 1,
@@ -1549,6 +1808,10 @@
   "name": "T3 Heater",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat",
+   "Pressure"
+  ],
   "recipe": {
    "Silicon": 1,
    "Titanium": 1,
@@ -1561,6 +1824,10 @@
   "name": "t4 Heater",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat",
+   "Pressure"
+  ],
   "recipe": {
    "Alloy": 3,
    "Rod-iridium": 2,
@@ -1572,6 +1839,10 @@
   "name": "T5 Heater",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat",
+   "Pressure"
+  ],
   "recipe": {
    "Rod-iridium": 3,
    "RedPowder1": 3,
@@ -1583,6 +1854,7 @@
   "name": "Incubator",
   "type": "Biomass",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Fertilizer2": 1,
@@ -1595,6 +1867,7 @@
   "name": "T2 Incubator",
   "type": "Biomass",
   "planet": "Skeo",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Fertilizer3": 1,
@@ -1607,6 +1880,7 @@
   "name": "Machine optimizer",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RedPowder1": 2,
    "Rod-uranium": 1,
@@ -1619,6 +1893,7 @@
   "name": "T2 Machine Optimizer",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RedPowder1": 2,
    "Rod-uranium": 1,
@@ -1630,6 +1905,9 @@
   "name": "T1 Ore Crusher",
   "type": "Machine",
   "planet": "Humble",
+  "categories": [
+   "Pressure"
+  ],
   "recipe": {
    "Dolomite": 3,
    "Magnesium": 1,
@@ -1642,6 +1920,9 @@
   "name": "T2 Ore Crusher",
   "type": "Machine",
   "planet": "Humble",
+  "categories": [
+   "Pressure"
+  ],
   "recipe": {
    "Bauxite": 3,
    "Cobalt": 2,
@@ -1653,6 +1934,9 @@
   "name": "T3 Ore Crusher",
   "type": "Machine",
   "planet": "Humble",
+  "categories": [
+   "Pressure"
+  ],
   "recipe": {
    "Bauxite": 2,
    "Uraninite": 1,
@@ -1665,6 +1949,10 @@
   "name": "Ore Extractor",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat",
+   "Pressure"
+  ],
   "recipe": {
    "Osmium": 2,
    "Rod-iridium": 1,
@@ -1678,6 +1966,10 @@
   "name": "T2 Ore Extractor",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat",
+   "Pressure"
+  ],
   "recipe": {
    "Osmium": 3,
    "Rod-alloy": 1,
@@ -1689,6 +1981,10 @@
   "name": "T3 Ore Extractor",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Heat",
+   "Pressure"
+  ],
   "recipe": {
    "Rod-osmium": 1,
    "Rod-alloy": 1,
@@ -1701,6 +1997,7 @@
   "name": "Portal generator",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "FusionEnergyCell": 2,
    "FuseEnergy1": 2,
@@ -1714,6 +2011,7 @@
   "name": "Quartz craft station",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Aluminium": 2,
    "CosmicQuartz": 1,
@@ -1727,6 +2025,7 @@
   "name": "Recycling machine",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "MultiDeconstruct": 2,
    "Alloy": 3
@@ -1737,6 +2036,10 @@
   "name": "T2 Recycling machine",
   "type": "Machine",
   "planet": "Selenea",
+  "categories": [
+   "Heat",
+   "Pressure"
+  ],
   "recipe": {
    "Alloy": 2,
    "Explosive": 1,
@@ -1749,6 +2052,10 @@
   "name": "Flower Spreader",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "WaterBottle1": 3,
    "Alloy": 1,
@@ -1761,6 +2068,10 @@
   "name": "T2 Flower Spreader",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "WaterBottle1": 2,
    "Alloy": 2,
@@ -1772,6 +2083,9 @@
   "name": "Silk generator",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Insects"
+  ],
   "recipe": {
    "SilkWorm": 3,
    "Zeolite": 1,
@@ -1784,6 +2098,7 @@
   "name": "Teleporter",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Rod-alloy": 1,
    "Osmium": 1,
@@ -1797,6 +2112,7 @@
   "name": "Craft Station - refinement",
   "type": "Purification",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Silicon": 1,
@@ -1808,6 +2124,9 @@
   "name": "T1 Toxic Water Collector",
   "type": "Purification",
   "planet": "Toxicity",
+  "categories": [
+   "Purification"
+  ],
   "recipe": {
    "MicroPlastics": 2,
    "PristineMushroom": 1
@@ -1818,6 +2137,9 @@
   "name": "T2 Toxic Water Collector",
   "type": "Purification",
   "planet": "Toxicity",
+  "categories": [
+   "Purification"
+  ],
   "recipe": {
    "Minable-Tungsten": 1,
    "PurificationGel": 1,
@@ -1829,6 +2151,9 @@
   "name": "T3 Toxic Water Collector",
   "type": "Purification",
   "planet": "Toxicity",
+  "categories": [
+   "Purification"
+  ],
   "recipe": {
    "Rod-tungsten": 1,
    "PurificationGel": 1,
@@ -1840,6 +2165,10 @@
   "name": "Tree pot",
   "type": "Furniture",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "Alloy": 1,
    "Fertilizer2": 1
@@ -1850,6 +2179,11 @@
   "name": "Giant trees pot",
   "type": "Furniture",
   "planet": "Skeo",
+  "categories": [
+   "Oxygen",
+   "Plants",
+   "Insects"
+  ],
   "recipe": {
    "Amber": 1,
    "Fertilizer3": 1
@@ -1860,6 +2194,10 @@
   "name": "Tree Spreader",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "Alloy": 1,
    "Bacteria1": 1,
@@ -1873,6 +2211,10 @@
   "name": "T2 Tree Spreader",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "Alloy": 1,
    "Bacteria1": 1,
@@ -1886,6 +2228,10 @@
   "name": "T3 Tree Spreader",
   "type": "Biomass",
   "planet": "",
+  "categories": [
+   "Oxygen",
+   "Plants"
+  ],
   "recipe": {
    "Alloy": 1,
    "Bacteria1": 1,
@@ -1899,6 +2245,7 @@
   "name": "Food Grower",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Aluminium": 1,
    "Iron": 1,
@@ -1910,6 +2257,7 @@
   "name": "T2 Food Grower",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "WaterBottle1": 1,
    "Alloy": 1,
@@ -1921,6 +2269,9 @@
   "name": "T1 Vegetube",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Oxygen"
+  ],
   "recipe": {
    "Iron": 1,
    "ice": 1,
@@ -1932,6 +2283,9 @@
   "name": "T2 Vegetube",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Oxygen"
+  ],
   "recipe": {
    "Iron": 1,
    "ice": 2,
@@ -1944,6 +2298,9 @@
   "name": "T3 Vegetube",
   "type": "Machine",
   "planet": "",
+  "categories": [
+   "Oxygen"
+  ],
   "recipe": {
    "WaterBottle1": 1,
    "Silicon": 2,
@@ -1956,6 +2313,7 @@
   "name": "Atmospheric Water Collector",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Silicon": 1,
@@ -1970,6 +2328,7 @@
   "name": "Lake Water Collector",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Bioplastic1": 3,
    "Magnesium": 1,
@@ -1982,6 +2341,7 @@
   "name": "Water life collector",
   "type": "Biomass",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Bioplastic1": 2,
    "Alloy": 1,
@@ -1993,6 +2353,9 @@
   "name": "T2 Wind turbine",
   "type": "Machine",
   "planet": "Aqualis",
+  "categories": [
+   "Energy"
+  ],
   "recipe": {
    "Iron": 2,
    "Bioplastic1": 2,
@@ -2004,6 +2367,7 @@
   "name": "Large explosive device",
   "type": "Machine",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Rod-iridium": 3,
    "CircuitBoard1": 1,
@@ -2017,6 +2381,7 @@
   "name": "Terraforming Diorama A",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Aluminium": 1,
    "Minable-Tungsten": 1,
@@ -2029,6 +2394,7 @@
   "name": "Terraforming Diorama B",
   "type": "Furniture",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Aluminium": 1,
    "Minable-Tungsten": 1,
@@ -2041,6 +2407,9 @@
   "name": "T1 Atmosphere purifier",
   "type": "Purification",
   "planet": "Toxicity",
+  "categories": [
+   "Purification"
+  ],
   "recipe": {
    "PlasticPolymer": 2,
    "PristineMushroom": 1,
@@ -2052,6 +2421,9 @@
   "name": "T2 Atmosphere purifier",
   "type": "Purification",
   "planet": "Toxicity",
+  "categories": [
+   "Purification"
+  ],
   "recipe": {
    "PlasticPolymer": 4,
    "PurificationGel": 2
@@ -2062,6 +2434,9 @@
   "name": "T3 Atmosphere purifier",
   "type": "Purification",
   "planet": "Toxicity",
+  "categories": [
+   "Purification"
+  ],
   "recipe": {
    "Rod-plastic": 2,
    "PurificationGel": 2,
@@ -2073,6 +2448,9 @@
   "name": "T4 Atmosphere purifier",
   "type": "Purification",
   "planet": "Toxicity",
+  "categories": [
+   "Purification"
+  ],
   "recipe": {
    "Rod-plastic": 2,
    "PurificationGel": 2,
@@ -2084,6 +2462,7 @@
   "name": "Biomass screen",
   "type": "Screen",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Silicon": 1,
@@ -2095,6 +2474,7 @@
   "name": "Screen - Energy levels",
   "type": "Screen",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Silicon": 1,
@@ -2106,6 +2486,7 @@
   "name": "Screen - Mapping",
   "type": "Screen",
   "planet": "",
+  "categories": [],
   "recipe": {
    "HudCompass": 1,
    "Iron": 1,
@@ -2117,6 +2498,7 @@
   "name": "Screen - Transmissions",
   "type": "Screen",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Silicon": 2,
@@ -2128,6 +2510,7 @@
   "name": "Screen – Orbital information",
   "type": "Screen",
   "planet": "",
+  "categories": [],
   "recipe": {
    "HudCompass": 1,
    "Osmium": 1,
@@ -2139,6 +2522,7 @@
   "name": "Solar system screen",
   "type": "Screen",
   "planet": "",
+  "categories": [],
   "recipe": {
    "SolarQuartz": 1,
    "Silicon": 1,
@@ -2150,6 +2534,7 @@
   "name": "Screen - Progress",
   "type": "Screen",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Silicon": 2,
@@ -2161,6 +2546,7 @@
   "name": "Screen - Terraformation",
   "type": "Screen",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Cobalt": 1,
@@ -2172,6 +2558,7 @@
   "name": "Screen – Toxicity",
   "type": "Purification",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PlasticPolymer": 1,
    "PristineMushroom": 1,
@@ -2183,6 +2570,7 @@
   "name": "Screen - Blueprints",
   "type": "Screen",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Silicon": 1
@@ -2193,6 +2581,7 @@
   "name": "Vehicle – Rover",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 2,
    "Uranim": 1,
@@ -2206,6 +2595,7 @@
   "name": "Seren frog eggs",
   "type": "Item",
   "planet": "Selenea",
+  "categories": [],
   "recipe": {
    "Frog1Eggs": 1,
    "Mutagen4": 1,
@@ -2217,6 +2607,7 @@
   "name": "Acuzzi frog eggs",
   "type": "Item",
   "planet": "Aqualis",
+  "categories": [],
   "recipe": {
    "Frog1Eggs": 1,
    "Mutagen3": 1,
@@ -2228,6 +2619,7 @@
   "name": "Toxifia frog eggs",
   "type": "Item",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "Frog1Eggs": 1,
    "Mutagen3": 1,
@@ -2239,6 +2631,7 @@
   "name": "Generic frog eggs",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phytoplankton1": 1,
    "Mutagen4": 1,
@@ -2250,6 +2643,7 @@
   "name": "Huli frog eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Frog1Eggs": 1,
    "Mutagen4": 1
@@ -2260,6 +2654,7 @@
   "name": "Felicianna frog eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Frog1Eggs": 1,
    "Mutagen4": 1
@@ -2270,6 +2665,7 @@
   "name": "Strabo frog eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Frog1Eggs": 1,
    "Mutagen4": 1,
@@ -2281,6 +2677,7 @@
   "name": "Trajuu frog eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Frog1Eggs": 1,
    "Mutagen4": 1,
@@ -2292,6 +2689,7 @@
   "name": "Aiolus frog eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Frog1Eggs": 1,
    "Mutagen4": 1,
@@ -2303,6 +2701,7 @@
   "name": "Afae frog eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Frog1Eggs": 1,
    "Mutagen3": 1,
@@ -2314,6 +2713,7 @@
   "name": "Cillus frog eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Frog1Eggs": 1,
    "Mutagen3": 1,
@@ -2325,6 +2725,7 @@
   "name": "Amedo frog eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Frog1Eggs": 1,
    "Mutagen4": 1,
@@ -2336,6 +2737,7 @@
   "name": "Golden frog eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Frog1Eggs": 1,
    "Mutagen3": 1,
@@ -2347,6 +2749,7 @@
   "name": "T1 Toxic goo removal explosives",
   "type": "Item",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PristineMushroom": 1,
    "ToxicGoo": 1,
@@ -2358,6 +2761,7 @@
   "name": "T2 Toxic goo removal explosives",
   "type": "Item",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PristineMushroom": 1,
    "ToxicGoo": 1,
@@ -2369,6 +2773,7 @@
   "name": "Bacteria Sample",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Algae1Seed": 3,
    "WaterBottle1": 3
@@ -2379,6 +2784,7 @@
   "name": "Bioplastic nugget",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Vegetable3Growable": 2,
    "Silicon": 1,
@@ -2390,6 +2796,7 @@
   "name": "Explosive",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RedPowder1": 2,
    "CircuitBoard1": 1
@@ -2400,6 +2807,7 @@
   "name": "Fertilizer",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Algae1Seed": 3,
    "Sulfur": 1,
@@ -2411,6 +2819,7 @@
   "name": "T2 Fertilizer",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Fertilizer1": 1,
    "Algae1Seed": 1,
@@ -2423,6 +2832,7 @@
   "name": "T3 Fertilizer",
   "type": "Component",
   "planet": "Aqualis",
+  "categories": [],
   "recipe": {
    "Phosphorus": 2,
    "Fertilizer2": 1
@@ -2433,6 +2843,7 @@
   "name": "Flare",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RedPowder1": 1,
    "Bioplastic1": 1
@@ -2443,6 +2854,7 @@
   "name": "Genetic trait",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -2450,6 +2862,7 @@
   "name": "Mutagen",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Bacteria1": 1,
    "MethanCapsule1": 1,
@@ -2461,6 +2874,7 @@
   "name": "T2 Mutagen",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Mutagen1": 1,
    "LarvaeBase1": 1,
@@ -2472,6 +2886,7 @@
   "name": "T3 Mutagen",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Bacteria1": 1,
    "NitrogenCapsule1": 1,
@@ -2483,6 +2898,7 @@
   "name": "T4 Mutagen",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Mutagen3": 1,
    "Mutagen1": 1
@@ -2493,6 +2909,7 @@
   "name": "Phytoplankton",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -2500,6 +2917,7 @@
   "name": "Explosive powder",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Sulfur": 2,
    "Iridium": 1
@@ -2510,6 +2928,7 @@
   "name": "Fabric",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silk": 2
   }
@@ -2519,6 +2938,7 @@
   "name": "Animals multiplier fuse",
   "type": "Item",
   "planet": "Aqualis",
+  "categories": [],
   "recipe": {
    "GeneticTrait": 2,
    "FuseCartridge": 1,
@@ -2533,6 +2953,7 @@
   "name": "Fuse cartridge",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "SolarQuartz": 2,
    "CircuitBoard1": 1
@@ -2543,6 +2964,7 @@
   "name": "Energy multiplier fuse",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "PulsarQuartz": 2,
    "FuseCartridge": 1,
@@ -2555,6 +2977,7 @@
   "name": "Growth multiplier fuse",
   "type": "Item",
   "planet": "Selenea",
+  "categories": [],
   "recipe": {
    "Fertilizer3": 2,
    "FuseCartridge": 1,
@@ -2567,6 +2990,7 @@
   "name": "Heat multiplier fuse",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -2574,6 +2998,7 @@
   "name": "Insects multiplier fuse",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Bee1Larvae": 1,
    "FuseCartridge": 1,
@@ -2589,6 +3014,7 @@
   "name": "Pressure multiplier fuse",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -2596,6 +3022,7 @@
   "name": "Purification multiplier fuse",
   "type": "Item",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PristineMushroom": 2,
    "FuseCartridge": 1,
@@ -2609,6 +3036,7 @@
   "name": "Trade rocket multiplier fuse",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Selenium": 2,
    "FuseCartridge": 1,
@@ -2621,6 +3049,7 @@
   "name": "Storage crate (ProceduralWreckContainer1)",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -2630,6 +3059,7 @@
   "name": "Storage crate (ProceduralWreckContainer2)",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -2639,6 +3069,7 @@
   "name": "Silk",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -2646,6 +3077,7 @@
   "name": "Smart fabric",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "FabricBlue": 2,
    "CircuitBoard1": 1
@@ -2656,6 +3088,7 @@
   "name": "Birthday cake",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CookChocolate": 3,
    "CookFlour": 3,
@@ -2667,6 +3100,7 @@
   "name": "Chocolate",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CookCocoaGrowable": 6
   }
@@ -2676,6 +3110,7 @@
   "name": "Cocoa",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -2683,6 +3118,7 @@
   "name": "Cookie",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CookFlour": 3,
    "CookChocolate": 3
@@ -2693,6 +3129,7 @@
   "name": "Croissant",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CookFlour": 3
   }
@@ -2702,6 +3139,7 @@
   "name": "Flour",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CookWheatGrowable": 6
   }
@@ -2711,6 +3149,7 @@
   "name": "Honey cooked beans",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Vegetable2Growable": 1,
    "Vegetable0Growable": 1,
@@ -2723,6 +3162,7 @@
   "name": "Fish soup",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Fish1Eggs": 1,
    "Fish2Eggs": 1,
@@ -2734,6 +3174,7 @@
   "name": "Wheat",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -2741,6 +3182,7 @@
   "name": "Circuit board",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 1,
    "Iron": 1,
@@ -2755,6 +3197,7 @@
   "name": "T1 Drone",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "CircuitBoard1": 1,
@@ -2766,6 +3209,7 @@
   "name": "T2 Drone",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Drone1": 1,
    "Alloy": 1,
@@ -2777,6 +3221,7 @@
   "name": "T3 Drone",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Drone2": 1,
    "RocketReactor2": 1,
@@ -2788,6 +3233,7 @@
   "name": "Fusion Energy Cell",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "PulsarQuartz": 3,
    "Osmium": 2,
@@ -2799,6 +3245,7 @@
   "name": "Access card (Keycard1)",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CircuitBoard1": 2
   }
@@ -2808,6 +3255,7 @@
   "name": "Access card (KeyCard2)",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CircuitBoard1": 2
   }
@@ -2817,6 +3265,7 @@
   "name": "Methane cartridge",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -2824,6 +3273,7 @@
   "name": "Nitrogen cartridge",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -2831,6 +3281,7 @@
   "name": "Oxygen capsule",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Cobalt": 2
   }
@@ -2840,6 +3291,7 @@
   "name": "Rocket Engine",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Rod-iridium": 1,
    "Uranim": 2,
@@ -2851,6 +3303,7 @@
   "name": "T2 Rocket Engine",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 2,
    "SolarQuartz": 1,
@@ -2864,6 +3317,7 @@
   "name": "Super Alloy Rod",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 8,
    "Aluminium": 1
@@ -2874,6 +3328,7 @@
   "name": "Iridium Rod",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iridium": 9
   }
@@ -2883,6 +3338,7 @@
   "name": "Osmium Rod",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Osmium": 9
   }
@@ -2892,6 +3348,7 @@
   "name": "Plastic Rod",
   "type": "Component",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PlasticPolymer": 8,
    "Toxins": 1
@@ -2902,6 +3359,7 @@
   "name": "Tungsten Rod",
   "type": "Component",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "Minable-Tungsten": 8,
    "Toxins": 1
@@ -2912,6 +3370,7 @@
   "name": "Uranium Rod",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Uranim": 9
   }
@@ -2921,6 +3380,7 @@
   "name": "Toxic artillery shell",
   "type": "Component",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "ToxicGoo": 1,
    "RedPowder1": 1,
@@ -2932,6 +3392,7 @@
   "name": "Toxic artillery shells pack",
   "type": "Item",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "ToxicityAmmo": 9
   }
@@ -2941,6 +3402,7 @@
   "name": "Pristine purifying balm",
   "type": "Component",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PurificationGel": 1,
    "MicroPlastics": 1
@@ -2951,6 +3413,7 @@
   "name": "Pristine purifying balms pack",
   "type": "Item",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "ToxicityMedecine": 9
   }
@@ -2960,6 +3423,7 @@
   "name": "Water bottle",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "ice": 1
   }
@@ -2969,6 +3433,7 @@
   "name": "T1 Animal food",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "honey": 1,
    "Vegetable2Growable": 1,
@@ -2980,6 +3445,7 @@
   "name": "T2 Animal food",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "AnimalFood1": 1,
    "Algae1Seed": 1,
@@ -2991,6 +3457,7 @@
   "name": "T3 Animal food",
   "type": "Item",
   "planet": "Aqualis",
+  "categories": [],
   "recipe": {
    "AnimalFood2": 1,
    "SilkWorm": 1
@@ -3001,6 +3468,7 @@
   "name": "High quality food",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "honey": 1,
    "Vegetable2Growable": 1
@@ -3011,6 +3479,7 @@
   "name": "Honey",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -3018,6 +3487,7 @@
   "name": "Air filter",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "FabricBlue": 1,
    "Osmium": 1,
@@ -3031,6 +3501,7 @@
   "name": "T1 Backpack",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 2
   }
@@ -3040,6 +3511,7 @@
   "name": "T2 Backpack",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Backpack1": 1,
    "Iron": 1,
@@ -3052,6 +3524,7 @@
   "name": "T3 Backpack",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Backpack2": 1,
    "Aluminium": 2,
@@ -3064,6 +3537,7 @@
   "name": "T4 Backpack",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Backpack3": 1,
    "Alloy": 3,
@@ -3075,6 +3549,7 @@
   "name": "T5 Backpack",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Backpack4": 1,
    "Alloy": 3,
@@ -3086,6 +3561,7 @@
   "name": "T6 Backpack",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "BalzarQuartz": 1,
    "Backpack5": 1,
@@ -3099,6 +3575,7 @@
   "name": "T7 Backpack",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 2,
    "Backpack6": 1,
@@ -3113,6 +3590,7 @@
   "name": "T1 Agility Boots",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Aluminium": 2,
    "FabricBlue": 2
@@ -3123,6 +3601,7 @@
   "name": "T2 Agility Boots",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "BootsSpeed1": 1,
    "Alloy": 2,
@@ -3134,6 +3613,7 @@
   "name": "T3 Agility Boots",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "BootsSpeed2": 1,
    "Alloy": 2,
@@ -3145,6 +3625,7 @@
   "name": "T1 Exoskeleton",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Titanium": 1,
    "Silicon": 1,
@@ -3156,6 +3637,7 @@
   "name": "T2 Exoskeleton",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "EquipmentIncrease1": 1,
    "Titanium": 1,
@@ -3169,6 +3651,7 @@
   "name": "T3 Exoskeleton",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Osmium": 2,
    "EquipmentIncrease2": 1,
@@ -3181,6 +3664,7 @@
   "name": "T4 Exoskeleton",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "BalzarQuartz": 2,
    "EquipmentIncrease3": 1,
@@ -3193,6 +3677,7 @@
   "name": "T5 Exoskeleton",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CircuitBoard1": 2,
    "EquipmentIncrease4": 1,
@@ -3206,6 +3691,7 @@
   "name": "Microchip – Construction menu filter",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 1,
    "Magnesium": 1,
@@ -3217,6 +3703,7 @@
   "name": "Microchip - Compass",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 1,
    "Magnesium": 1,
@@ -3228,6 +3715,7 @@
   "name": "T1 Jetpack",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 2,
    "Titanium": 1
@@ -3238,6 +3726,7 @@
   "name": "T2 Jetpack",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Jetpack1": 1,
    "Alloy": 1,
@@ -3251,6 +3740,7 @@
   "name": "T3 Jetpack",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Jetpack2": 1,
    "Alloy": 1,
@@ -3263,6 +3753,7 @@
   "name": "T4 Jetpack",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Rod-osmium": 1,
    "Jetpack3": 1,
@@ -3276,6 +3767,7 @@
   "name": "T5 Jetpack",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor2": 2,
    "Jetpack4": 1,
@@ -3289,6 +3781,7 @@
   "name": "Microchip – Map",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Aluminium": 2,
    "Obsidian": 1
@@ -3299,6 +3792,7 @@
   "name": "Microchip – T1 Goo cleaning",
   "type": "Equipment",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "Magnesium": 1,
    "ToxicSpores": 1
@@ -3309,6 +3803,7 @@
   "name": "Microchip – T2 Goo cleaning",
   "type": "Equipment",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PlasticPolymer": 2,
    "MultiToolCleaningGooChip1": 1,
@@ -3321,6 +3816,7 @@
   "name": "Microchip – T3 Goo cleaning",
   "type": "Equipment",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PlasticPolymer": 2,
    "MultiToolCleaningGooChip2": 1,
@@ -3334,6 +3830,7 @@
   "name": "Microchip – T4 Goo cleaning",
   "type": "Equipment",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "Minable-Tungsten": 2,
    "MultiToolCleaningGooChip3": 1,
@@ -3347,6 +3844,7 @@
   "name": "Microchip - Construction",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 2,
    "Magnesium": 2
@@ -3357,6 +3855,7 @@
   "name": "Microchip - Deconstruction",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 1,
    "Magnesium": 1
@@ -3367,6 +3866,7 @@
   "name": "Microchip – T2 Deconstruction",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "MethanCapsule1": 1,
    "MultiDeconstruct": 1,
@@ -3378,6 +3878,7 @@
   "name": "Microchip – T3 Deconstruction",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "BalzarQuartz": 1,
    "MultiToolDeconstruct2": 1,
@@ -3389,6 +3890,7 @@
   "name": "Microchip - Torch",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 1,
    "Magnesium": 2
@@ -3399,6 +3901,7 @@
   "name": "Microchip – T2 Torch",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "MultiToolLight": 1,
    "Aluminium": 1,
@@ -3411,6 +3914,7 @@
   "name": "Microchip – T3 Torch",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "SolarQuartz": 2,
    "MultiToolLight2": 1
@@ -3421,6 +3925,7 @@
   "name": "Microchip - T1 Mining Speed",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Magnesium": 1,
    "Silicon": 1,
@@ -3432,6 +3937,7 @@
   "name": "Microchip - T2 Mining Speed",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "MultiToolMineSpeed1": 1,
    "Silicon": 1,
@@ -3443,6 +3949,7 @@
   "name": "Microchip - T3 Mining Speed",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "MultiToolMineSpeed2": 1,
    "Silicon": 1,
@@ -3455,6 +3962,7 @@
   "name": "Microchip - T4 Mining Speed",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "MultiToolMineSpeed3": 1,
    "Silicon": 1,
@@ -3467,6 +3975,7 @@
   "name": "T1 Oxygen Tank",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Cobalt": 2,
    "Iron": 1,
@@ -3478,6 +3987,7 @@
   "name": "T2 Oxygen Tank",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "OxygenTank1": 1,
    "Silicon": 1,
@@ -3491,6 +4001,7 @@
   "name": "T3 Oxygen Tank",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "OxygenTank2": 1,
    "Iron": 1,
@@ -3505,6 +4016,7 @@
   "name": "T4 Oxygen Tank",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 3,
    "OxygenTank3": 1,
@@ -3516,6 +4028,7 @@
   "name": "T5 Oxygen Tank",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 2,
    "OxygenTank4": 1,
@@ -3529,6 +4042,7 @@
   "name": "Microchip – T1 Blueprint Pinning",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Aluminium": 1,
    "Osmium": 1,
@@ -3542,6 +4056,7 @@
   "name": "Microchip – T2 Blueprint pinning",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "PinChip1": 1,
    "MethanCapsule1": 1,
@@ -3556,6 +4071,7 @@
   "name": "Microchip – T3 Blueprint pinning",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "QuasarQuartz": 1,
    "PinChip2": 1,
@@ -3567,6 +4083,7 @@
   "name": "Microchip - Toxic Areas Informations",
   "type": "Equipment",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "MicroPlastics": 2,
    "ChlorineCapsule1": 1
@@ -3577,6 +4094,7 @@
   "name": "Microchip – T2 Toxic Areas Informations",
   "type": "Equipment",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PurificationGel": 1,
    "ToxicZoneHudDisplayer": 1,
@@ -3589,6 +4107,7 @@
   "name": "T1 Toxins Filter",
   "type": "Equipment",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PlasticPolymer": 2,
    "Silicon": 1,
@@ -3600,6 +4119,7 @@
   "name": "T2 Toxins Filter",
   "type": "Equipment",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PlasticPolymer": 2,
    "ToxinsFilter1": 1,
@@ -3612,6 +4132,7 @@
   "name": "T3 Toxins Filter",
   "type": "Equipment",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "Minable-Tungsten": 2,
    "ToxinsFilter2": 1,
@@ -3624,6 +4145,7 @@
   "name": "Warden key detector",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "SolarQuartz": 2,
    "CircuitBoard1": 1,
@@ -3636,6 +4158,7 @@
   "name": "Water Filter",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Aluminium": 1,
    "Silicon": 1,
@@ -3649,6 +4172,7 @@
   "name": "Tiloo fish eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phytoplankton1": 1,
    "Mutagen2": 1,
@@ -3660,6 +4184,7 @@
   "name": "Golden fish eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phytoplankton1": 1,
    "Mutagen3": 1,
@@ -3671,6 +4196,7 @@
   "name": "Provios fish eggs",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phytoplankton1": 1,
    "Mutagen1": 1,
@@ -3682,6 +4208,7 @@
   "name": "Vilnus fish eggs",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phytoplankton1": 1,
    "Mutagen1": 1,
@@ -3693,6 +4220,7 @@
   "name": "Gerrero fish eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phytoplankton1": 1,
    "Mutagen2": 1,
@@ -3704,6 +4232,7 @@
   "name": "Khrom fish eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phytoplankton1": 1,
    "Mutagen2": 1,
@@ -3715,6 +4244,7 @@
   "name": "Ulani fish eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phytoplankton1": 1,
    "Mutagen3": 1,
@@ -3726,6 +4256,7 @@
   "name": "Aelera fish eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phytoplankton1": 1,
    "Mutagen2": 1,
@@ -3737,6 +4268,7 @@
   "name": "Tegede fish eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phytoplankton1": 1,
    "Mutagen1": 1,
@@ -3748,6 +4280,7 @@
   "name": "Ecaru fish eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phytoplankton1": 1,
    "Mutagen3": 1,
@@ -3759,6 +4292,7 @@
   "name": "Buyu fish eggs",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Phytoplankton1": 1,
    "Mutagen3": 1,
@@ -3770,6 +4304,7 @@
   "name": "Bee larva",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase2": 1,
    "Mutagen1": 1,
@@ -3781,6 +4316,7 @@
   "name": "Liux butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase3": 1,
    "Mutagen1": 1,
@@ -3792,6 +4328,7 @@
   "name": "Nere butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase3": 1,
    "Mutagen1": 1,
@@ -3803,6 +4340,7 @@
   "name": "Lorpen butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase3": 1,
    "Mutagen1": 1,
@@ -3814,6 +4352,7 @@
   "name": "Fiorente butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase3": 1,
    "Mutagen1": 1,
@@ -3825,6 +4364,7 @@
   "name": "Alben butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase3": 1,
    "Mutagen1": 1,
@@ -3836,6 +4376,7 @@
   "name": "Futura butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase3": 1,
    "Mutagen1": 1,
@@ -3847,6 +4388,7 @@
   "name": "Imeo butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase3": 1,
    "Mutagen2": 1,
@@ -3858,6 +4400,7 @@
   "name": "Serena butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase3": 1,
    "Mutagen2": 1,
@@ -3869,6 +4412,7 @@
   "name": "Golden butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase3": 1,
    "Mutagen2": 1,
@@ -3880,6 +4424,7 @@
   "name": "Azurae butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase1": 1,
    "Mutagen1": 1,
@@ -3891,6 +4436,7 @@
   "name": "Lucia butterfly larva",
   "type": "Item",
   "planet": "Skeo",
+  "categories": [],
   "recipe": {
    "LarvaeBase3": 1,
    "Amber": 1,
@@ -3902,6 +4448,7 @@
   "name": "Leani butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase1": 1,
    "Mutagen1": 1,
@@ -3913,6 +4460,7 @@
   "name": "Fensea butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase1": 1,
    "Mutagen1": 1,
@@ -3924,6 +4472,7 @@
   "name": "Galaxe butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase1": 1,
    "Mutagen1": 1,
@@ -3935,6 +4484,7 @@
   "name": "Abstreus butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase1": 1,
    "Mutagen1": 1,
@@ -3946,6 +4496,7 @@
   "name": "Empalio butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase1": 1,
    "Mutagen1": 1,
@@ -3957,6 +4508,7 @@
   "name": "Penga butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase3": 1,
    "Mutagen1": 1,
@@ -3968,6 +4520,7 @@
   "name": "Chevrone butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase3": 1,
    "Mutagen1": 1,
@@ -3979,6 +4532,7 @@
   "name": "Aemel butterfly larva",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase3": 1,
    "Mutagen1": 1,
@@ -3990,6 +4544,7 @@
   "name": "Common larva",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Mutagen3": 1,
    "Phytoplankton1": 1,
@@ -4001,6 +4556,7 @@
   "name": "Uncommon larva",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4008,6 +4564,7 @@
   "name": "Rare larva",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Mutagen4": 1,
    "Phytoplankton1": 1,
@@ -4019,6 +4576,7 @@
   "name": "Silkworm",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "LarvaeBase2": 1,
    "Bacteria1": 1,
@@ -4030,6 +4588,7 @@
   "name": "Super Alloy",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Cobalt": 1,
    "Iron": 1,
@@ -4044,6 +4603,7 @@
   "name": "Aluminum",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4051,6 +4611,7 @@
   "name": "Amber",
   "type": "Resource",
   "planet": "Skeo",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4058,6 +4619,7 @@
   "name": "Bauxite",
   "type": "Component",
   "planet": "Humble",
+  "categories": [],
   "recipe": {
    "Aluminium": 3,
    "Iron": 1,
@@ -4070,6 +4632,7 @@
   "name": "Cobalt",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4077,6 +4640,7 @@
   "name": "Dolomite",
   "type": "Component",
   "planet": "Humble",
+  "categories": [],
   "recipe": {
    "Cobalt": 3,
    "Iron": 1,
@@ -4090,6 +4654,7 @@
   "name": "Ice",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4097,6 +4662,7 @@
   "name": "Iridium",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4104,6 +4670,7 @@
   "name": "Iron",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4111,6 +4678,7 @@
   "name": "Magnesium",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4118,6 +4686,7 @@
   "name": "Obsidian",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4125,6 +4694,7 @@
   "name": "Osmium",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4132,6 +4702,7 @@
   "name": "Phosphorus",
   "type": "Resource",
   "planet": "Aqualis",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4139,6 +4710,7 @@
   "name": "Selenium",
   "type": "Resource",
   "planet": "Selenea",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4146,6 +4718,7 @@
   "name": "Silicon",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4153,6 +4726,7 @@
   "name": "Sulfur",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4160,6 +4734,7 @@
   "name": "Titanium",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4167,6 +4742,7 @@
   "name": "Tungsten",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4174,6 +4750,7 @@
   "name": "Uraninite",
   "type": "Component",
   "planet": "Humble",
+  "categories": [],
   "recipe": {
    "Alloy": 1,
    "Iridium": 1,
@@ -4187,6 +4764,7 @@
   "name": "Uranium",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4194,6 +4772,7 @@
   "name": "Zeolite",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4201,6 +4780,7 @@
   "name": "Blazar Quartz",
   "type": "Component",
   "planet": "Selenea",
+  "categories": [],
   "recipe": {
    "Selenium": 2,
    "Cobalt": 1,
@@ -4212,6 +4792,7 @@
   "name": "Cosmic Quartz",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "MagnetarQuartz": 1,
    "BalzarQuartz": 1,
@@ -4229,6 +4810,7 @@
   "name": "Magnetar Quartz",
   "type": "Component",
   "planet": "Skeo",
+  "categories": [],
   "recipe": {
    "Amber": 2,
    "Osmium": 1,
@@ -4240,6 +4822,7 @@
   "name": "Pulsar Quartz",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Osmium": 1,
    "Zeolite": 1,
@@ -4253,6 +4836,7 @@
   "name": "Quasar Quartz",
   "type": "Component",
   "planet": "Aqualis",
+  "categories": [],
   "recipe": {
    "Phosphorus": 1,
    "Bioplastic1": 1,
@@ -4265,6 +4849,7 @@
   "name": "Solar Quartz",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "NitrogenCapsule1": 1,
    "Sulfur": 1,
@@ -4276,6 +4861,7 @@
   "name": "Chlorine dioxide",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4283,6 +4869,7 @@
   "name": "Microplastics",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4290,6 +4877,7 @@
   "name": "Plastic polymer",
   "type": "Component",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "Toxins": 2,
    "MicroPlastics": 1
@@ -4300,6 +4888,7 @@
   "name": "Pristine mushroom",
   "type": "Component",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "Toxins": 1,
    "Vegetable3Growable": 1,
@@ -4311,6 +4900,7 @@
   "name": "Purification capsule",
   "type": "Component",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "ChlorineCapsule1": 1,
    "PurifiedWater": 1,
@@ -4322,6 +4912,7 @@
   "name": "Purification gel",
   "type": "Component",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PurificationCapsule": 1,
    "PurifiedWater": 1,
@@ -4333,6 +4924,7 @@
   "name": "Purified water",
   "type": "Component",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "PristineMushroom": 1,
    "WaterBottle1": 1
@@ -4343,6 +4935,7 @@
   "name": "Toxic Goo",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "MicroPlastics": 1,
    "Toxins": 1
@@ -4353,6 +4946,7 @@
   "name": "Toxic Spores",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "ChlorineCapsule1": 1,
    "Toxins": 1
@@ -4363,6 +4957,7 @@
   "name": "Toxic water",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "PurifiedWater": 1,
    "Toxins": 1
@@ -4373,6 +4968,7 @@
   "name": "Toxins",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4380,6 +4976,7 @@
   "name": "Algae",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4387,6 +4984,7 @@
   "name": "Lirma Seed",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Mutagen3": 1,
    "Fertilizer1": 1,
@@ -4398,6 +4996,7 @@
   "name": "Shanga Seed",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4405,6 +5004,7 @@
   "name": "Pestera Seed",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4412,6 +5012,7 @@
   "name": "Nulna Seed",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4419,6 +5020,7 @@
   "name": "Tuska Seed",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4426,6 +5028,7 @@
   "name": "Orema plant",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4433,6 +5036,7 @@
   "name": "Volnus plant",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4440,6 +5044,7 @@
   "name": "Golden Seed",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4447,6 +5052,7 @@
   "name": "Rosea tree seed",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Mutagen4": 1
@@ -4457,6 +5063,7 @@
   "name": "Lillia tree seed",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Mutagen4": 1
@@ -4467,6 +5074,7 @@
   "name": "Prunea tree seed",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Mutagen4": 1
@@ -4477,6 +5085,7 @@
   "name": "Redwo tree seed",
   "type": "Item",
   "planet": "Selenea",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Mutagen4": 1,
@@ -4488,6 +5097,7 @@
   "name": "Pamelia tree seed",
   "type": "Item",
   "planet": "Aqualis",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Vegetable1Growable": 1,
@@ -4499,6 +5109,7 @@
   "name": "Detoxo tree seed",
   "type": "Item",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "PurificationGel": 1,
@@ -4510,6 +5121,7 @@
   "name": "Brojo tree seed",
   "type": "Item",
   "planet": "Skeo",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Amber": 1,
@@ -4521,6 +5133,7 @@
   "name": "Linifolia tree seed",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Mutagen1": 1,
@@ -4532,6 +5145,7 @@
   "name": "Aleatus tree seed",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Mutagen1": 1,
@@ -4543,6 +5157,7 @@
   "name": "Cernea tree seed",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Mutagen1": 1,
@@ -4554,6 +5169,7 @@
   "name": "Elegea tree seed",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Mutagen1": 1,
@@ -4565,6 +5181,7 @@
   "name": "Humelora tree seed",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Mutagen1": 1,
@@ -4576,6 +5193,7 @@
   "name": "Aemora tree seed",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Mutagen1": 1,
@@ -4587,6 +5205,7 @@
   "name": "Pleom tree seed",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Mutagen1": 1,
@@ -4598,6 +5217,7 @@
   "name": "Soleus tree seed",
   "type": "Component",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Mutagen1": 1,
@@ -4609,6 +5229,7 @@
   "name": "Shreox tree seed",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "TreeRoot": 1,
    "Mutagen1": 1,
@@ -4620,6 +5241,7 @@
   "name": "Tree bark",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4627,6 +5249,7 @@
   "name": "Eggplant",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4634,6 +5257,7 @@
   "name": "Squash",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4641,6 +5265,7 @@
   "name": "Beans",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4648,6 +5273,7 @@
   "name": "Mushroom",
   "type": "Resource",
   "planet": "",
+  "categories": [],
   "recipe": {}
  },
  {
@@ -4655,6 +5281,7 @@
   "name": "Vehicle – Beacon",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Zeolite": 1,
    "Osmium": 1,
@@ -4666,6 +5293,7 @@
   "name": "Vehicle – T1 Equipment increase",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Alloy": 1,
    "Silicon": 1,
@@ -4677,6 +5305,7 @@
   "name": "Vehicle – T2 Equipment increase",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "VehicleEquipmentSize1": 2,
    "Obsidian": 1,
@@ -4688,6 +5317,7 @@
   "name": "Vehicle – T1 Inventory increase",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 1,
    "FabricBlue": 1,
@@ -4699,6 +5329,7 @@
   "name": "Vehicle – T2 Inventory increase",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "VehicleInventorySize1": 2,
    "Osmium": 1,
@@ -4710,6 +5341,7 @@
   "name": "Vehicle – T3 Inventory increase",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "VehicleInventorySize2": 2,
    "MagnetarQuartz": 1,
@@ -4721,6 +5353,7 @@
   "name": "Jetpack for vehicle",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 4,
    "SolarQuartz": 1,
@@ -4732,6 +5365,7 @@
   "name": "Vehicle – T1 Lights",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Sulfur": 1,
    "Cobalt": 1,
@@ -4743,6 +5377,7 @@
   "name": "Vehicle – T2 Lights",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "VehicleLights1": 2,
    "SolarQuartz": 1
@@ -4753,6 +5388,7 @@
   "name": "Vehicle – Logistics",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CircuitBoard1": 2,
    "Rod-osmium": 1,
@@ -4765,6 +5401,7 @@
   "name": "Vehicle – Unlimited oxygen",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Zeolite": 4,
    "OxygenCapsule1": 2
@@ -4775,6 +5412,7 @@
   "name": "Vehicle – T1 Speed increase",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Zeolite": 2,
    "RocketReactor": 1
@@ -4785,6 +5423,7 @@
   "name": "Vehicle – T2 Speed increase",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "VehicleSpeed1": 2,
    "RedPowder1": 1
@@ -4795,6 +5434,7 @@
   "name": "Vehicle – T3 Speed increase",
   "type": "Equipment",
   "planet": "",
+  "categories": [],
   "recipe": {
    "VehicleSpeed2": 2,
    "RedPowder1": 1,
@@ -4807,6 +5447,7 @@
   "name": "Vehicle – T4 Speed increase",
   "type": "Equipment",
   "planet": "Selenea",
+  "categories": [],
   "recipe": {
    "Explosive": 2,
    "VehicleSpeed3": 1,
@@ -4819,6 +5460,7 @@
   "name": "Animals spreader rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "Rod-osmium": 1,
@@ -4831,6 +5473,7 @@
   "name": "T2 Animals spreader rocket",
   "type": "Item",
   "planet": "Skeo",
+  "categories": [],
   "recipe": {
    "RocketReactor2": 1,
    "Rod-osmium": 1,
@@ -4844,6 +5487,7 @@
   "name": "Plant Rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "Alloy": 2,
@@ -4857,6 +5501,7 @@
   "name": "T2 Plant Rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Fertilizer3": 1,
    "RocketReactor2": 1,
@@ -4871,6 +5516,7 @@
   "name": "Extraction rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Rod-alloy": 1,
    "RocketReactor": 1,
@@ -4885,6 +5531,7 @@
   "name": "Drone visualization rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CircuitBoard1": 2,
    "RocketReactor": 1,
@@ -4896,6 +5543,7 @@
   "name": "Asteroid attraction rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "Alloy": 2,
@@ -4907,6 +5555,7 @@
   "name": "T2 Asteroid attraction rocket",
   "type": "Item",
   "planet": "Selenea",
+  "categories": [],
   "recipe": {
    "Rod-iridium": 2,
    "RocketReactor2": 1,
@@ -4920,6 +5569,7 @@
   "name": "Map information rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "HudCompass": 1,
@@ -4932,6 +5582,7 @@
   "name": "T2 Map information rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "HudCompass": 1,
@@ -4945,6 +5596,7 @@
   "name": "Insect spreader rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "Rod-osmium": 1,
@@ -4957,6 +5609,7 @@
   "name": "T2 Insect spreader rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Fertilizer3": 1,
    "RocketReactor2": 1,
@@ -4971,6 +5624,7 @@
   "name": "T1 GPS Satellite",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "HudCompass": 1,
@@ -4982,6 +5636,7 @@
   "name": "T2 GPS Satellite",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "HudCompass": 2,
@@ -4993,6 +5648,7 @@
   "name": "T3 GPS Satellite",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "HudCompass": 2,
@@ -5005,6 +5661,7 @@
   "name": "T4 GPS Satellite",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CircuitBoard1": 2,
    "RocketReactor": 1,
@@ -5017,6 +5674,7 @@
   "name": "Seed spreader rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "Alloy": 2,
@@ -5030,6 +5688,7 @@
   "name": "T2 Oxygen Rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Rod-alloy": 2,
    "RocketReactor2": 1,
@@ -5042,6 +5701,7 @@
   "name": "Magnetic field protection rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "Alloy": 2,
@@ -5053,6 +5713,7 @@
   "name": "T2 Magnetic field protection rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Rod-osmium": 2,
    "RocketReactor2": 1,
@@ -5066,6 +5727,7 @@
   "name": "Purification rocket",
   "type": "Item",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "PurificationGel": 2,
@@ -5078,6 +5740,7 @@
   "name": "Toxic area information rocket",
   "type": "Item",
   "planet": "Toxicity",
+  "categories": [],
   "recipe": {
    "RocketReactor": 1,
    "HudCompass": 1,
@@ -5091,6 +5754,7 @@
   "name": "Interplanetary travel rocket",
   "type": "Item",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Rod-alloy": 1,
    "RocketReactor": 1,
@@ -5107,6 +5771,7 @@
   "name": "Aluminum scraps",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Aluminium": 2,
    "Alloy": 1
@@ -5117,6 +5782,7 @@
   "name": "Electronics scraps",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Silicon": 1,
    "Cobalt": 1
@@ -5127,6 +5793,7 @@
   "name": "Metal scraps (TrashMetalsCanisters1)",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Magnesium": 1
@@ -5137,6 +5804,7 @@
   "name": "Metal scraps (TrashMetalsScraps1)",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1,
    "Titanium": 1
@@ -5147,6 +5815,7 @@
   "name": "Uranium scraps",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Uranim": 2
   }
@@ -5156,6 +5825,7 @@
   "name": "Canister",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -5165,6 +5835,7 @@
   "name": "Big safe (ProceduralWreckSafe)",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -5174,6 +5845,7 @@
   "name": "Access Console (WreckEntryLocked1)",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -5183,6 +5855,7 @@
   "name": "Access Console (WreckEntryLocked2)",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -5192,6 +5865,7 @@
   "name": "Fusion reactor (WreckFusionGenerator)",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -5201,6 +5875,7 @@
   "name": "Debris",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -5210,6 +5885,7 @@
   "name": "Big safe (WreckSafe)",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "Iron": 1
   }
@@ -5219,6 +5895,7 @@
   "name": "Technical debris",
   "type": "Other Building",
   "planet": "",
+  "categories": [],
   "recipe": {
    "CircuitBoard1": 1
   }
