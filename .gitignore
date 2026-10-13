@@ -46,3 +46,9 @@ next-env.d.ts
 
 # game extraction scratch (raw game files stay local)
 /scripts/extract/work/
+
+# Claude Code notes and handoff stay local
+/.claude/
+/CLAUDE.md
+/AGENTS.md
+/RESUME-HERE.md

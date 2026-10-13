@@ -6,7 +6,7 @@ import { admin } from "better-auth/plugins";
 import { db } from "@/lib/db";
 
 // Email + password only for now: there is no email sender, so no verification or password reset yet.
-// Admins: the `role` column, set to "admin" by hand (see RESUME-HERE.md).
+// Admins: the `role` column, set to "admin" by hand with SQL.
 export const auth = betterAuth({
   database: prismaAdapter(db, { provider: "postgresql" }),
   emailAndPassword: { enabled: true },
